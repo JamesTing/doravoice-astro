@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import amymindLogo from "../assets/logo.svg";
+
+// interface Props {
+// 	title: string;
+// 	body: string;
+// 	href: string;
+// }
+
+// const { href, title, body } = Astro.props;
+---
+
+<div class="navbar rounded">
+	<div class="main">
+		<a href="./index.html">
+			<img src='/src/assets/logo.svg' class="logo" alt="AmyMind的logo" />
+		</a>
+		<div class="navigator-list">
+			<a class="item rounded" href="#mindmap">思维导图</a>
+			<a class="item rounded" href="#whiteboard">白板</a>
+			<a class="item rounded" href="#pricing">价格</a>
+		</div>
+	</div>
+	<div class="aciton-list">
+		<a
+			class="item rounded"
+			href="https://app.amymind.com/account/login">登录</a
+		>
+		<a
+			class="item black-button border-radius-8"
+			href="https://app.amymind.com/account/signup">注册</a
+		>
+	</div>
+</div>
+<style>
+	.navbar {
+		margin: 0;
+		border-radius: 0 !important;
+	}
+	.navbar .main .navigator-list {
+		display: none;
+	}
+
+	.navbar {
+		width: 100%;
+		max-width: 1080px;
+		height: 48px;
+		padding: 0 12px;
+		margin: 20px auto 0;
+		background: rgba(252, 252, 252, 0.6);
+		border: 1px solid rgba(0, 0, 0, 0.04);
+		box-shadow:
+			0px 4px 12px rgba(0, 0, 0, 0.04),
+			inset 0px -1px 0px rgba(0, 0, 0, 0.06);
+		backdrop-filter: blur(6px);
+		/* 兼容safari backdrop-filter */
+		-webkit-backdrop-filter: blur(6px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.navbar .main,
+	.navbar .main .navigator-list,
+	.navbar .aciton-list {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	.navbar .main {
+		gap: 40px;
+	}
+	.navbar .aciton-list {
+		gap: 8px;
+	}
+	.navbar .aciton-list .item {
+		font-size: 14px;
+		padding: 4px 7px;
+	}
+	.navbar .aciton-list .item:not(.black-button):hover {
+		background-color: rgba(0, 0, 0, 0.04);
+	}
+	.navigator-list .item {
+		transition: all 0.32s ease;
+		padding: 3px 6px;
+	}
+	.navigator-list .item:hover {
+		background-color: rgba(0, 0, 0, 0.04);
+	}
+</style>
