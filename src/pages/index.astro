@@ -3,20 +3,28 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import { Image } from "astro:assets";
 import lightEffect from "../assets/light-effect.svg";
+import MindmapFeature from "../components/MindmapFeature.astro";
 ---
 
 <Layout title="AmyMind">
 	<!-- 头部 -->
-	<div class="header">
-		<img src='/src/assets/light-effect.svg' alt="light effect" />
+	<div class="fixed w-full pt-4 z-10">
+		<img
+			class="absolute left-0 top-0 opacity-40 pointer-events-none"
+			src="/src/assets/light-effect.svg"
+			alt="light effect"
+		/>
 		<Navbar />
 	</div>
 
 	<!-- Mindmap -->
-	<div class="section mindmap-part" id="mindmap">
-		<h2 class="product-sologan">
+	<div
+		class="pt-28 flex flex-col items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+	>
+		<h2 id="product-sologan">
 			<p>
-				One Sentence to <span class="mindmap"
+				One idea to
+				<span class="mindmap"
 					>Mindmap<i class="ai-sign">AI-Powered</i></span
 				>
 			</p>
@@ -25,176 +33,37 @@ import lightEffect from "../assets/light-effect.svg";
 				<span class="ticker">
 					<span class="ppt">PowerPoint</span>
 					<span class="md">Markdown</span>
-					<span class="pdf">PDF</span>
-					<span class="doc">Word</span>
+					<span>
+						<span class="pdf">PDF</span>
+						<span style="-webkit-text-fill-color: #333;">&amp;</span
+						>
+						<span class="doc">Word</span>
+					</span>
 				</span>
 			</p>
 		</h2>
-		<div class="product-description">
-			The modern mind mapping tool that aids the entire process of data
-			collection, brainstorming, and final presentation all in one
-			workflow.
+		<div class="text-neutral-500 text-center text-lg mb-4">
+			Text to mind map with AI. And Turn markdown, txt, freemind file into
+			mindmap <br />
+			Enjoy effortless exporting in PowerPoint, PDF, or Word formats.<br
+			/>
+			Edit and share your mind maps with others with ease.
 		</div>
 		<a
-			href="https://app.amymind.com/mindmap/new"
-			class="action-button black-button border-radius-12"
-			>Create Mindmap from One Sentence →</a
+			href="https://app.amymind.com/mindmap/guide"
+			id="glow-button"
+			class="radius-md p-2 mb-4"
+			>Get Started
+			<span>→</span></a
 		>
-		<div class="language-switch">
+		<div id="language-switch">
 			<a href="./cn/index.html">访问中文版 →</a>
 		</div>
-		<div class="feature-list">
-			<div class="tab">
-				<div
-					class="item border-radius-16"
-					data-target=".feature-import"
-				>
-					<div class="icon">
-						<img
-							src="/src/assets/mindmap-import.svg"
-							alt="Import with Ease"
-						/>
-					</div>
-					<div class="content">
-						<div class="title">Import with Ease</div>
-						<div class="description">
-							Including markdown, txt, freemind, and webpages,
-							making data collection effortless.
-						</div>
-					</div>
-				</div>
-				<div
-					class="item border-radius-16 actived"
-					data-target=".feature-ai"
-				>
-					<div class="icon">
-						<img
-							src="/src/assets/mindmap-ai.svg"
-							alt="Inspiration at Your Fingertips"
-						/>
-					</div>
-					<div class="content">
-						<div class="title">Inspiration at Your Fingertips</div>
-						<div class="description">
-							Utilize AI-powered dialogue to generate branch nodes
-							or entire mind maps, sparking fresh ideas and
-							insights.
-						</div>
-					</div>
-				</div>
-				<div
-					class="item border-radius-16"
-					data-target=".feature-export"
-				>
-					<div class="icon">
-						<img
-							src="/src/assets/mindmap-export.svg"
-							alt="Workflow Integration"
-						/>
-					</div>
-					<div class="content">
-						<div class="title">Workflow Integration</div>
-						<div class="description">
-							Export PDF, image, text, ppt, docx... for further
-							modification in PowerPoint, Word, and beyond.
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="content">
-				<!-- import file card -->
-				<div class="item border-radius-16 feature-import medium-shadow">
-					<div class="file-card-list">
-						<div class="file-card border-radius-4 medium-shadow">
-							<img
-								src="/src/assets/file-markdown.svg"
-								alt="markdown"
-							/>
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img
-								src="/src/assets/file-freemind.svg"
-								alt="freemind"
-							/>
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img
-								src="/src/assets/file-webpage.svg"
-								alt="webpage"
-							/>
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img src="/src/assets/file-text.svg" alt="text" />
-						</div>
-					</div>
-					<img
-						class="screenshot border-radius-12 medium-shadow"
-						src="/src/assets/screenshot-import.png"
-						alt="Screenshot - Supported file formats for import"
-					/>
-					<img
-						class="mindmap-shape"
-						src="/src/assets/mindmap-shape.svg"
-						alt="Mindmap diagram"
-					/>
-				</div>
-				<!-- AI feature card -->
-				<div
-					class="item border-radius-16 actived feature-ai medium-shadow"
-				>
-					<img
-						class="screenshot border-radius-12 dark-shadow"
-						src="/src/assets/screenshot-chat.png"
-						alt="Screenshot - AI chat generate mindmap"
-					/>
-					<img
-						class="mindmap-shape"
-						src="/src/assets/mindmap-shape.svg"
-						alt="Mindmap diagram"
-					/>
-				</div>
-				<!-- export file card -->
-				<div class="item border-radius-16 feature-export medium-shadow">
-					<img
-						class="screenshot border-radius-12 dark-shadow"
-						src="/src/assets/screenshot-export.png"
-						alt="Screenshot - Supported file formats for export "
-					/>
-					<img
-						class="mindmap-shape"
-						src="/src/assets/mindmap-shape.svg"
-						alt="Mindmap diagram"
-					/>
-					<div class="file-card-list">
-						<div class="file-card border-radius-4 medium-shadow">
-							<img src="/src/assets/file-ppt.svg" alt="PowerPoint" />
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img src="/src/assets/file-word.svg" alt="Word" />
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img
-								src="/src/assets/file-markdown.svg"
-								alt="Markdown"
-							/>
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img src="/src/assets/file-pdf.svg" alt="PDF" />
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img src="/src/assets/file-text.svg" alt="Text" />
-						</div>
-						<div class="file-card border-radius-4 medium-shadow">
-							<img src="/src/assets/file-image.svg" alt="Image" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="max-w-4xl mx-auto"><MindmapFeature /></div>
 	</div>
 
 	<!-- Whiteboard -->
-	<div class="section" id="whiteboard">
+	<div class="mx-auto max-w-5xl" id="whiteboard">
 		<h2 class="product-sologan">
 			Modern Whiteboard tool with clear design
 		</h2>
@@ -251,7 +120,10 @@ import lightEffect from "../assets/light-effect.svg";
 			</div>
 			<div class="item border-radius-16 feature-fast">
 				<div class="icon">
-					<img src="/src/assets/whiteboard-fast-icon.svg" alt="fast" />
+					<img
+						src="/src/assets/whiteboard-fast-icon.svg"
+						alt="fast"
+					/>
 				</div>
 				<div class="content">
 					<div class="title">Fast, edit online</div>
@@ -270,7 +142,7 @@ import lightEffect from "../assets/light-effect.svg";
 	</div>
 
 	<!-- Design for All Platforms -->
-	<div class="section">
+	<div class="mx-auto max-w-5xl">
 		<h2 class="product-sologan">Design for All Platforms</h2>
 		<div class="product-description">
 			The web version is just the beginning, AmyMind will gradually cover
@@ -301,7 +173,7 @@ import lightEffect from "../assets/light-effect.svg";
 	</div>
 
 	<!-- Pricing -->
-	<div class="section" id="pricing">
+	<div class="mx-auto max-w-5xl" id="pricing">
 		<h2 class="product-sologan">Pricing</h2>
 		<div class="product-description">
 			Friends with limited budget are welcome to use it for free. If you
@@ -351,7 +223,7 @@ import lightEffect from "../assets/light-effect.svg";
 	</div>
 
 	<!-- Follow -->
-	<div class="section">
+	<div class="mx-auto max-w-5xl">
 		<h2 class="product-sologan">Follow AmyMind</h2>
 		<div class="product-description">
 			The growth of AmyMind could not be separated from the support and
@@ -398,7 +270,7 @@ import lightEffect from "../assets/light-effect.svg";
 	</div>
 
 	<!-- 底部 -->
-	<div class="footer">
+	<div class="mx-auto max-w-5xl">
 		<div class="main">AmyMind</div>
 		<div class="sub">
 			<a class="link" href="./legal/privacy-policy.html">Privacy Policy</a
@@ -413,18 +285,183 @@ import lightEffect from "../assets/light-effect.svg";
 </Layout>
 
 <style>
-	.section {
-		background: linear-gradient(
-			180deg,
-			#f7f8fa 0px,
-			rgba(247, 248, 250, 0) 300px
-		);
-		padding-top: 52px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	#product-sologan {
+		font-size: 3.25rem;
+		font-weight: 700;
+		line-height: 3.75rem;
+		margin: 0 0 20px;
+		position: relative;
+		word-break: keep-all;
+		/* 字体横向间距 */
+		letter-spacing: -0.02em;
+		text-align: center;
 	}
-	.section.mindmap-part {
-		padding-top: 124px;
+	#product-sologan .ai-sign {
+		font-weight: normal;
+		display: inline-block;
+		width: 120px;
+		height: 32px;
+		line-height: 1;
+		text-align: right;
+		position: absolute;
+		letter-spacing: normal;
+		top: -12px;
+		left: 36%;
+		font-size: 16px;
+		font-family: "Comic Sans MS", cursive;
+		background: url(/src/assets/sketch-arrow.svg) no-repeat left top;
+	}
+	#product-sologan .ai-sign.zh {
+		top: -16px;
+		left: 48%;
+	}
+
+	@keyframes slide {
+		0%,
+		20% {
+			top: 0;
+		}
+		30% {
+			top: -3.75rem;
+		}
+		40% {
+			top: -7.5rem;
+		}
+		60% {
+			top: -7.5rem;
+		}
+		90% {
+			top: -7.5rem;
+		}
+	}
+
+	.ticker {
+		display: inline-flex;
+		height: 3.75rem;
+		overflow: hidden;
+		flex-direction: column;
+	}
+	.ticker > span {
+		position: relative;
+		top: 0;
+		text-align: left;
+		animation: slide 7s infinite;
+		/* 文字渐变背景色 */
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.ticker span.ppt {
+		/* 渐变文字背景色 */
+		background: linear-gradient(180deg, #bc3f1f 50%, #ffb29d 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.ticker span.md {
+		/* 渐变文字背景色 */
+		background: linear-gradient(180deg, #000 50%, #d6d6d6 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.ticker span.doc {
+		/* 渐变文字背景色 */
+		background: linear-gradient(180deg, #195ad4 50%, #9dd5ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	.ticker span.pdf {
+		/* 渐变文字背景色 */
+		background: linear-gradient(180deg, #ba0f0f 50%, #ff7171 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	#glow-button {
+		color: #fff;
+		background: #111;
+		cursor: pointer;
+		position: relative;
+		z-index: 0;
+		border-radius: 10px;
+	}
+
+	#glow-button:before {
+		content: "";
+		background: linear-gradient(
+			45deg,
+			#ff0000,
+			#ff7300,
+			#fffb00,
+			#48ff00,
+			#00ffd5,
+			#002bff,
+			#7a00ff,
+			#ff00c8,
+			#ff0000
+		);
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		background-size: 400%;
+		z-index: -1;
+		filter: blur(20px);
+		width: calc(100% + 4px);
+		height: calc(80% + 4px);
+		animation: glowing 20s linear infinite;
+		opacity: 0.3;
+		transition: opacity 0.28s ease-in-out;
+		border-radius: 10px;
+	}
+
+	#glow-button:active {
+		/* color: #000 */
+	}
+
+	#glow-button:active:after {
+		background: transparent;
+	}
+
+	#glow-button:hover {
+		transition: all 0.16s ease-in-out;
+		transform: translateY(-2px) scale(1.01);
+	}
+	#glow-button span {
+		display: inline-block;
+		transition: all 0.16s ease-in-out;
+		transform: translateX(0px);
+	}
+	#glow-button:hover span {
+		transform: translateX(8px);
+	}
+	#glow-button:hover:before {
+		opacity: 1;
+	}
+
+	#glow-button:after {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #111;
+		left: 0;
+		top: 0;
+		border-radius: 10px;
+	}
+
+	@keyframes glowing {
+		0% {
+			background-position: 0 0;
+		}
+		50% {
+			background-position: 400% 0;
+		}
+		100% {
+			background-position: 0 0;
+		}
 	}
 </style>

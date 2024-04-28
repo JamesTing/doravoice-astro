@@ -1,0 +1,138 @@
+---
+import { Image } from "astro:assets";
+import amymindLogo from "../assets/logo.svg";
+
+// interface Props {
+// 	title: string;
+// 	body: string;
+// 	href: string;
+// }
+
+// const { href, title, body } = Astro.props;
+---
+
+<div id="feature-list" class="flex space-x-4">
+	<div id="tab" class="w-2/5 flex flex-col space-y-2">
+		<div class="flex bg-neutral-200 rounded-lg" data-target=".feature-import">
+			<div class="icon">
+				<img
+					src="/src/assets/mindmap-import.svg"
+					alt="Import with Ease"
+				/>
+			</div>
+			<div class="content">
+				<div class="title">Import with Ease</div>
+				<div class="description">
+					Including markdown, txt, freemind, and webpages, making data
+					collection effortless.
+				</div>
+			</div>
+		</div>
+		<div class="flex bg-neutral-200 rounded-lg actived" data-target=".feature-ai">
+			<div class="icon">
+				<img
+					src="/src/assets/mindmap-ai.svg"
+					alt="Inspiration at Your Fingertips"
+				/>
+			</div>
+			<div class="content">
+				<div class="title">Inspiration at Your Fingertips</div>
+				<div class="description">
+					Utilize AI-powered dialogue to generate branch nodes or
+					entire mind maps, sparking fresh ideas and insights.
+				</div>
+			</div>
+		</div>
+		<div class="flex bg-neutral-200 rounded-lg" data-target=".feature-export">
+			<div class="icon">
+				<img
+					src="/src/assets/mindmap-export.svg"
+					alt="Workflow Integration"
+				/>
+			</div>
+			<div class="content">
+				<div class="title">Workflow Integration</div>
+				<div class="description">
+					Export PDF, image, text, ppt, docx... for further
+					modification in PowerPoint, Word, and beyond.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="content" class="w-3/5">
+		<!-- import file card -->
+		<div class="flex bg-neutral-200 rounded-lg feature-import medium-shadow">
+			<div class="file-card-list">
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-markdown.svg" alt="markdown" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-freemind.svg" alt="freemind" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-webpage.svg" alt="webpage" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-text.svg" alt="text" />
+				</div>
+			</div>
+			<img
+				class="screenshot border-radius-12 medium-shadow"
+				src="/src/assets/screenshot-import.png"
+				alt="Screenshot - Supported file formats for import"
+			/>
+			<img
+				class="mindmap-shape"
+				src="/src/assets/mindmap-shape.svg"
+				alt="Mindmap diagram"
+			/>
+		</div>
+		<!-- AI feature card -->
+		<div class="flex bg-neutral-200 rounded-lg actived feature-ai medium-shadow">
+			<img
+				class="screenshot border-radius-12 dark-shadow"
+				src="/src/assets/screenshot-chat.png"
+				alt="Screenshot - AI chat generate mindmap"
+			/>
+			<img
+				class="mindmap-shape"
+				src="/src/assets/mindmap-shape.svg"
+				alt="Mindmap diagram"
+			/>
+		</div>
+		<!-- export file card -->
+		<div class="flex bg-neutral-200 rounded-lg feature-export medium-shadow">
+			<img
+				class="screenshot border-radius-12 dark-shadow"
+				src="/src/assets/screenshot-export.png"
+				alt="Screenshot - Supported file formats for export "
+			/>
+			<img
+				class="mindmap-shape"
+				src="/src/assets/mindmap-shape.svg"
+				alt="Mindmap diagram"
+			/>
+			<div class="file-card-list">
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-ppt.svg" alt="PowerPoint" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-word.svg" alt="Word" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-markdown.svg" alt="Markdown" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-pdf.svg" alt="PDF" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-text.svg" alt="Text" />
+				</div>
+				<div class="file-card border-radius-4 medium-shadow">
+					<img src="/src/assets/file-image.svg" alt="Image" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<style></style>
