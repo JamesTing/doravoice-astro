@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import amymindLogo from "../assets/logo.svg";
+import amymindLogo from "./src/assets/logo.svg";
 
 // interface Props {
 // 	title: string;
@@ -13,71 +13,108 @@ import amymindLogo from "../assets/logo.svg";
 
 <div id="feature-list" class="flex space-x-4">
 	<div id="tab" class="w-2/5 flex flex-col space-y-2">
-		<div class="flex bg-neutral-200 rounded-lg" data-target=".feature-import">
-			<div class="icon">
+		<div
+			class="flex bg-neutral-100 rounded-xl py-3 px-4 space-x-2"
+			data-target=".feature-import"
+		>
+			<div class="w-10 flex-shrink-0">
 				<img
 					src="/src/assets/mindmap-import.svg"
 					alt="Import with Ease"
 				/>
 			</div>
-			<div class="content">
-				<div class="title">Import with Ease</div>
-				<div class="description">
-					Including markdown, txt, freemind, and webpages, making data
-					collection effortless.
+			<div>
+				<div class="text-lg font-bold leading-none mb-2">
+					With AI, Craft Mind Maps from an Idea!
+				</div>
+				<div class="text-sm text-neutral-500">
+					Unleash your creativity and clarify your thoughts. Our
+					product uses the power of Artificial Intelligence to convert
+					your simple idea into a comprehensive mind map.
 				</div>
 			</div>
 		</div>
-		<div class="flex bg-neutral-200 rounded-lg actived" data-target=".feature-ai">
-			<div class="icon">
+		<div
+			class="flex bg-neutral-100 rounded-xl actived p-4 space-x-2"
+			data-target=".feature-ai"
+		>
+			<div class="w-10 flex-shrink-0">
 				<img
 					src="/src/assets/mindmap-ai.svg"
 					alt="Inspiration at Your Fingertips"
 				/>
 			</div>
-			<div class="content">
-				<div class="title">Inspiration at Your Fingertips</div>
-				<div class="description">
-					Utilize AI-powered dialogue to generate branch nodes or
-					entire mind maps, sparking fresh ideas and insights.
+			<div>
+				<div class="text-lg font-bold leading-none mb-2">
+					Documents to Mind Maps, Instantly!
+				</div>
+				<div class="text-sm text-neutral-500">
+					Turn markdown, txt, freemind into clear, organized mind
+					maps. Say goodbye to clutter, hello to clarity with our
+					innovative feature. Simplify, visualize, create!
 				</div>
 			</div>
 		</div>
-		<div class="flex bg-neutral-200 rounded-lg" data-target=".feature-export">
-			<div class="icon">
+		<div
+			class="flex bg-neutral-100 rounded-xl py-3 px-4 space-x-2"
+			data-target=".feature-export"
+		>
+			<div class="w-10 flex-shrink-0">
 				<img
 					src="/src/assets/mindmap-export.svg"
 					alt="Workflow Integration"
 				/>
 			</div>
-			<div class="content">
-				<div class="title">Workflow Integration</div>
-				<div class="description">
-					Export PDF, image, text, ppt, docx... for further
-					modification in PowerPoint, Word, and beyond.
+			<div>
+				<div class="text-lg font-bold leading-none mb-2">
+					Export Easier, Power with AI!
+				</div>
+				<div class="text-sm text-neutral-500">
+					Now export in PowerPoint, PDF, or Word formats for easy
+					edits and seamless workflow transitions.
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div id="content" class="w-3/5">
+		<!-- AI feature card -->
+		<div
+			class="relative h-96 flex bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-pink-400/50 to-purple-600/50"
+		>
+			<img
+				class="rounded-xl w-4/5 opacity-80 absolute -left-2 -top-4 overflow-hidden"
+				style="mask-image:linear-gradient(270deg, black 0%, transparent 90%),
+				linear-gradient(0deg, black 0%, transparent 90%)"
+				src="/src/assets/screenshot-chat.png"
+				alt="Screenshot - AI chat generate mindmap"
+			/>
+			<img
+				class="opacity-20 absolute left-0 top-16 scale-90"
+				src="/src/assets/mindmap-shape.svg"
+				alt="Mindmap diagram"
+			/>
+		</div>
 		<!-- import file card -->
-		<div class="flex bg-neutral-200 rounded-lg feature-import medium-shadow">
+		<div
+			class="relative h-96 flex bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-pink-400/50 to-purple-600/50"
+		>
 			<div class="file-card-list">
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-markdown.svg" alt="markdown" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-freemind.svg" alt="freemind" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-webpage.svg" alt="webpage" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-text.svg" alt="text" />
 				</div>
 			</div>
 			<img
-				class="screenshot border-radius-12 medium-shadow"
+				class="rounded-xl w-4/5 opacity-80 absolute -left-2 -top-4 overflow-hidden"
 				src="/src/assets/screenshot-import.png"
 				alt="Screenshot - Supported file formats for import"
 			/>
@@ -87,23 +124,12 @@ import amymindLogo from "../assets/logo.svg";
 				alt="Mindmap diagram"
 			/>
 		</div>
-		<!-- AI feature card -->
-		<div class="flex bg-neutral-200 rounded-lg actived feature-ai medium-shadow">
-			<img
-				class="screenshot border-radius-12 dark-shadow"
-				src="/src/assets/screenshot-chat.png"
-				alt="Screenshot - AI chat generate mindmap"
-			/>
-			<img
-				class="mindmap-shape"
-				src="/src/assets/mindmap-shape.svg"
-				alt="Mindmap diagram"
-			/>
-		</div>
 		<!-- export file card -->
-		<div class="flex bg-neutral-200 rounded-lg feature-export medium-shadow">
+		<div
+			class="flex bg-neutral-100 rounded-xl feature-export medium-shadow"
+		>
 			<img
-				class="screenshot border-radius-12 dark-shadow"
+				class="rounded-xl w-3/4"
 				src="/src/assets/screenshot-export.png"
 				alt="Screenshot - Supported file formats for export "
 			/>
@@ -113,22 +139,22 @@ import amymindLogo from "../assets/logo.svg";
 				alt="Mindmap diagram"
 			/>
 			<div class="file-card-list">
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-ppt.svg" alt="PowerPoint" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-word.svg" alt="Word" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-markdown.svg" alt="Markdown" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-pdf.svg" alt="PDF" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-text.svg" alt="Text" />
 				</div>
-				<div class="file-card border-radius-4 medium-shadow">
+				<div class="">
 					<img src="/src/assets/file-image.svg" alt="Image" />
 				</div>
 			</div>
