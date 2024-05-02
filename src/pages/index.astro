@@ -1,279 +1,341 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import { Image } from "astro:assets";
-import lightEffect from "../assets/light-effect.svg";
+import Footer from "../components/Footer.astro";
 import MindmapFeature from "../components/MindmapFeature.astro";
 ---
 
-<Layout title="AmyMind">
-	<script type="module" src="src/assets/main.js"></script></Layout
+<Layout
+	title="AmyMind: AI-Powered Mind Mapping & Whiteboard App"
+	description="AmyMind is a free AI app for effortless creation and sharing of mindmaps, flowcharts, and UML diagrams."
+	keywords="mindmap, whiteboard, mind map, flowchart, UML, diagram, AI, artificial intelligence, markdown, ppt, pdf, word"
 >
-<!-- 头部 -->
-<div class="fixed w-full pt-4 z-10">
-	<img
-		class="absolute left-0 top-0 opacity-40 pointer-events-none"
-		src="/src/assets/light-effect.svg"
-		alt="light effect"
-	/>
-	<Navbar />
-</div>
+	<script type="module" src="src/assets/main.js"></script>
+	<!-- Head -->
+	<div class="fixed w-full pt-4 z-10">
+		<Navbar />
+	</div>
 
-<!-- Mindmap -->
-<div
-	class="pt-28 flex flex-col items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
->
-	<h2 id="product-sologan">
-		<p>
-			One idea to
-			<span class="mindmap">Mindmap<i class="ai-sign">AI-Powered</i></span
-			>
-		</p>
-		<p>
-			One Click to
-			<span class="ticker">
-				<span class="ppt">PowerPoint</span>
-				<span class="md">Markdown</span>
-				<span>
-					<span class="pdf">PDF</span>
-					<span style="-webkit-text-fill-color: #333;">&amp;</span>
-					<span class="doc">Word</span>
+	<!-- Mindmap -->
+	<div
+		id="mindmap"
+		class="pt-28 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+	>
+		<img
+			class="absolute -left-10 top-0 opacity-90 pointer-events-none"
+			src="/src/assets/light-effect.svg"
+			alt="light effect"
+		/>
+		<h2 id="product-sologan">
+			<p>
+				One idea to
+				<span class="relative"
+					>Mindmap<img
+						class="absolute left-2/3 -top-5 w-2/3"
+						src="/src/assets/ai-sign.png"
+						alt="AI Powered"
+					/></span
+				>
+			</p>
+			<p>
+				One Click to
+				<span class="ticker">
+					<span class="ppt">PowerPoint</span>
+					<span class="md">Markdown</span>
+					<span>
+						<span class="pdf">PDF</span>
+						<span style="-webkit-text-fill-color: #333;">&amp;</span
+						>
+						<span class="doc">Word</span>
+					</span>
 				</span>
-			</span>
-		</p>
-	</h2>
-	<div class="text-neutral-500 text-center text-lg mb-4">
-		Text to mind map with AI. And Turn markdown, txt, freemind file into
-		mindmap <br />
-		Enjoy effortless exporting in PowerPoint, PDF, or Word formats.<br />
-		Edit and share your mind maps with others with ease.
+			</p>
+		</h2>
+		<div class="text-neutral-500 text-center text-lg mb-4">
+			Text to mind map with AI. And Turn markdown, txt, freemind file into
+			mindmap <br />
+			Enjoy effortless exporting in PowerPoint, PDF, or Word formats.<br
+			/>
+			Edit and share your mind maps with others with ease.
+		</div>
+		<a
+			href="https://app.amymind.com/mindmap/guide"
+			id="glow-button"
+			class="radius-md py-2 px-4 mb-4"
+			>Get Started
+			<span>→</span></a
+		>
+		<div id="language-switch" class="mb-4 hidden">
+			<a href="./cn/index.html">访问中文版 →</a>
+		</div>
+		<div class="max-w-5xl mx-auto"><MindmapFeature /></div>
 	</div>
-	<a
-		href="https://app.amymind.com/mindmap/guide"
-		id="glow-button"
-		class="radius-md py-2 px-4 mb-4"
-		>Get Started
-		<span>→</span></a
-	>
-	<div id="language-switch" class="mb-4 hidden">
-		<a href="./cn/index.html">访问中文版 →</a>
-	</div>
-	<div class="max-w-5xl mx-auto"><MindmapFeature /></div>
-</div>
 
-<!-- Whiteboard -->
-<div class="mx-auto max-w-5xl" id="whiteboard">
-	<h2 class="product-sologan">Modern Whiteboard tool with clear design</h2>
-	<div class="product-description">
-		The old and complicated menu is not a standard feature of drawing
-		applications. AmyMind Whiteboard is such a productivity tool. It is
-		simple and elegant, and has super high efficiency.
-	</div>
-	<a
-		href="https://app.amymind.com/graph/new"
-		class="action-button black-button border-radius-12"
-		>Create Whiteboard for free →</a
+	<!-- Whiteboard -->
+	<div
+		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+		id="whiteboard"
 	>
-	<div class="feature-list-grid">
-		<div class="item border-radius-16 feature-simple">
-			<div class="icon">
+		<h2 class="text-5xl font-bold text-center mb-4">
+			Modern Whiteboard Tool<br />with Clear Design
+		</h2>
+		<div class="text-neutral-500 text-center text-lg mb-4">
+			The old and complicated menu is not a standard feature of drawing <br
+			/>
+			applications. AmyMind Whiteboard is such a productivity tool. It is <br
+			/>
+			simple and elegant, and has super high efficiency.
+		</div>
+		<a
+			href="https://app.amymind.com/graph/new"
+			class="rounded-full py-2 px-4 mb-8 bg-black text-white hover:shadow-xl transition-shadow"
+			>Create Whiteboard for free →</a
+		>
+		<div class="flex space-x-4 max-w-5xl">
+			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
 				<img
 					src="/src/assets/whiteboard-simple-icon.svg"
 					alt="simple"
 				/>
-			</div>
-			<div class="content">
-				<div class="title">Simple, but efficient</div>
-				<div class="description">
-					No outdated menus, screens full of small windows. Supports
-					toolbars, quick editing of graphic styles.
+				<div class="">
+					<div class="text-lg font-bold">Simple, but efficient</div>
+					<div class="text-neutral-500 leading-snug text-sm mb-4">
+						No outdated menus, screens full of small windows.
+						Supports toolbars, quick editing of graphic styles.
+					</div>
+					<img
+						class="picture"
+						src="/src/assets/whiteboard-simple.svg"
+						alt="simple"
+					/>
 				</div>
-				<img
-					class="picture"
-					src="/src/assets/whiteboard-simple.svg"
-					alt="simple"
-				/>
 			</div>
-		</div>
-		<div class="item border-radius-16 feature-productivity">
-			<div class="icon">
+			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
 				<img
 					src="/src/assets/whiteboard-productivity-icon.svg"
 					alt="productivity"
 				/>
-			</div>
-			<div class="content">
-				<div class="title">Productivity tools, no joking</div>
-				<div class="description">
-					It’s not just casual drawing, but it can also draw
-					flowcharts, UML diagrams and other work scene diagrams.
+				<div class="">
+					<div class="text-lg font-bold">
+						Productivity tools, no joking
+					</div>
+					<div class="text-neutral-500 leading-snug text-sm mb-4">
+						It’s not just casual drawing, but it can also draw
+						flowcharts, UML diagrams and other work scene diagrams.
+					</div>
+					<img
+						class="picture"
+						src="/src/assets/whiteboard-productivity.svg"
+						alt="productivity"
+						style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
+					/>
 				</div>
-				<img
-					class="picture"
-					src="/src/assets/whiteboard-productivity.svg"
-					alt="productivity"
-				/>
 			</div>
-		</div>
-		<div class="item border-radius-16 feature-fast">
-			<div class="icon">
+			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
 				<img src="/src/assets/whiteboard-fast-icon.svg" alt="fast" />
-			</div>
-			<div class="content">
-				<div class="title">Fast, edit online</div>
-				<div class="description">
-					No need to download and install software to the local
-					computer, support online editing of charts.
+				<div class="">
+					<div class="text-lg font-bold">Fast, edit online</div>
+					<div class="text-neutral-500 leading-snug text-sm mb-4">
+						No need to download and install software to the local
+						computer, support online editing of charts.
+					</div>
+					<img
+						class="picture"
+						src="/src/assets/whiteboard-fast.svg"
+						alt="fast"
+					/>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Design for All Platforms -->
+	<div
+		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+	>
+		<h2 class="text-5xl font-bold text-center mb-4">
+			Design for All Platforms
+		</h2>
+		<div class="text-neutral-500 text-center text-lg mb-4">
+			The web version is just the beginning,<br /> AmyMind will gradually cover
+			all popular platforms.
+		</div>
+		<div class="flex space-x-4">
+			<div class="flex flex-col items-center text-center px-4 py-2">
+				<img src="/src/assets/plateform-webpage.svg" alt="Webpage" />
+				<div class="text-sm mt-2 mb-4">Web</div>
+				<div
+					class="text-sm rounded-full bg-black text-white px-2 py-1.5"
+				>
+					Available now
+				</div>
+			</div>
+			<div class="flex flex-col items-center text-center px-4 py-2">
 				<img
-					class="picture"
-					src="/src/assets/whiteboard-fast.svg"
-					alt="fast"
+					class="opacity-60"
+					src="/src/assets/platform-windows.svg"
+					alt="Windows"
 				/>
+				<div class="text-sm mt-2 mb-4">Windows</div>
+				<div
+					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
+				>
+					2024 Mid
+				</div>
+			</div>
+			<div class="flex flex-col items-center text-center px-4 py-2">
+				<img
+					class="opacity-60"
+					src="/src/assets/plateform-mac.svg"
+					alt="MacOS"
+				/>
+				<div class="text-sm mt-2 mb-4">MacOS</div>
+				<div
+					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
+				>
+					2024 Mid
+				</div>
+			</div>
+			<div class="flex flex-col items-center text-center px-4 py-2">
+				<img
+					class="opacity-60"
+					src="/src/assets/platform-mobile.svg"
+					alt="Mobile"
+				/>
+				<div class="text-sm mt-2 mb-4">Mobile</div>
+				<div
+					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
+				>
+					In the further
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Design for All Platforms -->
-<div class="mx-auto max-w-5xl">
-	<h2 class="product-sologan">Design for All Platforms</h2>
-	<div class="product-description">
-		The web version is just the beginning, AmyMind will gradually cover all
-		popular platforms.
-	</div>
-	<div class="platform-list">
-		<div class="item available">
-			<img src="/src/assets/plateform-webpage.svg" alt="Webpage" />
-			<div class="title">Web</div>
-			<span class="date border-radius-16">Available now</span>
+	<!-- Pricing -->
+	<div
+		id="pricing"
+		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+	>
+		<h2 class="text-5xl font-bold text-center mb-4">Pricing</h2>
+		<div class="text-neutral-500 text-lg text-center mb-10">
+			Friends with limited budget are welcome to use it for free. <br />
+			If you need,you can consider upgrading the membership plan.
 		</div>
-		<div class="item">
-			<img src="/src/assets/platform-windows.svg" alt="Windows" />
-			<div class="title">Windows</div>
-			<span class="date border-radius-16">2024 Mid</span>
-		</div>
-		<div class="item">
-			<img src="/src/assets/plateform-mac.svg" alt="MacOS" />
-			<div class="title">MacOS</div>
-			<span class="date border-radius-16">2024 Mid</span>
-		</div>
-		<div class="item">
-			<img src="/src/assets/platform-mobile.svg" alt="Mobile" />
-			<div class="title">Mobile</div>
-			<span class="date border-radius-16">In the further</span>
-		</div>
-	</div>
-</div>
-
-<!-- Pricing -->
-<div class="mx-auto max-w-5xl" id="pricing">
-	<h2 class="product-sologan">Pricing</h2>
-	<div class="product-description">
-		Friends with limited budget are welcome to use it for free. If you need,
-		you can consider upgrading the membership plan.
-	</div>
-	<div class="rateplan">
-		<div class="item starter medium-shadow border-radius-16">
-			<div class="title">Free</div>
-			<div class="description">For occasional users</div>
-			<div class="price">
-				<div>$0<span>/Month</span></div>
-			</div>
-			<a class="subscribe-button">Current Plan</a>
-			<ul>
-				<li>Mindmap App</li>
-				<li>WhiteBoard App</li>
-				<li>Export png, pdf, doc...</li>
-				<li>10 AI-actions/day</li>
-				<li>20 Diagrams</li>
-				<li>50MB Storeage</li>
-			</ul>
-		</div>
-		<div class="item pro dark-shadow border-radius-16">
-			<div class="title">AmyMind Pro</div>
-			<div class="description">
-				For professional users who often draw and organize diagrams.
-			</div>
-			<div class="price">
-				<div>$4.99<span>/Month</span></div>
-			</div>
-			<a
-				class="subscribe-button enabled"
-				href="https://app.amymind.com/home/membership">Upgrade to Pro</a
+		<div class="flex space-x-4">
+			<div
+				class="rounded-xl bg-white shadow-md p-4 max-w-80 border-neutral-100 border"
 			>
-			<ul>
-				<li>Mindmap App</li>
-				<li>WhiteBoard App</li>
-				<li>Export png, pdf, doc...</li>
-				<li class="hilight">200 AI-actions/day</li>
-				<li class="hilight">Unlimited Diagrams</li>
-				<li class="hilight">500MB Storeage</li>
-				<li class="hilight">Folder Manager</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-<!-- Follow -->
-<div class="mx-auto max-w-5xl">
-	<h2 class="product-sologan">Follow AmyMind</h2>
-	<div class="product-description">
-		The growth of AmyMind could not be separated from the support and help
-		of friends in the community. You are always welcome to communicate with
-		us and make AmyMind better together!
-	</div>
-	<div class="info-list">
-		<div class="item border-radius-16">
-			<div class="icon">🧭</div>
-			<div class="content">
-				<div class="title">Road Map</div>
-				<div class="description">
-					AmyMind development plan, you can keep track of feature
-					development progress here
+				<div class="text-2xl font-bold">Free</div>
+				<div class="text-neutral-500 min-h-12 text-sm">
+					For occasional users
+				</div>
+				<div class="flex items-end mb-2">
+					<div class="text-3xl leading-none text-bold">$0</div>
+					<div class="text-sm text-neutral-500">/Month</div>
 				</div>
 				<a
-					class="link"
-					href="https://trello.com/b/AZNWVbcE/amymind-roadmap"
-					>Detail →</a
+					class="rounded-lg bg-neutral-200 font-bold block text-neutral-600 text-center py-1.5 mb-2"
+					>Current Plan</a
 				>
+				<ul class="leading-loose list-disc list-inside">
+					<li>Mindmap App</li>
+					<li>WhiteBoard App</li>
+					<li>Export png, pdf, doc...</li>
+					<li class="text-fuchsia-600">10 AI-actions/day</li>
+					<li class="text-fuchsia-600">20 Diagrams</li>
+					<li class="text-fuchsia-600">50MB Storeage</li>
+				</ul>
+			</div>
+			<div
+				class="rounded-xl bg-white shadow-xl p-4 max-w-80 border-neutral-100 border"
+			>
+				<div
+					class="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-200"
+					style=" -webkit-text-fill-color: transparent;text-fill-color: transparent;; background-clip: text;"
+				>
+					AmyMind Pro
+				</div>
+				<div class="text-neutral-500 min-h-12 text-sm">
+					For professional users who often draw and organize diagrams.
+				</div>
+				<div class="flex items-end mb-2">
+					<div class="text-3xl leading-none text-bold">$4.99</div>
+					<div class="text-sm text-neutral-500">/Month</div>
+				</div>
+				<a
+					class="rounded-lg bg-purple-500 font-bold block text-white text-center py-1.5 mb-2 hover:bg-fuchsia-500"
+					href="https://app.amymind.com/home/member">Upgrade to Pro</a
+				>
+				<ul class="leading-loose list-disc list-inside">
+					<li>Mindmap App</li>
+					<li>WhiteBoard App</li>
+					<li>Export png, pdf, doc...</li>
+					<li class="text-fuchsia-600">200 AI-actions/day</li>
+					<li class="text-fuchsia-600">Unlimited Diagrams</li>
+					<li class="text-fuchsia-600">500MB Storeage</li>
+					<li class="text-fuchsia-600">Folder Manager</li>
+				</ul>
 			</div>
 		</div>
-		<div class="item border-radius-16">
-			<div class="icon">📧</div>
-			<div class="content">
-				<div class="title">Contact Us</div>
-				<div class="description">
-					Send me an email if you have any questions.The email contact
-					is ahshengchen, sevice at gmail.com
+	</div>
+
+	<!-- Follow -->
+	<div
+		class="pt-12 flex flex-col mb-10 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+	>
+		<h2 class="text-5xl font-bold text-center mb-4">Follow AmyMind</h2>
+		<div class="text-neutral-500 text-lg text-center mb-10">
+			The growth of AmyMind could not be separated from the support and
+			help<br />
+			of friends in the community. You are always welcome to communicate with<br
+			/>
+			us and make AmyMind better together!
+		</div>
+		<div class="flex space-x-4 max-w-5xl">
+			<div class="p-4 rounded-xl bg-neutral-100 w-1/3 flex space-x-2">
+				<div class="text-xl">🧭</div>
+				<div class="">
+					<div class="font-bold text-md">Road Map</div>
+					<div class="text-neutral-500 text-sm">
+						AmyMind development plan, you can keep track of feature
+						development progress here
+					</div>
+					<a
+						class="text-fuchsia-600 text-sm mt-2 block"
+						href="https://trello.com/b/AZNWVbcE/amymind-roadmap"
+						>Detail →</a
+					>
+				</div>
+			</div>
+			<div class="p-4 rounded-xl bg-neutral-100 w-1/3 flex space-x-2">
+				<div class="text-xl">📧</div>
+				<div class="">
+					<div class="font-bold text-md">Contact Us</div>
+					<div class="text-neutral-500 text-sm">
+						Send me an email if you have any questions.The email
+						contact is ahshengchen, sevice at gmail.com
+					</div>
+				</div>
+			</div>
+			<div class="p-4 rounded-xl bg-neutral-100 w-1/3 flex space-x-2">
+				<div class="text-xl">💁‍♀️</div>
+				<div class="">
+					<div class="font-bold text-md">Official Resellers</div>
+					<div class="text-neutral-500 text-sm">
+						Partner of AmyMind
+					</div>
+					<a
+						class="text-fuchsia-600 text-sm mt-2 block"
+						href="/legal/official-resellers.html">Detail →</a
+					>
 				</div>
 			</div>
 		</div>
-		<div class="item border-radius-16">
-			<div class="icon">💁‍♀️</div>
-			<div class="content">
-				<div class="title">Official Resellers</div>
-				<div class="description">Sales partner of AmyMind</div>
-				<a class="link" href="./legal/official-resellers.html"
-					>Detail →</a
-				>
-			</div>
-		</div>
 	</div>
-</div>
 
-<!-- 底部 -->
-<div class="mx-auto max-w-5xl">
-	<div class="main">AmyMind</div>
-	<div class="sub">
-		<a class="link" href="./legal/privacy-policy.html">Privacy Policy</a>
-		<a class="link" href="./legal/terms-of-service.html">Terms of Service</a
-		>
-		<a class="link" href="./legal/refund-policy.html">Refund Policy</a>
-		<a class="link">© AmyMind 2023</a>
-	</div>
-</div>
-
+	<Footer />
+</Layout>
 <style>
 	#product-sologan {
 		font-size: 3.25rem;
@@ -286,26 +348,6 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 		letter-spacing: -0.02em;
 		text-align: center;
 	}
-	#product-sologan .ai-sign {
-		font-weight: normal;
-		display: inline-block;
-		width: 120px;
-		height: 32px;
-		line-height: 1;
-		text-align: right;
-		position: absolute;
-		letter-spacing: normal;
-		top: -12px;
-		left: 36%;
-		font-size: 16px;
-		font-family: "Comic Sans MS", cursive;
-		background: url(/src/assets/sketch-arrow.svg) no-repeat left top;
-	}
-	#product-sologan .ai-sign.zh {
-		top: -16px;
-		left: 48%;
-	}
-
 	@keyframes slide {
 		0%,
 		20% {

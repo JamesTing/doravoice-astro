@@ -1,14 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import amymindLogo from "../assets/logo.svg";
-
-// interface Props {
-// 	title: string;
-// 	body: string;
-// 	href: string;
-// }
-
-// const { href, title, body } = Astro.props;
 ---
 
 <div
@@ -23,18 +13,28 @@ import amymindLogo from "../assets/logo.svg";
 			/>
 		</a>
 		<div class="flex-1 items-center space-x-4">
-			<a class="rounded-md transition-all px-2 py-1 hover:bg-neutral-200 hover:text-black" href="#mindmap">思维导图</a>
-			<a class="rounded-md transition-all px-2 py-1 hover:bg-neutral-200 hover:text-black" href="#whiteboard">白板</a>
-			<a class="rounded-md transition-all px-2 py-1 hover:bg-neutral-200 hover:text-black" href="#pricing">价格</a>
+			<a
+				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
+				href="/index.html#mindmap">Mindmap</a
+			>
+			<a
+				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
+				href="/index.html#whiteboard">Whiteboard</a
+			>
+			<a
+				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
+				href="/index.html#pricing">Pricing</a
+			>
 		</div>
 	</div>
 	<div class="mr-2 space-x-2 text-sm">
-		<a class="rounded-md" href="https://app.amymind.com/account/login"
-			>登录</a
+		<a
+			class="rounded-lg py-1.5 px-2 hover:bg-neutral-200"
+			href="https://app.amymind.com/account/login">Log In</a
 		>
 		<a
-			class="bg-black rounded-md py-1 px-2 text-white hover:shadow-lg"
-			href="https://app.amymind.com/account/signup">注册</a
+			class="bg-black rounded-lg py-1.5 px-2 text-white hover:shadow-lg"
+			href="https://app.amymind.com/account/signup">Sign Up</a
 		>
 	</div>
 </div>

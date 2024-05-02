@@ -1,14 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import amymindLogo from "./src/assets/logo.svg";
-
-// interface Props {
-// 	title: string;
-// 	body: string;
-// 	href: string;
-// }
-
-// const { href, title, body } = Astro.props;
 ---
 
 <div id="feature-list" class="flex space-x-4">
@@ -23,7 +13,7 @@ import amymindLogo from "./src/assets/logo.svg";
 				alt="Inspiration at Your Fingertips"
 			/>
 			<div>
-				<div class="text-lg font-bold leading-none mb-2">
+				<div class="font-bold leading-none mb-2">
 					With AI, Craft Mind Maps from an Idea!
 				</div>
 				<div class="text-sm text-neutral-500">
@@ -43,7 +33,7 @@ import amymindLogo from "./src/assets/logo.svg";
 				alt="Import with Ease"
 			/>
 			<div>
-				<div class="text-lg font-bold leading-none mb-2">
+				<div class="font-bold leading-none mb-2">
 					Documents to Mind Maps, Instantly!
 				</div>
 				<div class="text-sm text-neutral-500">
@@ -63,7 +53,7 @@ import amymindLogo from "./src/assets/logo.svg";
 				alt="Workflow Integration"
 			/>
 			<div>
-				<div class="text-lg font-bold leading-none mb-2">
+				<div class="font-bold leading-none mb-2">
 					Export Easier, Power with AI!
 				</div>
 				<div class="text-sm text-neutral-500">
@@ -78,7 +68,7 @@ import amymindLogo from "./src/assets/logo.svg";
 		<!-- AI feature card -->
 		<div
 			id="feature-ai"
-			class="block relative h-96 shadow-xl overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-pink-400/50 to-purple-600/50"
+			class="block relative h-96 shadow-xl shadow-fuchsia-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-pink-400/50 to-purple-600/50"
 		>
 			<img
 				class="rounded-xl w-11/12 opacity-80 absolute -left-1 -top-4"
@@ -88,7 +78,8 @@ import amymindLogo from "./src/assets/logo.svg";
 				alt="Screenshot - AI chat generate mindmap"
 			/>
 			<img
-				class="opacity-20 absolute left-0 top-16 scale-90"
+				class="opacity-20 absolute left-4 top-24"
+				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
 				src="/src/assets/mindmap-shape.svg"
 				alt="Mindmap diagram"
 			/>
@@ -96,7 +87,7 @@ import amymindLogo from "./src/assets/logo.svg";
 		<!-- import file card -->
 		<div
 			id="feature-import"
-			class="hidden relative h-96 shadow-xl overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-green-500/50 to-green-500/10"
+			class="hidden relative h-96 shadow-xl shadow-green-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-green-500/50 to-green-500/10"
 		>
 			<div
 				class="absolute left-1/2 top-6 -translate-x-1/2 flex space-x-4"
@@ -129,7 +120,8 @@ import amymindLogo from "./src/assets/logo.svg";
 				alt="Screenshot - Supported file formats for import"
 			/>
 			<img
-				class="opacity-20 absolute left-16 top-48 scale-90"
+				class="opacity-20 absolute left-20 top-48 scale-90"
+				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
 				src="/src/assets/mindmap-shape.svg"
 				alt="Mindmap diagram"
 			/>
@@ -137,7 +129,7 @@ import amymindLogo from "./src/assets/logo.svg";
 		<!-- export file card -->
 		<div
 			id="feature-export"
-			class="hidden relative h-96 shadow-xl overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-orange-400/50 to-yellow-400/50"
+			class="hidden relative h-96 shadow-xl shadow-orange-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-orange-400/50 to-yellow-400/50"
 		>
 			<img
 				class="rounded-xl w-4/5 opacity-80 absolute -left-16 top-8"
@@ -147,6 +139,7 @@ import amymindLogo from "./src/assets/logo.svg";
 			/>
 			<img
 				class="opacity-20 absolute left-4 top-40 scale-90"
+				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
 				src="/src/assets/mindmap-shape.svg"
 				alt="Mindmap diagram"
 			/>
