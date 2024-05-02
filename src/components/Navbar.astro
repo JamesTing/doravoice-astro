@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import Logo from "/src/assets/logo.svg";
 ---
 
 <div
@@ -6,8 +8,8 @@
 >
 	<div class="flex-grow flex items-center space-x-8">
 		<a href="/">
-			<img
-				src="/src/assets/logo.svg"
+			<Image
+				src={Logo}
 				class="relative top-0.5"
 				alt="AmyMind的logo"
 			/>

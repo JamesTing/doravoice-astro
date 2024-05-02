@@ -1,4 +1,20 @@
 ---
+import { Image } from "astro:assets";
+import MindmapAI from "/src/assets/mindmap-ai.svg";
+import MindmapImport from "/src/assets/mindmap-import.svg";
+import MindmapExport from "/src/assets/mindmap-export.svg";
+import ScreenshotChat from "/src/assets/screenshot-chat.png";
+import FileMarkdown from "/src/assets/file-markdown.svg";
+import MindmapShape from "/src/assets/mindmap-shape.svg";
+import FileFreemind from "/src/assets/file-freemind.svg";
+import FileWebpage from "/src/assets/file-webpage.svg";
+import FileImage from "/src/assets/file-image.svg";
+import FileText from "/src/assets/file-text.svg";
+import ScreenshotImport from "/src/assets/screenshot-import.png";
+import ScreenshotExport from "/src/assets/screenshot-export.png";
+import FilePPT from "/src/assets/file-ppt.svg";
+import FileWord from "/src/assets/file-word.svg";
+import FilePDF from "/src/assets/file-pdf.svg";
 ---
 
 <div id="feature-list" class="flex space-x-4">
@@ -7,9 +23,9 @@
 			class="flex bg-neutral-100 rounded-xl py-3 px-2 items-start space-x-2 actived"
 			data-target="#feature-ai"
 		>
-			<img
+			<Image
 				class="w-14 flex-shrink-0"
-				src="/src/assets/mindmap-ai.svg"
+				src={MindmapAI}
 				alt="Inspiration at Your Fingertips"
 			/>
 			<div>
@@ -27,9 +43,9 @@
 			class="flex rounded-xl py-3 px-2 items-start space-x-2"
 			data-target="#feature-import"
 		>
-			<img
+			<Image
 				class="w-14 flex-shrink-0"
-				src="/src/assets/mindmap-import.svg"
+				src={MindmapImport}
 				alt="Import with Ease"
 			/>
 			<div>
@@ -47,10 +63,11 @@
 			class="flex rounded-xl py-3 px-2 items-start space-x-2"
 			data-target="#feature-export"
 		>
-			<img
+			<Image
 				class="w-14 flex-shrink-0"
-				src="/src/assets/mindmap-export.svg"
-				alt="Workflow Integration"
+				src={MindmapExport}
+				alt="Workflow
+				Integration"
 			/>
 			<div>
 				<div class="font-bold leading-none mb-2">
@@ -70,18 +87,24 @@
 			id="feature-ai"
 			class="block relative h-96 shadow-xl shadow-fuchsia-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-pink-400/50 to-purple-600/50"
 		>
-			<img
+			<Image
 				class="rounded-xl w-11/12 opacity-80 absolute -left-1 -top-4"
 				style="mask-image:linear-gradient(270deg, black 0%, transparent 90%),
 				linear-gradient(0deg, black 0%, transparent 90%)"
-				src="/src/assets/screenshot-chat.png"
-				alt="Screenshot - AI chat generate mindmap"
+				src={ScreenshotChat}
+				alt="Screenshot
+				-
+				AI
+				chat
+				generate
+				mindmap"
 			/>
-			<img
+			<Image
 				class="opacity-20 absolute left-4 top-24"
 				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
-				src="/src/assets/mindmap-shape.svg"
-				alt="Mindmap diagram"
+				src={MindmapShape}
+				alt="Mindmap
+				diagram"
 			/>
 		</div>
 		<!-- import file card -->
@@ -92,38 +115,45 @@
 			<div
 				class="absolute left-1/2 top-6 -translate-x-1/2 flex space-x-4"
 			>
-				<img
+				<Image
 					class="rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-markdown.svg"
+					src={FileMarkdown}
 					alt="markdown"
 				/>
-				<img
+				<Image
 					class="rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-freemind.svg"
+					src={FileFreemind}
 					alt="freemind"
 				/>
-				<img
+				<Image
 					class="rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-webpage.svg"
+					src={FileWebpage}
 					alt="webpage"
 				/>
-				<img
+				<Image
 					class="rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-text.svg"
+					src={FileText}
 					alt="text"
 				/>
 			</div>
-			<img
+			<Image
 				class="rounded-xl w-4/5 opacity-80 absolute left-1/2 top-28 -translate-x-1/2"
 				style="mask-image:linear-gradient(180deg, black 0%, transparent 90%)"
-				src="/src/assets/screenshot-import.png"
-				alt="Screenshot - Supported file formats for import"
+				src={ScreenshotImport}
+				alt="Screenshot
+				-
+				Supported
+				file
+				formats
+				for
+				import"
 			/>
-			<img
+			<Image
 				class="opacity-20 absolute left-20 top-48 scale-90"
 				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
-				src="/src/assets/mindmap-shape.svg"
-				alt="Mindmap diagram"
+				src={MindmapShape}
+				alt="Mindmap
+				diagram"
 			/>
 		</div>
 		<!-- export file card -->
@@ -131,49 +161,57 @@
 			id="feature-export"
 			class="hidden relative h-96 shadow-xl shadow-orange-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-orange-400/50 to-yellow-400/50"
 		>
-			<img
+			<Image
 				class="rounded-xl w-4/5 opacity-80 absolute -left-16 top-8"
 				style="mask-image:linear-gradient(180deg, black 0%, transparent 90%)"
-				src="/src/assets/screenshot-export.png"
-				alt="Screenshot - Supported file formats for export "
+				src={ScreenshotExport}
+				alt="Screenshot
+				-
+				Supported
+				file
+				formats
+				for
+				export
+				"
 			/>
-			<img
+			<Image
 				class="opacity-20 absolute left-4 top-40 scale-90"
 				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
-				src="/src/assets/mindmap-shape.svg"
-				alt="Mindmap diagram"
+				src={MindmapShape}
+				alt="Mindmap
+				diagram"
 			/>
 			<div
 				class="absolute right-2 top-1/2 -translate-y-1/2 flex w-1/4 flex-wrap"
 			>
-				<img
+				<Image
 					class="mb-4 mr-4 rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-ppt.svg"
+					src={FilePPT}
 					alt="PowerPoint"
 				/>
-				<img
+				<Image
 					class="mb-4 mr-4 rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-word.svg"
+					src={FileWord}
 					alt="Word"
 				/>
-				<img
+				<Image
 					class="mb-4 mr-4 rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-markdown.svg"
+					src={FileMarkdown}
 					alt="Markdown"
 				/>
-				<img
+				<Image
 					class="mb-4 mr-4 rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-pdf.svg"
+					src={FilePDF}
 					alt="PDF"
 				/>
-				<img
+				<Image
 					class="mb-4 mr-4 rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-text.svg"
+					src={FileText}
 					alt="Text"
 				/>
-				<img
+				<Image
 					class="mb-4 mr-4 rounded-lg shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
-					src="/src/assets/file-image.svg"
+					src={FileImage}
 					alt="Image"
 				/>
 			</div>
