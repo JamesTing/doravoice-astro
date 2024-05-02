@@ -1,4 +1,18 @@
 ---
+import { Image } from "astro:assets";
+import LightEffect from "/src/assets/light-effect.svg";
+import WhiteboardSimpleIcon from "/src/assets/whiteboard-simple-icon.svg";
+import AISign from "/src/assets/ai-sign.png";
+import WhiteboardSimple from "/src/assets/whiteboard-simple.svg";
+import WhiteboardProductivityIcon from "/src/assets/whiteboard-productivity-icon.svg";
+import WhiteboardProductivity from "/src/assets/whiteboard-productivity.svg";
+import WhiteboardFastIcon from "/src/assets/whiteboard-fast-icon.svg";
+import WhiteboardFast from "/src/assets/whiteboard-fast.svg";
+import PlatformWindows from "/src/assets/platform-windows.svg";
+import PlatformMac from "/src/assets/platform-mac.svg";
+import PlatformMobile from "/src/assets/platform-mobile.svg";
+import PlatformWebpage from "/src/assets/platform-webpage.svg";
+
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
@@ -21,18 +35,18 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 		id="mindmap"
 		class="pt-28 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
 	>
-		<img
+		<Image
 			class="absolute -left-10 top-0 opacity-90 pointer-events-none"
-			src="/src/assets/light-effect.svg"
+			src={LightEffect}
 			alt="light effect"
 		/>
 		<h2 id="product-sologan">
 			<p>
 				One idea to
 				<span class="relative"
-					>Mindmap<img
+					>Mindmap<Image
 						class="absolute left-2/3 -top-5 w-2/3"
-						src="/src/assets/ai-sign.png"
+						src={AISign}
 						alt="AI Powered"
 					/></span
 				>
@@ -93,28 +107,18 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 		>
 		<div class="flex space-x-4 max-w-5xl">
 			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
-				<img
-					src="/src/assets/whiteboard-simple-icon.svg"
-					alt="simple"
-				/>
+				<Image src={WhiteboardSimpleIcon} alt="simple" />
 				<div class="">
 					<div class="text-lg font-bold">Simple, but efficient</div>
 					<div class="text-neutral-500 leading-snug text-sm mb-4">
 						No outdated menus, screens full of small windows.
 						Supports toolbars, quick editing of graphic styles.
 					</div>
-					<img
-						class="picture"
-						src="/src/assets/whiteboard-simple.svg"
-						alt="simple"
-					/>
+					<Image src={WhiteboardSimple} alt="simple" />
 				</div>
 			</div>
 			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
-				<img
-					src="/src/assets/whiteboard-productivity-icon.svg"
-					alt="productivity"
-				/>
+				<Image src={WhiteboardProductivityIcon} alt="productivity" />
 				<div class="">
 					<div class="text-lg font-bold">
 						Productivity tools, no joking
@@ -123,27 +127,22 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 						It’s not just casual drawing, but it can also draw
 						flowcharts, UML diagrams and other work scene diagrams.
 					</div>
-					<img
-						class="picture"
-						src="/src/assets/whiteboard-productivity.svg"
+					<Image
+						src={WhiteboardProductivity}
 						alt="productivity"
 						style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
 					/>
 				</div>
 			</div>
 			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
-				<img src="/src/assets/whiteboard-fast-icon.svg" alt="fast" />
+				<Image src={WhiteboardFastIcon} alt="fast" />
 				<div class="">
 					<div class="text-lg font-bold">Fast, edit online</div>
 					<div class="text-neutral-500 leading-snug text-sm mb-4">
 						No need to download and install software to the local
 						computer, support online editing of charts.
 					</div>
-					<img
-						class="picture"
-						src="/src/assets/whiteboard-fast.svg"
-						alt="fast"
-					/>
+					<Image src={WhiteboardFast} alt="fast" />
 				</div>
 			</div>
 		</div>
@@ -162,7 +161,7 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 		</div>
 		<div class="flex space-x-4">
 			<div class="flex flex-col items-center text-center px-4 py-2">
-				<img src="/src/assets/plateform-webpage.svg" alt="Webpage" />
+				<Image src={PlatformWebpage} alt="Webpage" />
 				<div class="text-sm mt-2 mb-4">Web</div>
 				<div
 					class="text-sm rounded-full bg-black text-white px-2 py-1.5"
@@ -171,11 +170,7 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 				</div>
 			</div>
 			<div class="flex flex-col items-center text-center px-4 py-2">
-				<img
-					class="opacity-60"
-					src="/src/assets/platform-windows.svg"
-					alt="Windows"
-				/>
+				<Image class="opacity-60" src={PlatformWindows} alt="Windows" />
 				<div class="text-sm mt-2 mb-4">Windows</div>
 				<div
 					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
@@ -184,11 +179,7 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 				</div>
 			</div>
 			<div class="flex flex-col items-center text-center px-4 py-2">
-				<img
-					class="opacity-60"
-					src="/src/assets/plateform-mac.svg"
-					alt="MacOS"
-				/>
+				<Image class="opacity-60" src={PlatformMac} alt="MacOS" />
 				<div class="text-sm mt-2 mb-4">MacOS</div>
 				<div
 					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
@@ -197,11 +188,7 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 				</div>
 			</div>
 			<div class="flex flex-col items-center text-center px-4 py-2">
-				<img
-					class="opacity-60"
-					src="/src/assets/platform-mobile.svg"
-					alt="Mobile"
-				/>
+				<Image class="opacity-60" src={PlatformMobile} alt="Mobile" />
 				<div class="text-sm mt-2 mb-4">Mobile</div>
 				<div
 					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
