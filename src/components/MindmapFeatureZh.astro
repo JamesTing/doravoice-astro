@@ -1,0 +1,197 @@
+---
+import { Image } from "astro:assets";
+import MindmapAI from "/src/assets/mindmap-ai.svg";
+import MindmapImport from "/src/assets/mindmap-import.svg";
+import MindmapExport from "/src/assets/mindmap-export.svg";
+import ScreenshotChat from "/src/assets/screenshot-chat.png";
+import FileMarkdown from "/src/assets/file-markdown.svg";
+import MindmapShape from "/src/assets/mindmap-shape.svg";
+import FileFreemind from "/src/assets/file-freemind.svg";
+import FileWebpage from "/src/assets/file-webpage.svg";
+import FileImage from "/src/assets/file-image.svg";
+import FileText from "/src/assets/file-text.svg";
+import ScreenshotImport from "/src/assets/screenshot-import.png";
+import ScreenshotExport from "/src/assets/screenshot-export.png";
+import FilePPT from "/src/assets/file-ppt.svg";
+import FileWord from "/src/assets/file-word.svg";
+import FilePDF from "/src/assets/file-pdf.svg";
+---
+
+<div id="feature-list" class="flex space-x-4">
+	<div id="tab" class="w-2/5 flex flex-col space-y-2">
+		<div
+			class="flex bg-neutral-100 rounded-xl py-3 px-2 items-start space-x-2 actived"
+			data-target="#feature-ai"
+		>
+			<Image
+				class="w-14 flex-shrink-0"
+				src={MindmapAI}
+				alt="Inspiration at Your Fingertips"
+			/>
+			<div>
+				<div class="font-bold leading-none mb-2">
+					AI助力，一句话生成思维导图
+				</div>
+				<div class="text-sm text-neutral-500">
+					释放你的创造力，澄清你的思绪。我们的产品利用人工智能的力量，将你的简单想法转化为全面的思维导图。
+				</div>
+			</div>
+		</div>
+		<div
+			class="flex rounded-xl py-3 px-2 items-start space-x-2"
+			data-target="#feature-import"
+		>
+			<Image
+				class="w-14 flex-shrink-0"
+				src={MindmapImport}
+				alt="Import with Ease"
+			/>
+			<div>
+				<div class="font-bold leading-none mb-2">
+					常见格式，瞬间转换为思维导图
+				</div>
+				<div class="text-sm text-neutral-500">
+					将markdown、txt、freemind转换为清晰、有组织的思维导图。用我们的创新功能，告别混乱，迎接清晰。简化，可视化，创造！（网页生成思维导图即将上线）
+				</div>
+			</div>
+		</div>
+		<div
+			class="flex rounded-xl py-3 px-2 items-start space-x-2"
+			data-target="#feature-export"
+		>
+			<Image
+				class="w-14 flex-shrink-0"
+				src={MindmapExport}
+				alt="Workflow Integration"
+			/>
+			<div>
+				<div class="font-bold leading-none mb-2">
+					开放自由，文件轻松导出
+				</div>
+				<div class="text-sm text-neutral-500">
+					支持导出为PowerPoint、PDF、Word文件，以及png、mm等格式。方便二次编辑，工作流无缝切换。
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="content" class="w-3/5">
+		<!-- AI feature card -->
+		<div
+			id="feature-ai"
+			class="block relative h-96 shadow-xl shadow-fuchsia-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-pink-400/50 to-purple-600/50"
+		>
+			<Image
+				class="rounded-xl w-11/12 opacity-80 absolute -left-1 -top-4"
+				style="mask-image:linear-gradient(270deg, black 0%, transparent 90%),linear-gradient(0deg, black 0%, transparent 90%)"
+				src={ScreenshotChat}
+				alt="Screenshot - AI chat generate mindmap"
+			/>
+			<Image
+				class="opacity-20 absolute left-4 top-24"
+				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
+				src={MindmapShape}
+				alt="Mindmap diagram"
+			/>
+		</div>
+		<!-- import file card -->
+		<div
+			id="feature-import"
+			class="hidden relative h-96 shadow-xl shadow-green-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-green-500/50 to-green-500/10"
+		>
+			<div
+				class="absolute left-1/2 top-6 -translate-x-1/2 flex space-x-4"
+			>
+				<Image
+					class="w-12 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileMarkdown}
+					alt="markdown"
+				/>
+				<Image
+					class="w-12 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileFreemind}
+					alt="freemind"
+				/>
+				<Image
+					class="w-12 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileWebpage}
+					alt="webpage"
+				/>
+				<Image
+					class="w-12 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileText}
+					alt="text"
+				/>
+			</div>
+			<Image
+				class="rounded-xl w-4/5 opacity-80 absolute left-1/2 top-28 -translate-x-1/2"
+				style="mask-image:linear-gradient(180deg, black 0%, transparent 90%)"
+				src={ScreenshotImport}
+				alt="Screenshot - Supported file formats for import"
+			/>
+			<Image
+				class="opacity-20 absolute left-20 top-48 scale-90"
+				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
+				src={MindmapShape}
+				alt="Mindmap diagram"
+			/>
+		</div>
+		<!-- export file card -->
+		<div
+			id="feature-export"
+			class="hidden relative h-96 shadow-xl shadow-orange-800/15 overflow-hidden bg-neutral-100 rounded-xl feature-import medium-shadow bg-gradient-to-br from-orange-400/50 to-yellow-400/50"
+		>
+			<Image
+				class="rounded-xl w-4/5 opacity-80 absolute -left-16 top-8"
+				style="mask-image:linear-gradient(180deg, black 0%, transparent 90%)"
+				src={ScreenshotExport}
+				alt="Screenshot - Supported file formats for export"
+			/>
+			<Image
+				class="opacity-20 absolute left-4 top-40 scale-90"
+				style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
+				src={MindmapShape}
+				alt="Mindmap diagram"
+			/>
+			<div
+				class="absolute right-2 top-1/2 -translate-y-1/2 flex w-1/4 flex-wrap"
+			>
+				<Image
+					class="w-12 mb-4 mr-4 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FilePPT}
+					alt="PowerPoint"
+				/>
+				<Image
+					class="w-12 mb-4 mr-4 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileWord}
+					alt="Word"
+				/>
+				<Image
+					class="w-12 mb-4 mr-4 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileMarkdown}
+					alt="Markdown"
+				/>
+				<Image
+					class="w-12 mb-4 mr-4 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FilePDF}
+					alt="PDF"
+				/>
+				<Image
+					class="w-12 mb-4 mr-4 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileText}
+					alt="Text"
+				/>
+				<Image
+					class="w-12 mb-4 mr-4 rounded shadow-lg py-4 px-3 bg-gradient-to-b from-white/90 to-white/60"
+					src={FileImage}
+					alt="Image"
+				/>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	#tab .actived: {
+		display: block;
+	}
+</style>
