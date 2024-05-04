@@ -1,28 +1,28 @@
 ---
 layout: '/src/layouts/LayoutPage.astro'
-title: 'Terms of Service'
+title: '服务条款'
 ---
 
-The online tool network service website operated by AmyMind (referred to as "Website"), the following terms and conditions ("Terms of Service", "Terms") apply to all users. Accessing or using any part of the website indicates acceptance and compliance with these Terms of Service. These Terms of Service may be changed and updated by us at any time, and we reserve this right.
+AmyMind运营的在线工具网络服务网站（简称“Website”），以下条款和条件（“服务条款”、“条款”）适用于所有用户。访问或使用网站的任何部分，即表示接受并遵守本服务条款。本服务条款可能会被我们随时更改和更新，并保留这个权利。	
 
-We provide you with information, tools, and services for purchasing goods under the conditions that you meet the legal age and agree to seek our services. Please do not use our products for any illegal or unauthorized use, including the spread of destructive codes, otherwise, it will lead to service termination.
+在您满足法定年龄并同意寻求我们服务的条件下，我们向您提供信息、工具以及购买商品的服务。请不将我们的产品用于任何非法或未授权的用途，包括破坏性的代码传播，否则将导致服务终止。	
 
-In using our services, other than providing credit card information, your other information may be transmitted, and credit card information is always encrypted. Unless specifically permitted, no part of this service may be reproduced, copied, copied, sold or utilized.
+在使用我们的服务时，除了提供信用卡信息以外，您的其他信息可能会被传输，信用卡信息始终保持加密。若无特定许可，不得再现、复制、拷贝、销售或利用本服务的任何部分。	
 
-We may change the prices of goods and modify or terminate services at any time without further notice. We are not responsible for any changes, suspensions or terminations of goods prices or services to you or any third party.
+我们可能会更改商品价格并随时修改或终止服务，恕不另行通知。对于商品价格变动或服务更改、暂停或终止，我们对您或任何第三方概不负责。	
 
-We reserve the right to limit the sale of goods, and may limit the quantity of any product or service we provide as the situation requires. All product descriptions or product price changes are determined by us without further notice.
+我们保留限制商品销售的权利，并可能会根据情况限制我们提供的任何产品或服务的数量，所有产品描述或产品价格如有更改，由我们自行决定，恕不另行通知。	
 
-For any orders you place with us, we reserve the right to refuse. You agree to provide the latest, complete and accurate purchase and account information for all purchases made in our store.
+对于您向我们下的任何订单，我们保留拒绝的权利。您同意对在我们商店进行的所有购买提供最新、完整和准确的购买和账户信息。	
 
-This service may contain information, products, and services from third parties. When you visit third-party links, you may be transferred to sites unrelated to us. We are not responsible for any responsibilities of third parties. Complaints, claims, concerns, or issues related to third-party products should be submitted directly to the third party.
+本服务可能含有些来自第三方的信息、产品和服务，当您访问第三方链接时，可能会转到与我们无关的网站，我们不对第三方的任何责任负责。如有与第三方产品相关的投诉、索赔、疑虑或问题，应直接提交给第三方。	
 
-You agree to indemnify, defend and guarantee AmyMind for any claims or demands arising from your use of this service in violation of the terms of service, including reasonable attorney's fees.
+您同意赔偿、捍卫和保证AmyMind，对于您对本服务的使用违反服务条款而引起的任何索赔或要求负责，包括合理的律师费用。	
 
-This service should be provided "as is" and "available" without any express or implied warranties.
+使用此服务应按照“原样”和“可用”提供，没有任何明示或暗示的保证。	
 
-There may be printing errors, errors, or omissions in this website or service related to product descriptions, pricing, promotions, offers, product shipping charges, shipping times, and validity. We have the right to correct and change the updated information, or cancel orders.
+本网站或服务中可能有与产品描述、定价、促销、优惠、产品运输费用、运输时间和有效性有关的印刷错误、误差或遗漏，我们有权校正并更改更新信息，或取消订单。	
 
-We reserve the right to prohibit users from using the website or its content under certain circumstances, including but not limited to submitting false or misleading information, or making illegal, obscene, damaging comments, etc.
+我们保留禁止用户在以下情况下使用网站或其内容的权利，包括但不限于提交虚假或误导性信息，或发表非法、淫秽、破坏性评论等。	
 
-The terms of service of our website may be changed and updated at any time. To review the latest version of the Terms of Service, users need to visit our website frequently. If there are any questions about the terms of service, you can directly ask us through ahshengchen@gmail.com.
+我们网站的服务条款可能会随时更改和更新。以检阅服务条款的最新版本，用户需要经常访问我们的网站。如果对服务条款有任何疑问，可以直接通过ahshengchen@gmail.com向我们提问。

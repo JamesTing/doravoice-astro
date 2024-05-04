@@ -1,17 +1,17 @@
 ---
 layout: '/src/layouts/LayoutPage.astro'
-title: 'Refund Policy'
+title: '退款协议'
 ---
 
-Our return policy allows for refunds or exchanges within 30 days of purchase. Unfortunately, if you exceed 30 days from the date of purchase, we will not be able to provide you with a refund or exchange.
+我们的退货政策许可在购买之日起的30天内办理退款或换货。遗憾的是，如果您从购买日超过30天，我们将无法为您提供退款或换货服务。	
 
-1. Unsubscription Service
-We grant you the right to unsubscribe at any time, whether through our website or by directly contacting our customer service team to cancel your subscription. Once you decide to unsubscribe, it means that your subscription service will remain effective until the end of the original subscription period, and you can continue to enjoy our paid features.
+1. 退订服务	
+我们给予您随时退订服务的权限，无论是通过我们的网站还是直接联系我们的顾客服务团队关闭您的订阅。一旦您决定取消订阅，这意味着您的订阅服务将持续有效直至原定订阅期限结束，您可以继续享受我们的付费功能。	
 
-2. Refund Process
-Under certain conditions, you will be eligible to apply for a refund from us within 30 days of purchasing the subscription: if our products and services do not meet your expectations, or for any other reason. Once your refund request is approved, we will return the funds to your account according to your method of payment.
+2. 退款流程	
+满足特定条件的情况下，您将有资格在购买订阅的30天内向我们提出退款申请：如果我们的产品和服务不符合您的期望，或者由于其他任何种类的原因。一旦您的退款请求被批准，我们将根据您的付款方式，将款项返还至您的账户。	
 
-3. Termination of Subscription Service
-Once your refund request is approved, your subscription service will be immediately terminated, and you will no longer be able to enjoy our paid services.
+3. 终止订阅服务	
+在您的退款申请得到批准之后，您的订阅服务将立即终止，随之您将无法享用我们的付费服务。	
 
-If you have any questions about refunds or cancellation of subscriptions, please send an email to ahshengchen@gmail.com.
+如对退款或取消订阅有任何疑问，请发送电子邮件至 ahshengchen@gmail.com.  
