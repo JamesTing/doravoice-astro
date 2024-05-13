@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/LayoutDocs.astro";
+import DocsSidebar from "../../components/DocsSidebar.astro";
+
+const allPosts = await getCollection("docs");
+---
+
+<p>This is where I will post about my journey learning Astro.</p>
+<ul>
+    <DocsSidebar />
+    {
+        allPosts.map((post) => (
+            <div>
+                <a href={`/user-guide/${post.slug}`}>{post.data.title}</a>
+            </div>
+        ))
+    }
+</ul>

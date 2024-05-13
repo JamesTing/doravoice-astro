@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import Logo from "/src/assets/logo.svg";
+---
+
+<div
+	class="shadow-sm h-12 fixed z-10 w-full shadow-black/5 border-black/10 border-b backdrop-blur p-2 bg-white/50 flex items-center text-neutral-700"
+>
+	<div class="flex-grow flex items-center space-x-8">
+		<a href="/">
+			<Image src={Logo} class="relative top-0.5" alt="AmyMind的logo" />
+		</a>
+		<div class="flex-1 items-center space-x-4">
+			<a
+				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
+				href="/user-guide">User Guide</a
+			>
+		</div>
+	</div>
+	<div class="mr-2 space-x-2 text-sm">
+		<a class="rounded-lg py-1.5 px-2 hover:bg-neutral-200" href="#">中文</a>
+	</div>
+</div>
+<style></style>
