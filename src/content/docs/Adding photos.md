@@ -4,7 +4,7 @@ pubDate: 2024-05-09
 ---
 # Adding photos
 
-Images are also a great way of layering even more personality into your MindNode and giving more context and information at first glance. To add a photo:
+Images are also a great way of layering even more personality into your AmyMind and giving more context and information at first glance. To add a photo:
 
 Go ahead and select a node.
 Open the image picker via the toolbar (Mac) or choose Photos under the Images tab from the action menu (circle with three dots) (iOS).
@@ -29,4 +29,4 @@ Editing an image with the Markup extension
 Editing an image with the Markup extension
 Side note:
 
-Images are stored directly in the MindNode file. MindNode accepts all formats compatible with your operating system and imports them as PNGs.
+Images are stored directly in the AmyMind file. AmyMind accepts all formats compatible with your operating system and imports them as PNGs.

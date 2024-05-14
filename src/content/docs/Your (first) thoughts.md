@@ -3,13 +3,13 @@ title: "⛰️ Your (first) thoughts"
 pubDate: 2024-05-10
 ---
 # Your (first) thoughts
-Go ahead and launch MindNode on your device. If you're launching MindNode for the first time, the app will guide you through a short onboarding flow.
+Go ahead and launch AmyMind on your device. If you're launching AmyMind for the first time, the app will guide you through a short onboarding flow.
 
 Create a new file on your Mac by selecting File > New from the main menu. On iOS, tap the plus button in the browser tab.
 
 Creating a new document via the File option in the Menubar
 Creating a new document clicking the Plus icon in the Browse Folder
-MindNode will automatically create a new main node to get you started. Double-click or double-tap it to start adding text to it. Go ahead and add your first idea here. If you want to follow our example, type in "My Coffee Shop".
+AmyMind will automatically create a new main node to get you started. Double-click or double-tap it to start adding text to it. Go ahead and add your first idea here. If you want to follow our example, type in "My Coffee Shop".
 
 Should you want to add text in the following line of the node, press Option ⌥ + Enter.
 

@@ -13,19 +13,32 @@ outline.sort((a, b) => {
 	return 0;
 });
 
-const staticPosts = JSON.stringify(outline);
 ---
 
-<hello-world
-	data-docs={staticPosts}
+<div
 	class="fixed w-72 mt-12 pt-6 px-4 flex-shrink-0 border-r border-neutral-100 bg-neutral-50 h-dvh overflow-y-auto"
 >
-	<div class="font-bold text-neutral-900">Hello World</div>
+	<div class="text-sm text-neutral-400 font-medium">Get Started</div>
+	<ul class="menu mt-1 mb-6 ml-1.5 pl-3 border-l border-neutral-200">
+		<a
+			class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
+			href="/user-guide"
+		>
+			👋 Hi, there
+		</a>
+		<a
+			class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
+			href="/user-guide/faq"
+		>
+			🧭 FAQs
+		</a>
+	</ul>
+	<div class="text-sm text-neutral-400 font-medium">User Guide</div>
 	<ul class="menu mt-1 mb-6 ml-1.5 pl-3 border-l border-neutral-200">
 		{
 			outline.map((post) => (
 				<a
-					class="transition text-sm block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
+					class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
 					href={`/user-guide/${post.slug}`}
 				>
 					{post.data.title}
@@ -33,48 +46,6 @@ const staticPosts = JSON.stringify(outline);
 			))
 		}
 	</ul>
-	<div class="font-bold text-neutral-900">User Guide</div>
-	<ul class="menu mt-1 mb-6 ml-1.5 pl-3 border-l border-neutral-200">
-		{
-			outline.map((post) => (
-				<a
-					class="transition text-sm block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
-					href={`/user-guide/${post.slug}`}
-				>
-					{post.data.title}
-				</a>
-			))
-		}
-	</ul>
-</hello-world>
+</div>
 <style></style>
-<script>
-	class AstroGreet extends HTMLElement {
-		constructor() {
-			super();
-
-			// 从 data（数据）属性中读取消息。
-			const docs = this.dataset.docs;
-			const links = document.querySelectorAll(".menu a");
-			const content = document.querySelector("#content");
-			links.forEach((item) => {
-				item.addEventListener("click", (e) => {
-					e.preventDefault();
-					const docsObject = JSON.parse(docs);
-					console.log(docsObject);
-					const page = docsObject.find(
-						(doc) =>
-							doc.slug ===
-							(e.target as any).href.split("/").pop(),
-					);
-					console.log(page);
-					content.innerHTML = `
-						<h1>${page.data.title}</h1>
-						${page.body}
-					`;
-				});
-			});
-		}
-	}
-	customElements.define("hello-world", AstroGreet);
-</script>
+<script></script>
