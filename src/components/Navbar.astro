@@ -29,25 +29,27 @@ import Logo from "/src/assets/logo.svg";
 			>
 		</div>
 	</div>
-	<div class="mr-2 space-x-2 text-sm">
+	<div class="space-x-2 text-sm">
 		<a
-			class="rounded-lg py-1.5 px-2 hover:bg-neutral-200"
+			class="rounded-md py-1.5 px-2 hover:bg-neutral-200"
 			href="https://app.amymind.com/account/login">Log In</a
 		>
 		<a
-			class="bg-black rounded-lg py-1.5 px-2 text-white hover:shadow-lg"
+			class="bg-black rounded-md py-1.5 px-2 text-white hover:shadow-lg"
 			href="https://app.amymind.com/account/signup">Sign Up</a
 		>
 	</div>
 </div>
 <style></style>
 <script>
-	// 从cookie中获取用户信息
 	document.cookie.split(";").forEach((item) => {
 		const [key, value] = item.split("=");
 		if (key.trim() === "profile") {
-			const profile = JSON.parse(value);
-			console.log(profile);
+			const profile = JSON.parse(decodeURIComponent(value));
+			if (profile) {
+				// window.location.href = "http://localhost:3000/";
+				window.location.href = "https://app.amymind.com/";
+			}
 		}
 	});
 </script>
