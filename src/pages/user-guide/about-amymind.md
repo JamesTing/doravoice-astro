@@ -1,5 +1,7 @@
 ---
+layout: '/src/layouts/LayoutDocs.astro'
 title: "📃 About AmyMind"
+category: 'User Guide'
 pubDate: 2024-05-10
 ---
 # About Amymind

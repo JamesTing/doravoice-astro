@@ -13,10 +13,10 @@ import PlatformMac from "/src/assets/platform-mac.svg";
 import PlatformMobile from "/src/assets/platform-mobile.svg";
 import PlatformWebpage from "/src/assets/platform-webpage.svg";
 
-import Layout from "/src/layouts/Layout.astro";
-import NavbarZh from "/src/components/NavbarZh.astro";
-import FooterZh from "/src/components/FooterZh.astro";
-import MindmapFeatureZh from "/src/components/MindmapFeatureZh.astro";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import MindmapFeatureZh from "../../components/MindmapFeatureZh.astro";
 ---
 
 <Layout
@@ -26,7 +26,7 @@ import MindmapFeatureZh from "/src/components/MindmapFeatureZh.astro";
 >
 	<!-- Head -->
 	<div class="fixed w-full pt-4 z-10">
-		<NavbarZh />
+		<Navbar />
 	</div>
 
 	<!-- Mindmap -->
@@ -68,13 +68,15 @@ import MindmapFeatureZh from "/src/components/MindmapFeatureZh.astro";
 			文件转换为思维导图<br />轻松导出 PowerPoint, PDF, Word
 			方便二次编辑和分享
 		</div>
+
 		<a
 			href="https://app.amymind.com/mindmap/guide"
 			id="glow-button"
-			class="radius-md py-2 px-4 mb-4"
+			class="radius-md py-2 px-4 mb-8"
 			>无需注册，立即体验
 			<span>→</span></a
 		>
+
 		<div class="max-w-5xl mx-auto"><MindmapFeatureZh /></div>
 	</div>
 
@@ -301,7 +303,7 @@ import MindmapFeatureZh from "/src/components/MindmapFeatureZh.astro";
 		</div>
 	</div>
 
-	<FooterZh />
+	<Footer />
 </Layout>
 <style>
 	#product-sologan {

@@ -1,18 +1,20 @@
 ---
-import { getCollection } from "astro:content";
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
 
-const outline = await getCollection("docs");
-// 将outline根据title排序
-outline.sort((a, b) => {
-	if (a.data.pubDate < b.data.pubDate) {
+const lang = getLangFromUrl(Astro.url);
+const translatedPath = useTranslatedPath(lang);
+
+// 导入`./src/pages/post/` 中所有以 `.md` 结尾的文件
+const docs = await Astro.glob("/src/pages/user-guide/*.md");
+docs.sort((a, b) => {
+	if (a.frontmatter.pubDate < b.frontmatter.pubDate) {
 		return -1;
 	}
-	if (a.data.pubDate > b.data.pubDate) {
+	if (a.frontmatter.pubDate > b.frontmatter.pubDate) {
 		return 1;
 	}
 	return 0;
 });
-
 ---
 
 <div
@@ -22,13 +24,13 @@ outline.sort((a, b) => {
 	<ul class="menu mt-1 mb-6 ml-1.5 pl-3 border-l border-neutral-200">
 		<a
 			class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
-			href="/user-guide"
+			href={translatedPath("/user-guide", lang)}
 		>
 			👋 Hi, there
 		</a>
 		<a
 			class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
-			href="/user-guide/faq"
+			href={translatedPath("/user-guide/faq", lang)}
 		>
 			🧭 FAQs
 		</a>
@@ -36,12 +38,12 @@ outline.sort((a, b) => {
 	<div class="text-sm text-neutral-400 font-medium">User Guide</div>
 	<ul class="menu mt-1 mb-6 ml-1.5 pl-3 border-l border-neutral-200">
 		{
-			outline.map((post) => (
+			docs.map((post) => (
 				<a
 					class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950"
-					href={`/user-guide/${post.slug}`}
+					href={post.url}
 				>
-					{post.data.title}
+					{post.frontmatter.title}
 				</a>
 			))
 		}

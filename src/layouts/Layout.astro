@@ -1,4 +1,7 @@
 ---
+import { getLangFromUrl } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+
 interface Props {
 	title: string;
 	description?: string;
@@ -9,7 +12,7 @@ const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -51,16 +54,6 @@ const { title, description, keywords } = Astro.props;
 
 						return false;
 					});
-				}
-
-				var userLang = navigator.language || navigator.language;
-				if (userLang.startsWith("zh")) {
-					var languageSwitch = document.querySelector(
-						"#language-switch",
-					) as HTMLElement;
-					if (languageSwitch) {
-						languageSwitch.style.display = "block";
-					}
 				}
 			});
 		</script>

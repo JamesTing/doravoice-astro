@@ -10,6 +10,9 @@ export default defineConfig({
   i18n: {
     defaultLocale: "en",
     locales: ["zh-cn", "en"],
+    fallback: {
+      "zh-cn": "en"
+    },
     routing: {
       prefixDefaultLocale: false
     }

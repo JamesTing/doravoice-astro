@@ -1,5 +1,7 @@
 ---
+layout: '/src/layouts/LayoutDocs.astro'
 title: "🤔 What is mind mapping?"
+category: 'Get Started'
 pubDate: 2024-05-10
 ---
 # What is mind mapping?

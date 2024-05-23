@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+import {
+    getLangFromUrl,
+    useTranslations,
+    useTranslatedPath,
+    getSlug,
+} from "../i18n/utils";
+import { languages } from "../i18n/ui";
+import LanguageIcon from "/src/assets/language-picker.svg";
+
+const lang = getLangFromUrl(Astro.url);
+const slug = getSlug(Astro.url);
+const translatedPath = useTranslatedPath(lang);
+const t = useTranslations(lang);
+---
+
+<div class="flex items-center">
+    <Image src={LanguageIcon} alt="langueage picker" />
+    <select
+        id="language-picker"
+        class="bg-transparent outline-none cursor-pointer transition rounded-md py-1 hover:bg-neutral-200"
+    >
+        {
+            Object.entries(languages).map(([lan, label]) => (
+                <option
+                    value={translatedPath(slug, lan)}
+                    selected={lan === lang}
+                >
+                    {label}
+                </option>
+            ))
+        }
+    </select>
+</div>
+
+<script>
+    document
+        .getElementById("language-picker")
+        .addEventListener("change", (e) => {
+            const lang = (e.target as HTMLSelectElement).value;
+            window.location.href = lang;
+        });
+</script>

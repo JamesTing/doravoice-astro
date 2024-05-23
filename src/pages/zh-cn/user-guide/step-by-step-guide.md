@@ -1,5 +1,7 @@
 ---
+layout: '/src/layouts/LayoutDocs.astro'
 title: "🗺️ Step-by-step guide"
+category: 'Get Started'
 pubDate: 2024-05-10
 ---
 # Step-by-step guide

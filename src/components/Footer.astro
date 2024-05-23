@@ -1,20 +1,34 @@
 ---
+import { Image } from "astro:assets";
+import Logo from "/src/assets/logo.svg";
+import LanguagePicker from "../components/LanguagePicker.astro";
+import {
+	getLangFromUrl,
+	useTranslations,
+	useTranslatedPath,
+} from "../i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 
 <div class="mx-auto max-w-5xl flex justify-between mb-12 border-t pt-2 text-sm">
 	<div>AmyMind</div>
 	<div class="flex space-x-4 text-neutral-500">
-		<a class="hover:text-neutral-800" href="/legal/privacy-policy"
-			>Privacy Policy</a
+		<a
+			class="hover:text-neutral-800"
+			href={translatePath("/legal/privacy-policy")}>{t('footer.privacy-policy')}</a
 		>
-		<a class="hover:text-neutral-800" href="/legal/terms-of-service"
-			>Terms of Service</a
+		<a
+			class="hover:text-neutral-800"
+			href={translatePath("/legal/terms-of-service")}>{t('footer.terms-of-service')}</a
 		>
-		<a class="hover:text-neutral-800" href="/legal/refund-policy"
-			>Refund Policy</a
+		<a
+			class="hover:text-neutral-800"
+			href={translatePath("/legal/refund-policy")}>{t('footer.refund-policy')}</a
 		>
-		<a class="hover:text-neutral-800">© AmyMind 2023</a>
+		<a class="hover:text-neutral-800">© AmyMind 2024</a>
 	</div>
 </div>
 <style></style>

@@ -1,43 +1,57 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "/src/assets/logo.svg";
+import LanguagePicker from "../components/LanguagePicker.astro";
+import {
+	getLangFromUrl,
+	useTranslations,
+	useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+const t = useTranslations(lang);
 ---
 
 <div
 	class="mx-auto max-w-5xl rounded-xl shadow-xl shadow-black/5 border-black/10 border backdrop-blur p-2 bg-white/50 flex items-center text-neutral-700"
 >
-	<div class="flex-grow flex items-center space-x-8">
+	<div class="flex-grow flex items-center space-x-4">
 		<a href="/">
 			<Image src={Logo} class="relative top-0.5" alt="AmyMind的logo" />
 		</a>
-		<div class="flex-1 items-center space-x-4">
+		<div class="flex-1 items-center space-x-1">
 			<a
 				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href="/#mindmap">Mindmap</a
+				href={translatePath("/#mindmap")}>{t("nav.mindmap")}</a
 			>
 			<a
 				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href="/#whiteboard">Whiteboard</a
+				href={translatePath("/#whiteboard")}>{t("nav.whiteboard")}</a
 			>
 			<a
 				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href="/#pricing">Pricing</a
+				href={translatePath("/#pricing")}>{t("nav.pricing")}</a
 			>
 			<a
 				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href="/user-guide">User Guide</a
+				href={translatePath("/user-guide")}>{t("nav.user-guide")}</a
 			>
 		</div>
 	</div>
-	<div class="space-x-2 text-sm">
-		<a
-			class="rounded-md py-1.5 px-2 hover:bg-neutral-200"
-			href="https://app.amymind.com/account/login">Log In</a
-		>
-		<a
-			class="bg-black rounded-md py-1.5 px-2 text-white hover:shadow-lg"
-			href="https://app.amymind.com/account/signup">Sign Up</a
-		>
+	<div class="space-x-4 flex items-center">
+		<LanguagePicker />
+		<div class="space-x-1 text-sm">
+			<a
+				class="rounded-md py-1.5 px-2 hover:bg-neutral-200"
+				href="https://app.amymind.com/account/login">{t("nav.login")}</a
+			>
+			<a
+				class="bg-black rounded-md py-1.5 px-2 text-white hover:shadow-lg"
+				href="https://app.amymind.com/account/signup"
+				>{t("nav.signup")}</a
+			>
+		</div>
 	</div>
 </div>
 <style></style>

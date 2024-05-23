@@ -1,5 +1,7 @@
 ---
+layout: '/src/layouts/LayoutDocs.astro'
 title: "⛰️ Your (first) thoughts"
+category: 'Get Started'
 pubDate: 2024-05-10
 ---
 # Your (first) thoughts

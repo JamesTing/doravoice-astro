@@ -1,5 +1,7 @@
 ---
+layout: '/src/layouts/LayoutDocs.astro'
 title: "🌁 Adding photos"
+category: 'User Guide'
 pubDate: 2024-05-09
 ---
 # Adding photos

@@ -13,21 +13,19 @@ interface Props {
 }
 
 const { frontmatter } = Astro.props;
-
-const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
+		<meta name="description" content={frontmatter.description} />
+		<meta name="keywords" content={frontmatter.keywords} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<title>{title}</title>
+		<title>{frontmatter.title}</title>
 
 		<!-- Paste this right before your closing </head> tag -->
 		<script type="text/javascript">
