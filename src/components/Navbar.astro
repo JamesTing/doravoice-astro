@@ -48,31 +48,30 @@ const t = useTranslations(lang);
 			>
 			<a
 				class="bg-black rounded-md py-1.5 px-2 text-white hover:shadow-lg"
-				href="https://app.amymind.com/login"
-				>{t("nav.signup")}</a
+				href="https://app.amymind.com/login">{t("nav.signup")}</a
 			>
 		</div>
 	</div>
 </div>
 <style></style>
 <script>
-	console.log('💥cookie',document.cookie);
+	console.log("💥cookie", document.cookie);
 	document.cookie.split(";").forEach((item) => {
-    const [key, value] = item.split("=");
-    console.log('cookie key:', key.trim(), 'cookie value:', value);
-    if (key.trim() === "profile") {
-        try {
-            const decodedValue = decodeURIComponent(value);
-            console.log('decoded profile value:', decodedValue);
-            const profile = JSON.parse(decodedValue);
-            console.log('cookie profile:', profile);
-            if (profile) {
-                // window.location.href = "http://localhost:3000/";
-                window.location.href = "https://app.amymind.com/";
-            }
-        } catch (error) {
-            console.error('Error parsing profile cookie:', error);
-        }
-    }
-});
+		const [key, value] = item.split("=");
+		console.log("cookie key:", key.trim(), "cookie value:", value);
+		if (key.trim() === "user") {
+			try {
+				const decodedValue = decodeURIComponent(value);
+				console.log("decoded user value:", decodedValue);
+				const { id, email } = JSON.parse(decodedValue);
+				console.log("cookie user:", id, email);
+				if (email) {
+					// window.location.href = "http://localhost:3000/";
+					window.location.href = "https://app.amymind.com/";
+				}
+			} catch (error) {
+				console.error("Error parsing user cookie:", error);
+			}
+		}
+	});
 </script>
