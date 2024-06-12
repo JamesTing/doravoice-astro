@@ -56,10 +56,13 @@ const t = useTranslations(lang);
 </div>
 <style></style>
 <script>
+	console.log('💥cookie',document.cookie);
 	document.cookie.split(";").forEach((item) => {
 		const [key, value] = item.split("=");
+		console.log('cookie key',key);
 		if (key.trim() === "profile") {
 			const profile = JSON.parse(decodeURIComponent(value));
+			console.log('cookie profile',profile);
 			if (profile) {
 				// window.location.href = "http://localhost:3000/";
 				window.location.href = "https://app.amymind.com/";
