@@ -175,7 +175,11 @@ const { title, description, keywords } = Astro.props;
 				y.parentNode.insertBefore(t, y);
 			})(window, document, "clarity", "script", "ksbkb9e48r");
 		</script>
-		<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+		<script>
+			const script = document.createElement("script");
+			script.src = "https://cdn.paddle.com/paddle/v2/paddle.js";
+			document.head.appendChild(script);
+		</script>
 	</head>
 	<body>
 		<slot />
