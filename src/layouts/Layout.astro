@@ -180,6 +180,11 @@ const { title, description, keywords } = Astro.props;
 			script.src = "https://cdn.paddle.com/paddle/v2/paddle.js";
 			document.head.appendChild(script);
 		</script>
+		<script type="text/javascript">
+			Paddle.Initialize({ 
+			  token: 'live_5dcad2d04f1776f34541d92f9be' // replace with a client-side token
+			});
+		  </script>
 	</head>
 	<body>
 		<slot />
