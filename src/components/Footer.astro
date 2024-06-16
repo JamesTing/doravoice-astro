@@ -13,20 +13,23 @@ const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
 
-<div class="mx-auto max-w-5xl flex justify-between mb-12 border-t pt-2 text-sm">
-	<div>AmyMind</div>
-	<div class="flex space-x-4 text-neutral-500">
+<div class="mx-auto max-w-5xl flex justify-between mb-12 pt-2 px-2 text-sm">
+	<div class="text-neutral-400">AmyMind</div>
+	<div class="flex space-x-4 text-neutral-400">
 		<a
 			class="hover:text-neutral-800"
-			href={translatePath("/legal/privacy-policy")}>{t('footer.privacy-policy')}</a
+			href={translatePath("/legal/privacy-policy")}
+			>{t("footer.privacy-policy")}</a
 		>
 		<a
 			class="hover:text-neutral-800"
-			href={translatePath("/legal/terms-of-service")}>{t('footer.terms-of-service')}</a
+			href={translatePath("/legal/terms-of-service")}
+			>{t("footer.terms-of-service")}</a
 		>
 		<a
 			class="hover:text-neutral-800"
-			href={translatePath("/legal/refund-policy")}>{t('footer.refund-policy')}</a
+			href={translatePath("/legal/refund-policy")}
+			>{t("footer.refund-policy")}</a
 		>
 		<a class="hover:text-neutral-800">© AmyMind 2024</a>
 	</div>
