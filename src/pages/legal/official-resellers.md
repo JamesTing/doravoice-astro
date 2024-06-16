@@ -3,7 +3,7 @@ layout: '/src/layouts/LayoutPage.astro'
 title: 'AUTHORIZATION CERTIFICATE'
 ---
 
-![alt 荔枝数码Logo](/src/assets/lizhishuma.png)
+![alt 荔枝数码Logo](../../assets/lizhishuma.png)
 
 # AUTHORIZATION CERTIFICATE
 We, the developer of AmyMind authorizes DIGITALYCHEE TECHNOLOGY CO, LTD as our official partner inChina, and it owns the right to sell the copyrighted software of us on their store:

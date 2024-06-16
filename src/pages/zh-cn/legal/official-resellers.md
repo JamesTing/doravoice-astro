@@ -3,7 +3,7 @@ layout: '/src/layouts/LayoutPage.astro'
 title: '授权经销商'
 ---
 
-![alt 荔枝数码Logo](/src/assets/lizhishuma.png)
+![alt 荔枝数码Logo](../../../assets/lizhishuma.png)
 
 # 授权证明
 授权 苏州荔枝数码科技有限公司 为大中国区官方合作伙伴， 并享有本公司旗下正版软件 AmyMind 在中国的销售资质。 该合作伙伴的店铺名为 「数码荔枝正版软件」，店铺网址为：https://digitalychee.taobao.com/ 和 https://lizhi.io/store。
