@@ -466,3 +466,20 @@ import MindmapFeatureZh from "../../components/MindmapFeatureZh.astro";
 		}
 	}
 </style>
+<script>
+	document.cookie.split(";").forEach((item) => {
+		const [key, value] = item.split("=");
+		if (key.trim() === "user") {
+			try {
+				const decodedValue = decodeURIComponent(value);
+				const { id, email } = JSON.parse(decodedValue);
+				if (email) {
+					// window.location.href = "http://localhost:3000/";
+					window.location.href = "https://app.amymind.com/";
+				}
+			} catch (error) {
+				console.error("Error parsing user cookie:", error);
+			}
+		}
+	});
+</script>

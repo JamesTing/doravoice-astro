@@ -78,7 +78,9 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 			>Get Started
 			<span>→</span></a
 		>
-		<div class="text-sm text-neutral-500 mb-8">No registration required</div>
+		<div class="text-sm text-neutral-500 mb-8">
+			No registration required
+		</div>
 
 		<div class="max-w-5xl mx-auto"><MindmapFeature /></div>
 	</div>
@@ -482,3 +484,20 @@ import MindmapFeature from "../components/MindmapFeature.astro";
 		}
 	}
 </style>
+<script>
+	document.cookie.split(";").forEach((item) => {
+		const [key, value] = item.split("=");
+		if (key.trim() === "user") {
+			try {
+				const decodedValue = decodeURIComponent(value);
+				const { id, email } = JSON.parse(decodedValue);
+				if (email) {
+					// window.location.href = "http://localhost:3000/";
+					window.location.href = "https://app.amymind.com/";
+				}
+			} catch (error) {
+				console.error("Error parsing user cookie:", error);
+			}
+		}
+	});
+</script>
