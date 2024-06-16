@@ -1,5 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import {
+	getLangFromUrl,
+	useTranslations,
+	useTranslatedPath,
+} from "../../i18n/utils";
+
 import LightEffect from "/src/assets/light-effect.svg";
 import WhiteboardSimpleIcon from "/src/assets/whiteboard-simple-icon.svg";
 import AISign from "/src/assets/ai-sign.png";
@@ -17,6 +23,9 @@ import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
 import MindmapFeatureZh from "../../components/MindmapFeatureZh.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout
@@ -296,7 +305,8 @@ import MindmapFeatureZh from "../../components/MindmapFeatureZh.astro";
 					</div>
 					<a
 						class="text-fuchsia-600 text-sm mt-2 block"
-						href="/legal/official-resellers.html">详情 →</a
+						href={translatePath("/legal/official-resellers")}
+						>详情 →</a
 					>
 				</div>
 			</div>
