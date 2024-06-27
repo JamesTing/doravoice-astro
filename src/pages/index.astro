@@ -84,10 +84,10 @@ const translatePath = useTranslatedPath(lang);
 			href="https://app.amymind.com/mindmap/guide"
 			id="glow-button"
 			class="radius-md py-2 px-4 mb-2"
-			>Get Started
-			<span>→</span></a
+			><span id="action-text">Get Started</span>
+			<span class="arrow">→</span></a
 		>
-		<div class="text-sm text-neutral-500 mb-8">
+		<div id="action-tip" class="text-sm text-neutral-500 mb-8">
 			No registration required
 		</div>
 
@@ -261,7 +261,8 @@ const translatePath = useTranslatedPath(lang);
 				</div>
 				<a
 					class="rounded-lg bg-purple-500 font-bold block text-white text-center py-1.5 mb-2 hover:bg-fuchsia-500"
-					href="https://app.amymind.com/home/membership">Upgrade to Pro</a
+					href="https://app.amymind.com/home/membership"
+					>Upgrade to Pro</a
 				>
 				<ul class="leading-loose list-disc list-inside">
 					<li>Mindmap App</li>
@@ -458,12 +459,12 @@ const translatePath = useTranslatedPath(lang);
 		transition: all 0.16s ease-in-out;
 		transform: translateY(-2px) scale(1.01);
 	}
-	#glow-button span {
+	#glow-button .arrow {
 		display: inline-block;
 		transition: all 0.16s ease-in-out;
 		transform: translateX(0px);
 	}
-	#glow-button:hover span {
+	#glow-button:hover .arrow {
 		transform: translateX(8px);
 	}
 	#glow-button:hover:before {
@@ -502,12 +503,21 @@ const translatePath = useTranslatedPath(lang);
 				const decodedValue = decodeURIComponent(value);
 				const { id, email } = JSON.parse(decodedValue);
 				if (email) {
-					// window.location.href = "http://localhost:3000/";
-					window.location.href = "https://app.amymind.com/";
+					const actionButton = document.getElementById(
+						"glow-button",
+					) as HTMLAnchorElement;
+					actionButton.href = `https://app.amymind.com/home`;
+
+					const actionText = document.getElementById("action-text");
+					actionText.innerText = "Visit My Dashboard";
+
+					const actionTip = document.getElementById("action-tip");
+					actionTip.style.visibility = "hidden";
 				}
 			} catch (error) {
 				console.error("Error parsing user cookie:", error);
 			}
+			return;
 		}
 	});
 </script>

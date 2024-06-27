@@ -41,7 +41,7 @@ const t = useTranslations(lang);
 	</div>
 	<div class="space-x-4 flex items-center">
 		<LanguagePicker />
-		<div class="space-x-1 text-sm">
+		<div id="guest-enter" class="space-x-1 text-sm">
 			<a
 				class="rounded-md py-1.5 px-2 hover:bg-neutral-200"
 				href="https://app.amymind.com/login">{t("nav.login")}</a
@@ -51,6 +51,37 @@ const t = useTranslations(lang);
 				href="https://app.amymind.com/login">{t("nav.signup")}</a
 			>
 		</div>
+		<div id="user-enter" class="space-x-1 text-sm hidden">
+			<a
+				class="rounded-md py-1.5 px-2 hover:bg-neutral-200"
+				href="https://app.amymind.com/home">Hi</a
+			>
+		</div>
 	</div>
 </div>
 <style></style>
+<script>
+	document.cookie.split(";").forEach((item) => {
+		const [key, value] = item.split("=");
+		if (key.trim() === "user") {
+			try {
+				const decodedValue = decodeURIComponent(value);
+				const { id, email } = JSON.parse(decodedValue);
+				if (email) {
+					const guestEnter = document.getElementById("guest-enter");
+					guestEnter.style.display = "none";
+
+					const userEnter = document.getElementById("user-enter");
+					const userEnterText = document.querySelector(
+						"#user-enter a",
+					) as HTMLAnchorElement;
+					userEnterText.innerText = email.split("@")[0];
+					userEnter.style.display = "unset";
+				}
+			} catch (error) {
+				console.error("Error parsing user cookie:", error);
+			}
+			return;
+		}
+	});
+</script>
