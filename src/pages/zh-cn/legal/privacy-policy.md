@@ -3,6 +3,7 @@ layout: '/src/layouts/LayoutPage.astro'
 title: '隐私协议'
 ---
 
+# 隐私协议
 本隐私协议介绍了当您访问 https://amymind.com（“网站”）或从中购买产品或服务时，我们如何收集、使用和共享您的个人信息。
 
 收集的个人信息类型	

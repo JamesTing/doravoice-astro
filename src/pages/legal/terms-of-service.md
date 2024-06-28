@@ -2,7 +2,7 @@
 layout: '/src/layouts/LayoutPage.astro'
 title: 'Terms of Service'
 ---
-
+# Terms of Service
 The online tool network service website operated by AmyMind (referred to as "Website"), the following terms and conditions ("Terms of Service", "Terms") apply to all users. Accessing or using any part of the website indicates acceptance and compliance with these Terms of Service. These Terms of Service may be changed and updated by us at any time, and we reserve this right.
 
 We provide you with information, tools, and services for purchasing goods under the conditions that you meet the legal age and agree to seek our services. Please do not use our products for any illegal or unauthorized use, including the spread of destructive codes, otherwise, it will lead to service termination.

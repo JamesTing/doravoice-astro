@@ -2,7 +2,7 @@
 layout: '/src/layouts/LayoutPage.astro'
 title: 'Refund Policy'
 ---
-
+# Refund Policy
 Our return policy allows for refunds or exchanges within 30 days of purchase. Unfortunately, if you exceed 30 days from the date of purchase, we will not be able to provide you with a refund or exchange.
 
 1. Unsubscription Service

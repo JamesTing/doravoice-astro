@@ -3,6 +3,8 @@ layout: '/src/layouts/LayoutPage.astro'
 title: 'Privacy Policy'
 ---
 
+# Privacy Policy
+
 This Privacy Policy describes how we collect, use, and share your personal information when you visit https://amymind.com ("Website") or purchase products or services from it.
 
 Types of personal information collected
