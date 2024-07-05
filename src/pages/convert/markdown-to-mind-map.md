@@ -20,8 +20,8 @@ In the torrent of information, we often lose our direction and struggle to grasp
 With AmyMind AI tools, just a few simple steps are needed to easily convert Markdown to mind maps.
 
 1. Open the AmyMind homepage: [https://amymind.com](https://amymind.com).
-2. Depending on your login status, select the corresponding button to enter the workspace. If you haven't logged in, click the "Get Start" button to enter directly; if you have logged in, click the "Go to Workspace" button.
-3. In the workspace, find and click the "Import File" button. In the pop-up window, click "Choose File" and select the markdown file.
+2. If you haven't logged in, click the "Get Started" button to enter the guide page. If you're already logged in, click the "Go To Workspace" button, then click the "+ Mind Map" button to enter the guide page.
+3. In the guide page, find and click the "Import File" button. In the pop-up window, click "Choose File" and select the markdown file.
 4. After confirming there are no errors, click the "Import" button, and AmyMind AI tools will automatically generate the corresponding mind map for you.
 
 ## Multi-Scenario Application Cases of Markdown to Mind Map Conversion

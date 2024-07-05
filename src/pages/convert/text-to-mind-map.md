@@ -20,7 +20,7 @@ When faced with lengthy paragraphs of text, we often feel inefficient in reading
 Using AmyMind AI tools, just follow these simple steps to easily convert text to a mind map.
 
 1. Open the AmyMind homepage: [https://amymind.com](https://amymind.com).
-2. Depending on your login status, select the appropriate button to enter the workspace. If you haven't logged in yet, click the "Get Start" button to enter directly; if you have logged in, click the "Go to Workspace" button.
+2. Depending on your login status, select the appropriate button to enter the workspace. If you haven't logged in yet, click the "Get Started" button to enter directly; if you have logged in, click the "Go to Workspace" button.
 3. In the workspace, find and click the "Paste Text" button, paste the text you want to convert into the text box.
 4. Confirm that there are no errors, click the "Create" button, and AmyMind AI tool will automatically generate the corresponding mind map for you.
 
