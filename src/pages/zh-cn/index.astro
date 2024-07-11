@@ -5,6 +5,7 @@ import {
 	useTranslations,
 	useTranslatedPath,
 } from "../../i18n/utils";
+import { Icon } from "astro-icon/components";
 
 import LightEffect from "/src/assets/light-effect.svg";
 import WhiteboardSimpleIcon from "/src/assets/whiteboard-simple-icon.svg";
@@ -18,11 +19,11 @@ import PlatformWindows from "/src/assets/platform-windows.svg";
 import PlatformMac from "/src/assets/platform-mac.svg";
 import PlatformMobile from "/src/assets/platform-mobile.svg";
 import PlatformWebpage from "/src/assets/platform-webpage.svg";
+import AmymindScreenshot from "/src/assets/amymind-screenshot.png";
 
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import MindmapFeatureZh from "../../components/MindmapFeatureZh.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
@@ -86,7 +87,183 @@ const translatePath = useTranslatedPath(lang);
 			<span class="arrow">→</span></a
 		>
 
-		<div class="max-w-5xl mx-auto"><MindmapFeatureZh /></div>
+		<Image
+			class="max-w-screen-md rounded-xl border border-gray-200 shadow-2xl"
+			src={AmymindScreenshot}
+			alt="AmyMind Screenshot"
+		/>
+		<h2 class="pt-12 pb-2 font-semibold text-4xl">
+			AI助力，思维导图更出色
+		</h2>
+		<div class="pb-8 text-gray-400">
+			有了AI，您可以轻松生成思维导图、进行研究，并且毫不费力地导出文件。
+		</div>
+
+		<div class="flex max-w-screen-lg gap-3">
+			<div class="rounded-xl bg-gray-100 w-1/3">
+				<div class="relative h-48">
+					<img
+						src="/src/assets/paste-text.png"
+						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
+						style="transform:translate(-120px,40px)rotate(-30deg)"
+						width="100"
+						alt="paste text to mind map"
+					/>
+					<img
+						src="/src/assets/one-idea.png"
+						width="100"
+						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
+						style="transform:translate(-50%,20px)"
+						alt="one idea to mind map"
+					/>
+					<img
+						src="/src/assets/import-file.png"
+						width="100"
+						class="absolute left-1/2 border border-green-200 shadow-xl rounded-xl"
+						style="transform:translate(20px,40px)rotate(30deg)"
+						alt="import file to mind maps"
+					/>
+					<img
+						src="/src/assets/star.png"
+						width="52"
+						class="absolute left-5 top-5"
+						alt="star"
+					/>
+				</div>
+				<div class="px-4 pb-4">
+					<h3 class="font-bold text-md">
+						AI智能生成，思维导图触手可及
+					</h3>
+					<p class="text-gray-400 text-sm">
+						借助AI，快速从简短的文字输入中生成思维导图。轻松导入PDF、Markdown和TXT等文件，实现无缝的内容整合
+					</p>
+				</div>
+			</div>
+			<div class="rounded-xl bg-gray-100 w-1/3">
+				<div class="relative h-48 mx-4">
+					<img
+						src="/src/assets/apple-mindmap.png"
+						alt="Simple Mind Map"
+						class="absolute bottom-0"
+					/>
+					<img
+						src="/src/assets/toolbar.png"
+						class="rounded-xl shadow-lg border border-gray-200 absolute top-16"
+						alt="AI Toolbar"
+					/>
+					<img
+						src="/src/assets/magic-wand.png"
+						width="84"
+						class="absolute left-1/3 top-3"
+						alt="AI Magic Wand"
+					/>
+				</div>
+				<div class="px-4 pb-4">
+					<h3 class="font-bold text-md">
+						AI深度挖掘，思维导图内容更丰富
+					</h3>
+					<p class="text-gray-400 text-sm">
+						利用AI Branch、AI Chat和AI Explore深入挖掘信息，从而制作出全面而详细的思维导图
+					</p>
+				</div>
+			</div>
+			<div class="rounded-xl bg-gray-100 w-1/3">
+				<div class="relative h-48">
+					<img
+						src="/src/assets/file-wall.png"
+						class="absolute bottom-0 h-full left-1/2 -translate-x-1/2"
+						alt="Export File"
+					/>
+				</div>
+				<div class="px-4 pb-4">
+					<h3 class="font-bold text-md">
+						灵活导出，思维导图应用广泛
+					</h3>
+					<p class="text-gray-400 text-sm">
+						导出思维导图为多种格式，包括PPT、PDF、DOC、TXT、MD、PNG，满足不同编辑和分享需求，让思维导图的应用更加便捷
+					</p>
+				</div>
+			</div>
+		</div>
+		<h2 class="pt-12 pb-2 font-semibold text-4xl">
+			不仅有AI，更有强大的思维导图
+		</h2>
+		<div class="pb-8 text-gray-400">
+			集成富文本备注、快捷操作、个性主题、多样图标等强大功能，为您打造一款思维导图制作利器
+		</div>
+		<div
+			class="flex max-w-screen-lg flex-wrap rounded-xl bg-gray-100 p-4 pb-0"
+		>
+			<div class="w-1/3 flex pb-4 pr-2">
+				<div class="mr-2">
+					<Icon name="fluent:note-add-48-regular" size={32} />
+				</div>
+				<div>
+					<h3 class="font-bold">节点备注</h3>
+					<p class="text-gray-400 text-sm">
+						在节点中插入富文本备注，可轻松应用加粗、斜体、高亮等样式，并插入图片
+					</p>
+				</div>
+			</div>
+			<div class="w-1/3 flex pb-4 pr-2">
+				<div class="mr-2">
+					<Icon
+						name="fluent:text-bullet-list-square-edit-20-regular"
+						size={32}
+					/>
+				</div>
+				<div>
+					<h3 class="font-bold">大纲模式</h3>
+					<p class="text-gray-400 text-sm">
+						以层级文本格式直观展示思维导图，让文本编辑更轻松便捷
+					</p>
+				</div>
+			</div>
+			<div class="w-1/3 flex pb-4 pr-2">
+				<div class="mr-2">
+					<Icon name="fluent:keyboard-16-regular" size={32} />
+				</div>
+				<div>
+					<h3 class="font-bold">快捷键</h3>
+					<p class="text-gray-400 text-sm">
+						支持复制、粘贴、生成子节点等快捷键操作，通过键盘快速高效编辑思维导图
+					</p>
+				</div>
+			</div>
+			<div class="w-1/3 flex pb-4 pr-2">
+				<div class="mr-2">
+					<Icon name="fluent:color-24-regular" size={32} />
+				</div>
+				<div>
+					<h3 class="font-bold">主题样式</h3>
+					<p class="text-gray-400 text-sm">
+						提供多种颜色主题和节点形状选择，个性化定制思维导图外观，提升美观度
+					</p>
+				</div>
+			</div>
+			<div class="w-1/3 flex pb-4 pr-2">
+				<div class="mr-2">
+					<Icon name="fluent:balloon-16-regular" size={32} />
+				</div>
+				<div>
+					<h3 class="font-bold">节点图标</h3>
+					<p class="text-gray-400 text-sm">
+						利用数字、颜色、优先级等图标清晰标识思维导图层级和重点，增强可读性
+					</p>
+				</div>
+			</div>
+			<div class="w-1/3 flex pb-4 pr-2">
+				<div class="mr-2">
+					<Icon name="fluent:share-20-filled" size={32} />
+				</div>
+				<div>
+					<h3 class="font-bold">轻松分享</h3>
+					<p class="text-gray-400 text-sm">
+						一键生成分享链接，轻松分享给朋友或团队成员，实现随时随地的访问与协作
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Whiteboard -->
