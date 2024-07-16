@@ -23,11 +23,12 @@ export const ui = {
         'footer.text-to-mind-map': 'Text to Mind Map',
         'footer.markdown-to-mind-map': 'Markdown to Mind Map',
         'footer.pdf-to-mind-map': 'PDF to Mind Map',
+        'footer.doc-to-mind-map': 'Word to Mind Map',
         'footer.mind-map-to-text': 'Mind Map to Text',
         'footer.mind-map-to-markdown': 'Mind Map to Markdown',
         'footer.mind-map-to-doc': 'Mind Map to Doc',
         'footer.mind-map-to-ppt': 'Mind Map to PPT',
-        'footer.mind-map-to-pdf': 'Mind Map to PDF',
+        'footer.mind-map-to-pdf': 'Mind Map to PDF'
     },
     'zh-cn': {
         'nav.mindmap': '思维导图',
@@ -43,6 +44,7 @@ export const ui = {
         'footer.text-to-mind-map': '文本转思维导图',
         'footer.markdown-to-mind-map': 'Markdown转思维导图',
         'footer.pdf-to-mind-map': 'PDF转思维导图',
+        'footer.doc-to-mind-map': 'Word转思维导图',
         'footer.mind-map-to-text': '思维导图转文本',
         'footer.mind-map-to-markdown': '思维导图转Markdown',
         'footer.mind-map-to-doc': '思维导图转DOC',
