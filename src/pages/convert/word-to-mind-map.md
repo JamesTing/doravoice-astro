@@ -11,9 +11,11 @@ Easily transform your Word documents into creative mind maps, whether from elect
 
 In the face of massive amounts of information, we often feel inefficient in reading and struggle to quickly grasp the key points. Mind maps, with their unique graphical presentation, provide us with a new way to organize and share information.
 
-1. **Quickly grasp core information**: Through mind maps, you can quickly understand the main ideas and key information of Word documents, saving time in filtering and summarizing.
-2. **Deepen understanding and memory**: Mind maps help you better understand and remember the content of Word documents, as the graphical structure is easier for the brain to receive and store.
-3. **Improve communication and collaboration**: Compared to pure text descriptions, mind maps are more intuitive and easier to understand, facilitating sharing and communication with others and improving team collaboration efficiency.
+1. **Rapid Information Extraction**: Using mind maps allows you to quickly extract key information from Word documents, filter out redundant content, and focus more on core issues.
+2. **Nonlinear Organization**: Unlike traditional linear text, mind maps allow you to organize information in a nonlinear way, which helps in discovering connections and insights between different topics.
+3. **Enhanced Memory**: Mind maps use visual elements (such as colors, shapes, images) to aid memory, making it easier for the brain to store and recall information.
+4. **Promote Decision Making**: When faced with multiple choices or needing to evaluate different plans, mind maps can help you systematically list various factors, leading to wiser decisions.
+5. **Improve Communication Efficiency**: In team communication or presentation, using mind maps can clearly convey main points and structures, reducing misunderstandings and confusion.
 
 ## How to Simply and Efficiently Convert Word Documents into Mind Maps?
 
