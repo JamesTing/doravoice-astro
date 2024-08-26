@@ -10,6 +10,7 @@ export const showDefaultLang = false;
 
 export const ui = {
     'en': {
+        'nav.features': 'Features',
         'nav.mindmap': 'Mindmap',
         'nav.whiteboard': 'Whiteboard',
         'nav.pricing': 'Pricing',
@@ -31,6 +32,7 @@ export const ui = {
         'footer.mind-map-to-pdf': 'Mind Map to PDF'
     },
     'zh-cn': {
+        'nav.features': '功能',
         'nav.mindmap': '思维导图',
         'nav.whiteboard': '白板',
         'nav.pricing': '定价',

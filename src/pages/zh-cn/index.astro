@@ -38,9 +38,9 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout
-	title="AmyMind: 伴你思考的AI思维导图"
-	description="AmyMind是一款AI驱动的应用，可以创建思维导图、流程图、UML、类图等，并与他人轻松共享。"
-	keywords="AmyMind,AI,思维导图,脑图,思维导图软件,免费思维导图软件,头脑风暴工具,白板,免费白板软件,流程图,免费流程图软件,UML"
+	title="AmyMind - 伴你思考的AI思维导图"
+	description="AmyMind是一款AI驱动的应用，支持通过提示语、PDF、Word、Markdown、Txt等方式生成思维导图，AI助力完善脑图内容，轻松导出各种格式与他人共享。"
+	keywords="AmyMind,AI,思维导图,脑图,思维导图软件,免费思维导图软件,头脑风暴工具"
 >
 	<!-- Head -->
 	<div class="fixed w-full pt-4 z-10">
@@ -50,7 +50,7 @@ const translatePath = useTranslatedPath(lang);
 	<!-- Mindmap -->
 	<div
 		id="mindmap"
-		class="pt-28 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+		class="pt-28 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 	>
 		<Image
 			class="absolute -left-10 top-0 opacity-90 pointer-events-none"
@@ -82,9 +82,9 @@ const translatePath = useTranslatedPath(lang);
 			</p>
 		</h2>
 		<div class="text-neutral-500 text-center text-lg mb-4">
-			AI助力，从一句话主题生成思维导图<br />或者将 markdown, txt, freemind
-			文件转换为思维导图<br />轻松导出 PowerPoint, PDF, Word
-			方便二次编辑和分享
+			AI助力，将一句话、Markdown、PDF、Word、Txt、Freemind转换为思维导图<br
+			/>
+			轻松导出 PowerPoint, PDF, Word 方便二次编辑和分享
 		</div>
 
 		<a
@@ -96,169 +96,202 @@ const translatePath = useTranslatedPath(lang);
 		>
 
 		<Image
-			class="max-w-screen-md rounded-xl border border-gray-200 shadow-2xl"
+			id="hero"
+			class="max-w-screen-md rounded-xl border border-gray-200 shadow-2xl transition duration-500 ease-in-out transform-gpu"
 			src={AmymindScreenshot}
 			alt="AmyMind Screenshot"
 		/>
-		<h2 class="pt-12 pb-2 font-semibold text-4xl">
+		<h2 id="features" class="pt-12 pb-2 font-semibold text-4xl">
 			AI助力，思维导图更出色
 		</h2>
-		<div class="pb-8 text-gray-400">
+		<div class="pb-8 text-gray-500">
 			有了AI，您可以轻松生成思维导图、进行研究，并且毫不费力地导出文件。
 		</div>
 
 		<div class="flex max-w-screen-lg gap-3">
-			<div class="rounded-xl bg-gray-100 w-1/3">
+			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
 				<div class="relative h-48">
-					<Image src={PasteText}
+					<Image
+						src={PasteText}
 						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(-120px,40px)rotate(-30deg)"
+						style="transform:translate(-120px,40px)rotate(-30deg);width:110px"
 						alt="paste text to mind map"
-						width={100}
-						/>
-					<Image src={OneIdea}
+						quality={100}
+					/>
+					<Image
+						src={OneIdea}
 						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(-50%,20px)"
+						style="transform:translate(-50%,20px);width:110px"
 						alt="one idea to mind map"
-						width={100}
-						/>
-					<Image src={ImportFile}
-						class="absolute left-1/2 border border-green-200 shadow-xl rounded-xl"
-						style="transform:translate(20px,40px)rotate(30deg)"
+						quality={100}
+					/>
+					<Image
+						src={ImportFile}
+						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
+						style="transform:translate(20px,40px)rotate(30deg);width:110px"
 						alt="import file to mind maps"
-						width={100}
-						/>
-					<Image src={Star}
+						quality={100}
+					/>
+					<Image
+						src={Star}
 						class="absolute left-5 top-5"
 						alt="star"
-						width={52}
-						/>
+						style={{ width: "52px" }}
+						quality={100}
+					/>
 				</div>
 				<div class="px-4 pb-4">
-					<h3 class="font-bold text-md">
-						AI智能生成，思维导图触手可及
+					<h3 class="font-normal text-xl mb-1">
+						AI生成，思维导图触手可及
 					</h3>
-					<p class="text-gray-400 text-sm">
-						借助AI，快速从简短的文字输入中生成思维导图。轻松导入PDF、Markdown、Word Doc和TXT等文件，实现无缝的内容整合
+					<p class="text-gray-500 text-sm">
+						借助AI，快速从简短的文字输入中生成思维导图。轻松导入PDF、Markdown、Word
+						Doc和TXT等文件，实现无缝的内容整合
 					</p>
 				</div>
 			</div>
-			<div class="rounded-xl bg-gray-100 w-1/3">
+			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
 				<div class="relative h-48 mx-4">
-					<Image src={AppleMindmap}
+					<Image
+						src={AppleMindmap}
 						class="absolute bottom-0"
 						alt="Simple Mind Map"
-						/>
-					<Image src={Toolbar}
+					/>
+					<Image
+						src={Toolbar}
 						class="rounded-xl shadow-lg border border-gray-200 absolute top-16"
 						alt="AI Toolbar"
-						/>
-					<Image src={MagicWand}
+					/>
+					<Image
+						src={MagicWand}
 						width={84}
 						class="absolute left-1/3 top-3"
 						alt="AI Magic Wand"
-						/>
+					/>
 				</div>
 				<div class="px-4 pb-4">
-					<h3 class="font-bold text-md">
-						AI深度挖掘，思维导图内容更丰富
+					<h3 class="font-normal text-xl mb-1">
+						AI探索，挖掘思维导图内容深度
 					</h3>
-					<p class="text-gray-400 text-sm">
-						利用AI Branch、AI Chat和AI Explore深入挖掘信息，从而制作出全面而详细的思维导图
+					<p class="text-gray-500 text-sm">
+						利用AI Branch、AI Chat和AI
+						Explore深入挖掘信息，从而制作出全面而详细的思维导图
 					</p>
 				</div>
 			</div>
-			<div class="rounded-xl bg-gray-100 w-1/3">
+			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
 				<div class="relative h-48 overflow-hidden">
-					<Image src={FileWall}
+					<Image
+						src={FileWall}
 						class="absolute -bottom-2 w-3/4 left-1/2 -translate-x-1/2"
 						alt="Export File"
-						/>
+					/>
 				</div>
 				<div class="px-4 pb-4">
-					<h3 class="font-bold text-md">
-						灵活导出，思维导图应用广泛
+					<h3 class="font-normal text-xl mb-1">
+						灵活导出，方便编辑和分享
 					</h3>
-					<p class="text-gray-400 text-sm">
+					<p class="text-gray-500 text-sm">
 						导出思维导图为多种格式，包括PPT、PDF、DOC、TXT、MD、PNG，满足不同编辑和分享需求，让思维导图的应用更加便捷
 					</p>
 				</div>
 			</div>
 		</div>
 		<h2 class="pt-12 pb-2 font-semibold text-4xl">
-			不仅有AI，更有强大的思维导图
+			不仅有AI，更是强大的思维导图
 		</h2>
-		<div class="pb-8 text-gray-400">
+		<div class="pb-8 text-gray-500">
 			集成富文本备注、快捷操作、个性主题、多样图标等强大功能，为您打造一款思维导图制作利器
 		</div>
 		<div
-			class="flex max-w-screen-lg flex-wrap rounded-xl bg-gray-100 p-4 pb-0"
+			class="flex justify-between max-w-screen-lg flex-wrap rounded-xl gap-y-4"
 		>
-			<div class="w-1/3 flex pb-4 pr-2">
+			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
 				<div class="mr-2">
-					<Icon name="fluent:note-add-48-regular" size={32} />
+					<Icon
+						name="fluent:note-add-48-regular"
+						color="orange"
+						size={32}
+					/>
 				</div>
 				<div>
 					<h3 class="font-bold">节点备注</h3>
-					<p class="text-gray-400 text-sm">
+					<p class="text-gray-500 text-sm">
 						在节点中插入富文本备注，可轻松应用加粗、斜体、高亮等样式，并插入图片
 					</p>
 				</div>
 			</div>
-			<div class="w-1/3 flex pb-4 pr-2">
+			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
 				<div class="mr-2">
 					<Icon
 						name="fluent:text-bullet-list-square-edit-20-regular"
+						color="green"
 						size={32}
 					/>
 				</div>
 				<div>
 					<h3 class="font-bold">大纲模式</h3>
-					<p class="text-gray-400 text-sm">
+					<p class="text-gray-500 text-sm">
 						以层级文本格式直观展示思维导图，让文本编辑更轻松便捷
 					</p>
 				</div>
 			</div>
-			<div class="w-1/3 flex pb-4 pr-2">
+			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
 				<div class="mr-2">
-					<Icon name="fluent:keyboard-16-regular" size={32} />
+					<Icon
+						name="fluent:keyboard-16-regular"
+						color="blue"
+						size={32}
+					/>
 				</div>
 				<div>
 					<h3 class="font-bold">快捷键</h3>
-					<p class="text-gray-400 text-sm">
+					<p class="text-gray-500 text-sm">
 						支持复制、粘贴、生成子节点等快捷键操作，通过键盘快速高效编辑思维导图
 					</p>
 				</div>
 			</div>
-			<div class="w-1/3 flex pb-4 pr-2">
+			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
 				<div class="mr-2">
-					<Icon name="fluent:color-24-regular" size={32} />
+					<Icon
+						name="fluent:color-24-regular"
+						color="purple"
+						size={32}
+					/>
 				</div>
 				<div>
 					<h3 class="font-bold">主题样式</h3>
-					<p class="text-gray-400 text-sm">
+					<p class="text-gray-500 text-sm">
 						提供多种颜色主题和节点形状选择，个性化定制思维导图外观，提升美观度
 					</p>
 				</div>
 			</div>
-			<div class="w-1/3 flex pb-4 pr-2">
+			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
 				<div class="mr-2">
-					<Icon name="fluent:balloon-16-regular" size={32} />
+					<Icon
+						name="fluent:balloon-16-regular"
+						color="red"
+						size={32}
+					/>
 				</div>
 				<div>
 					<h3 class="font-bold">节点图标</h3>
-					<p class="text-gray-400 text-sm">
+					<p class="text-gray-500 text-sm">
 						利用数字、颜色、优先级等图标清晰标识思维导图层级和重点，增强可读性
 					</p>
 				</div>
 			</div>
-			<div class="w-1/3 flex pb-4 pr-2">
+			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
 				<div class="mr-2">
-					<Icon name="fluent:share-20-filled" size={32} />
+					<Icon
+						name="fluent:share-20-filled"
+						color="maroon"
+						size={32}
+					/>
 				</div>
 				<div>
 					<h3 class="font-bold">轻松分享</h3>
-					<p class="text-gray-400 text-sm">
+					<p class="text-gray-500 text-sm">
 						一键生成分享链接，轻松分享给朋友或团队成员，实现随时随地的访问与协作
 					</p>
 				</div>
@@ -267,8 +300,8 @@ const translatePath = useTranslatedPath(lang);
 	</div>
 
 	<!-- Whiteboard -->
-	<div
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+	<!-- <div
+		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 		id="whiteboard"
 	>
 		<h2 class="text-5xl font-bold text-center mb-4">现代性的白板</h2>
@@ -283,7 +316,7 @@ const translatePath = useTranslatedPath(lang);
 			>无需注册，立即体验 →</a
 		>
 		<div class="flex space-x-4 max-w-5xl">
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
+			<div class="p-4 rounded-xl bg-gray-50 w-1/3">
 				<Image src={WhiteboardSimpleIcon} alt="simple" />
 				<div class="">
 					<div class="text-lg font-bold">简单，但是高效</div>
@@ -293,7 +326,7 @@ const translatePath = useTranslatedPath(lang);
 					<Image src={WhiteboardSimple} alt="simple" />
 				</div>
 			</div>
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
+			<div class="p-4 rounded-xl bg-gray-50 w-1/3">
 				<Image src={WhiteboardProductivityIcon} alt="productivity" />
 				<div class="">
 					<div class="text-lg font-bold">
@@ -309,7 +342,7 @@ const translatePath = useTranslatedPath(lang);
 					/>
 				</div>
 			</div>
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
+			<div class="p-4 rounded-xl bg-gray-50 w-1/3">
 				<Image src={WhiteboardFastIcon} alt="fast" />
 				<div class="">
 					<div class="text-lg font-bold">快速，在线编辑</div>
@@ -320,11 +353,11 @@ const translatePath = useTranslatedPath(lang);
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Design for All Platforms -->
 	<div
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 	>
 		<h2 class="text-5xl font-bold text-center mb-4">为所有平台设计</h2>
 		<div class="text-neutral-500 text-center text-lg mb-4">
@@ -347,7 +380,7 @@ const translatePath = useTranslatedPath(lang);
 				<div
 					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
 				>
-					2024 下半年
+					2025 下半年
 				</div>
 			</div>
 			<div class="flex flex-col items-center text-center px-4 py-2">
@@ -356,7 +389,7 @@ const translatePath = useTranslatedPath(lang);
 				<div
 					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
 				>
-					2024 下半年
+					2025 下半年
 				</div>
 			</div>
 			<div class="flex flex-col items-center text-center px-4 py-2">
@@ -374,7 +407,7 @@ const translatePath = useTranslatedPath(lang);
 	<!-- Pricing -->
 	<div
 		id="pricing"
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 	>
 		<h2 class="text-5xl font-bold text-center mb-4">定价</h2>
 		<div class="text-neutral-500 text-lg text-center mb-10">
@@ -442,7 +475,7 @@ const translatePath = useTranslatedPath(lang);
 
 	<!-- Follow -->
 	<div
-		class="pt-12 flex flex-col mb-10 items-center bg-gradient-to-b from-neutral-100 to-white to-10%"
+		class="pt-12 flex flex-col mb-10 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 	>
 		<h2 class="text-5xl font-bold text-center mb-4">关注AmyMind</h2>
 		<div class="text-neutral-500 text-lg text-center mb-10">
@@ -450,7 +483,7 @@ const translatePath = useTranslatedPath(lang);
 			欢迎你随时和我们交流，让 AmyMind 变得更棒！
 		</div>
 		<div class="flex space-x-4 max-w-5xl">
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3 flex space-x-2">
+			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
 				<div class="text-xl">🧭</div>
 				<div class="">
 					<div class="font-bold text-md">开发路线图</div>
@@ -465,7 +498,7 @@ const translatePath = useTranslatedPath(lang);
 					>
 				</div>
 			</div>
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3 flex space-x-2">
+			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
 				<div class="text-xl">📧</div>
 				<div class="">
 					<div class="font-bold text-md">联系我们</div>
@@ -474,7 +507,7 @@ const translatePath = useTranslatedPath(lang);
 					</div>
 				</div>
 			</div>
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3 flex space-x-2">
+			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
 				<div class="text-xl">💁‍♀️</div>
 				<div class="">
 					<div class="font-bold text-md">授权经销商</div>
@@ -494,6 +527,12 @@ const translatePath = useTranslatedPath(lang);
 	<Footer />
 </Layout>
 <style>
+	#hero {
+		transform: perspective(400px) rotateX(25deg) translateY(-60px);
+	}
+	#hero:hover {
+		transform: rotateX(0deg) translateY(0px);
+	}
 	#product-sologan {
 		font-size: 3.25rem;
 		font-weight: 700;
