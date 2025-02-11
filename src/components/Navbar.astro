@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "/src/assets/logo.svg";
+import Logo from "/src/assets/logo.png";
+import LogoText from "/src/assets/logo-text.png";
 import LanguagePicker from "../components/LanguagePicker.astro";
 import {
 	getLangFromUrl,
@@ -14,78 +15,21 @@ const t = useTranslations(lang);
 ---
 
 <div
-	class="mx-auto max-w-5xl rounded-xl shadow-xl shadow-black/5 border-black/10 border backdrop-blur p-2 bg-white/50 flex items-center text-neutral-700"
+	class="max-w-[900px] mx-auto rounded-xl shadow-xl shadow-black/5 border-black/10 border backdrop-blur px-4 py-2 bg-white/50 flex items-center text-neutral-700"
 >
 	<div class="flex-grow flex items-center space-x-4">
-		<a href="/">
-			<Image src={Logo} class="relative top-0.5" alt="AmyMind的logo" />
-		</a>
-		<div class="flex-1 items-center space-x-1">
+		<a href="/" title="DoraVoice">
+			<Image src={LogoText} class="w-28" alt="DoraVoice" /></a
+		>
+		<div class="flex-1 items-center space-x-1 leading-none">
 			<a
-				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
+ 				class="rounded-md transition-all px-2 py-1.5 hover:bg-gray-200 hover:text-black"
 				href={translatePath("/#features")}>{t("nav.features")}</a
-			>
-			<!-- <a
-				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href={translatePath("/#mindmap")}>{t("nav.mindmap")}</a
-			>
-			<a
-				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href={translatePath("/#whiteboard")}>{t("nav.whiteboard")}</a
-			> -->
-			<a
-				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href={translatePath("/#pricing")}>{t("nav.pricing")}</a
-			>
-			<a
-				class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black"
-				href={translatePath("/user-guide")}>{t("nav.user-guide")}</a
 			>
 		</div>
 	</div>
 	<div class="space-x-4 flex items-center">
 		<LanguagePicker />
-		<div id="guest-enter" class="space-x-1 text-sm">
-			<a
-				class="rounded-md py-1.5 px-2 hover:bg-neutral-200"
-				href="https://app.amymind.com/login">{t("nav.login")}</a
-			>
-			<a
-				class="bg-black rounded-md py-1.5 px-2 text-white hover:shadow-lg"
-				href="https://app.amymind.com/login">{t("nav.signup")}</a
-			>
-		</div>
-		<div id="user-enter" class="space-x-1 text-sm hidden">
-			<a
-				class="rounded-md py-1.5 px-2 hover:bg-neutral-200"
-				href="https://app.amymind.com/home">Hi</a
-			>
-		</div>
 	</div>
 </div>
 <style></style>
-<script>
-	document.cookie.split(";").forEach((item) => {
-		const [key, value] = item.split("=");
-		if (key.trim() === "user") {
-			try {
-				const decodedValue = decodeURIComponent(value);
-				const { id, email } = JSON.parse(decodedValue);
-				if (email) {
-					const guestEnter = document.getElementById("guest-enter");
-					guestEnter.style.display = "none";
-
-					const userEnter = document.getElementById("user-enter");
-					const userEnterText = document.querySelector(
-						"#user-enter a",
-					) as HTMLAnchorElement;
-					userEnterText.innerText = email.split("@")[0];
-					userEnter.style.display = "unset";
-				}
-			} catch (error) {
-				console.error("Error parsing user cookie:", error);
-			}
-			return;
-		}
-	});
-</script>

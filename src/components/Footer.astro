@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "/src/assets/logo.svg";
+import Logo from "/src/assets/logo.png";
 import LanguagePicker from "../components/LanguagePicker.astro";
 import {
 	getLangFromUrl,
@@ -13,76 +13,43 @@ const translatePath = useTranslatedPath(lang);
 const t = useTranslations(lang);
 ---
 
-<div class="mx-auto max-w-5xl mb-12 px-2 text-sm">
+<div class="mx-auto max-w-[900px] mb-12 px-2 text-sm">
 	<div
 		class="border-t border-gray-100 pt-8 pb-4 text-gray-400 flex justify-between"
 	>
 		<div class="w-56">
-			<Image src={Logo} class="opacity-60" alt="AmyMind" />
-			<div class="mt-4">AI Mind Map for Your Thinking</div>
-			<div class="">© AmyMind 2024</div>
+			<Image
+				src={Logo}
+				class="opacity-30 rounded-md w-6 mb-2"
+				alt="DoraVoice"
+			/>
+			<div class="mb-2 leading-tight">
+				Listen to podcasts and webpages in your native tongue, without
+				the need for a translator.
+			</div>
+			<div>©DoraVoice 2025</div>
 		</div>
+		<div class="w-20"></div>
 		<div>
-			<div class="leading-none font-medium text-base text-gray-500 mb-3">
-				Navigator
+			<div class="leading-none font-medium mb-2">
+				Tools
 			</div>
-
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href={translatePath("/user-guide")}>{t("nav.user-guide")}</a>
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href={translatePath("/#features")}>{t("nav.features")}</a>
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href={translatePath("/#pricing")}>{t("nav.pricing")}</a>
-			</div>
-			<!-- <div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href={translatePath("/#mindmap")}>{t("nav.mindmap")}</a>
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href={translatePath("/#whiteboard")}>{t("nav.whiteboard")}</a>
-			</div> -->
-		</div>
-		<div>
-			<div class="leading-none font-medium text-base text-gray-500 mb-3">
-				Export Tools
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href="#">{t("footer.mind-map-to-markdown")}</a>
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href="#">{t("footer.mind-map-to-text")}</a>
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href="#">{t("footer.mind-map-to-doc")}</a>
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href="#">{t("footer.mind-map-to-ppt")}</a>
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
-				<a href="#">{t("footer.mind-map-to-pdf")}</a>
-			</div>
-		</div>
-		<div>
-			<div class="leading-none font-medium text-base text-gray-500 mb-3">
-				AI Convert Tools
-			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href={translatePath("/convert/text-to-mind-map")}
 					>{t("footer.text-to-mind-map")}</a
 				>
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href={translatePath("/convert/markdown-to-mind-map")}
 					>{t("footer.markdown-to-mind-map")}</a
 				>
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href={translatePath("/convert/pdf-to-mind-map")}
 					>{t("footer.pdf-to-mind-map")}</a
 				>
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href={translatePath("/convert/word-to-mind-map")}
 					>{t("footer.doc-to-mind-map")}</a
 				>
@@ -90,41 +57,40 @@ const t = useTranslations(lang);
 		</div>
 
 		<div>
-			<div class="leading-none font-medium text-base text-gray-500 mb-3">
+			<div class="leading-none font-medium mb-2">
 				Legal
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href={translatePath("/legal/privacy-policy")}
 					>{t("footer.privacy-policy")}</a
 				>
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href={translatePath("/legal/terms-of-service")}
 					>{t("footer.terms-of-service")}</a
 				>
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href={translatePath("/legal/refund-policy")}
 					>{t("footer.refund-policy")}</a
 				>
 			</div>
 		</div>
 		<div>
-			<div class="leading-none font-medium text-base text-gray-500 mb-3">
+			<div class="leading-none font-medium mb-2">
 				More
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href="https://producterbook.com">Producter book</a>
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a href="https://twitter.com/amymindapp">Twitter</a>
 			</div>
-			<div class="mb-2 hover:text-gray-800 transition duration-300">
+			<div class="mb-1 hover:text-gray-800 transition duration-300">
 				<a
 					href="https://aitools.inc/tools/amy-mind"
 					rel="nofollow"
-					target="_blank"
-					>AI Tools</a
+					target="_blank">AI Tools</a
 				>
 			</div>
 		</div>

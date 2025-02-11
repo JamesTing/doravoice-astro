@@ -6,28 +6,13 @@ import {
 	useTranslatedPath,
 } from "../i18n/utils";
 
-import LightEffect from "/src/assets/light-effect.svg";
-import WhiteboardSimpleIcon from "/src/assets/whiteboard-simple-icon.svg";
-import AISign from "/src/assets/ai-sign.png";
-import WhiteboardSimple from "/src/assets/whiteboard-simple.svg";
-import WhiteboardProductivityIcon from "/src/assets/whiteboard-productivity-icon.svg";
-import WhiteboardProductivity from "/src/assets/whiteboard-productivity.svg";
-import WhiteboardFastIcon from "/src/assets/whiteboard-fast-icon.svg";
-import WhiteboardFast from "/src/assets/whiteboard-fast.svg";
-import PlatformWindows from "/src/assets/platform-windows.svg";
-import PlatformMac from "/src/assets/platform-mac.svg";
-import PlatformMobile from "/src/assets/platform-mobile.svg";
-import PlatformWebpage from "/src/assets/platform-webpage.svg";
-import AmymindScreenshot from "/src/assets/amymind-screenshot.png";
-import PasteText from "/src/assets/paste-text.png";
-import OneIdea from "/src/assets/one-idea.png";
-import ImportFile from "/src/assets/import-file.png";
-import Star from "/src/assets/star.png";
-import AppleMindmap from "/src/assets/apple-mindmap.png";
-import Toolbar from "/src/assets/toolbar.png";
-import MagicWand from "/src/assets/magic-wand.png";
-import FileWall from "/src/assets/file-wall.png";
+import ScreenshotHero from "/src/assets/screenshot-hero.png";
 import { Icon } from "astro-icon/components";
+import Logo from "/src/assets/logo.png";
+import LogoText from "/src/assets/logo-text.png";
+import LogoTextSlim from "/src/assets/logo-text-slim.png";
+import DownloadBadgeAppStore from "/src/assets/download-badge-app-store.svg";
+import DownloadBadgeGooglePlay from "/src/assets/download-badge-google-play.png";
 
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
@@ -38,623 +23,144 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout
-	title="AmyMind - AI Mind Mapping App"
-	description="AmyMind is a free AI app for effortless creation and sharing of mindmaps."
-	keywords="mindmap, mind map, AI, artificial intelligence, markdown to mindmap, pdf to mindmap, word to mindmap"
+	title="DoraVoice - AI Transcription and Translation"
+	description="DoraVoice is a free AI app for effortless transcription and translation."
+	keywords="transcription, translation, AI, artificial intelligence, transcription and translation"
 >
 	<!-- Head -->
-	<div class="fixed w-full pt-4 z-10">
+	<div class="pt-8 bg-gray-100">
+		<!-- navbar -->
 		<Navbar />
+		<!-- Hero -->
+		<div class="max-w-[900px] mx-auto mt-4 flex space-x-8 justify-between">
+			<div class="pt-28 pl-8">
+				<Image
+					src={Logo}
+					id="glow-button"
+					class="rounded-xl w-10 shadow-lg mb-1 ml-1"
+					alt="DoraVoice"
+				/>
+				<div class="text-black mb-8 text-5xl font-bold tracking-tight">
+					Tune into content <br /> in your native tongue
+				</div>
+				<div class="text-gray-500 text-lg mb-8">
+					Listen to podcasts and webpages in your native tongue,
+					without the need for a translator.
+				</div>
+				<!-- Download Badges -->
+				<div class="flex space-x-4">
+					<Image
+						src={DownloadBadgeAppStore}
+						alt="Download Badge App Store"
+						class="w-36 hover:shadow-lg transition-all cursor-pointer"
+					/>
+					<Image
+						src={DownloadBadgeGooglePlay}
+						alt="Download Badge Google Play"
+						class="w-36 hover:shadow-lg transition-all cursor-pointer hidden"
+					/>
+				</div>
+			</div>
+			<div class="max-w-96 h-[500px] overflow-hidden">
+				<Image
+					id="hero"
+					class="w-full"
+					src={ScreenshotHero}
+					alt="DoraVoice Screenshot"
+				/>
+			</div>
+		</div>
 	</div>
 
-	<!-- Mindmap -->
+	<!-- Features -->
 	<div
-		id="mindmap"
-		class="pt-28 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
+		class="pt-16 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 	>
-		<Image
-			class="absolute -left-10 top-0 opacity-90 pointer-events-none"
-			src={LightEffect}
-			alt="light effect"
-		/>
-		<h1 id="product-sologan">
-			<p>
-				One idea to
-				<span class="relative"
-					>Mindmap<Image
-						class="absolute left-2/3 -top-5 w-2/3"
-						src={AISign}
-						alt="AI Powered"
-					/></span
-				>
-			</p>
-			<p>
-				One Click to
-				<span class="ticker">
-					<span class="ppt">PowerPoint</span>
-					<span class="md">Markdown</span>
-					<span>
-						<span class="pdf">PDF</span>
-						<span style="-webkit-text-fill-color: #333;">&amp;</span
-						>
-						<span class="doc">Word</span>
-					</span>
-				</span>
-			</p>
-		</h1>
-		<div class="text-gray-500 text-center mb-4">
-			Text to mind map with AI. And Turn markdown, txt, freemind file into
-			mindmap <br />
-			Enjoy effortless exporting in PowerPoint, PDF, or Word formats
-		</div>
-		<a
-			href="https://app.amymind.com/mindmap/guide"
-			id="glow-button"
-			class="radius-md py-2 px-4 mb-2"
-			><span id="action-text">Get Started for Free</span>
-			<span class="arrow">→</span></a
-		>
-		<Image
-			id="hero"
-			class="max-w-screen-md rounded-xl border border-gray-200 shadow-2xl shadow-gray-200 mt-4 transition duration-500 ease-in-out transform-gpu"
-			src={AmymindScreenshot}
-			alt="AmyMind Screenshot"
-		/>
-		<h2 class="pt-12 pb-2 font-semibold text-4xl">
-			AI, Making Mind Maps Exceptional
+		<h2 class="text-3xl font-medium text-center tracking-tighter">
+			Transcription, Translation, and Reading
 		</h2>
-		<div id="features" class="pb-8 text-gray-400">
-			With AI, you can easily generate mind maps, conduct research, and
-			export files effortlessly.
+		<div class="pb-8 text-gray-600 text-lg">
+			Listen to podcasts and webpages in your native tongue, without the
+			need for a translator.
 		</div>
-		<div class="flex max-w-screen-lg gap-3">
-			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
-				<div class="relative h-48">
-					<Image
-						src={PasteText}
-						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(-120px,40px)rotate(-30deg);width:110px"
-						alt="paste text to mind map"
-						quality={100}
-					/>
-					<Image
-						src={OneIdea}
-						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(-50%,20px);width:110px"
-						alt="one idea to mind map"
-						quality={100}
-					/>
-					<Image
-						src={ImportFile}
-						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(20px,40px)rotate(30deg);width:110px"
-						alt="import file to mind maps"
-						quality={100}
-					/>
-					<Image
-						src={Star}
-						class="absolute left-5 top-5"
-						alt="star"
-						style={{ width: "52px" }}
-						quality={100}
-					/>
-				</div>
-				<div class="px-4 pb-4">
-					<h3 class="font-medium text-xl mb-1">
-						Anythings to Mind maps by AI
-					</h3>
-					<p class="text-gray-500 text-sm leading-snug">
-						With AI, quickly create mind maps from short text
-						inputs. Effortlessly import files such as PDF, Markdown,
-						Word Doc, and TXT for seamless content integration.
-					</p>
-				</div>
-			</div>
-			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
-				<div class="relative h-48 mx-4">
-					<Image
-						src={AppleMindmap}
-						class="absolute bottom-0"
-						alt="Simple Mind Map"
-					/>
-					<Image
-						src={Toolbar}
-						class="rounded-xl shadow-lg border border-gray-200 absolute top-16"
-						alt="AI Toolbar"
-					/>
-					<Image
-						src={MagicWand}
-						style={{width: "84px"}}
-						class="absolute left-1/3 top-3"
-						alt="AI Magic Wand"
-					/>
-				</div>
-				<div class="px-4 pb-4">
-					<h3 class="font-medium text-xl mb-1">
-						AI-Assisted Dive into Mind Maps
-					</h3>
-					<p class="text-gray-500 text-sm leading-snug">
-						Utilize AI Branch, AI Chat, and AI Explore to delve
-						deeper into information, resulting in comprehensive and
-						detailed mind maps.
-					</p>
-				</div>
-			</div>
-			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
-				<div class="relative h-48 overflow-hidden">
-					<Image
-						src={FileWall}
-						class="absolute -bottom-2 w-3/4 left-1/2 -translate-x-1/2"
-						alt="Export File"
-					/>
-				</div>
-				<div class="px-4 pb-4">
-					<h3 class="font-medium text-xl mb-1">
-						Export in Multiple Formats
-					</h3>
-					<p class="text-gray-500 text-sm leading-snug">
-						Export mind maps in various formats including PPT, PDF,
-						DOC, TXT, MD, PNG, meeting different editing and sharing
-						needs and making mind map application more accessible.
-					</p>
-				</div>
-			</div>
-		</div>
-		<h2 class="pt-12 pb-2 font-semibold text-4xl">
-			Not only AI, but Powerful Mind Maps
-		</h2>
-		<div class="pb-8 text-gray-400">
-			This app combines rich text notes, shortcuts, custom themes, and
-			various icons to create a powerful mind map tool.
-		</div>
-		<div
-			class="flex justify-between max-w-screen-lg flex-wrap rounded-xl gap-y-4"
-		>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:note-add-48-regular"
-						color="orange"
-						size={32}
-					/>
-				</div>
+		<div class="flex justify-between max-w-[900px] rounded-xl gap-x-4">
+			<div class="p-3 rounded-xl bg-gray-50">
+				<Icon
+					name="fluent:translate-auto-16-regular"
+					color="black"
+					size={28}
+				/>
+				<h3 class="font-medium text-normal leading-none my-2">
+					Language Transcription
+				</h3>
 				<div>
-					<h3 class="font-medium text-lg leading-none mb-2">
-						Node Notes
-					</h3>
 					<p class="text-gray-500 text-sm">
-						Insert rich text notes into nodes, easily apply bold,
-						italic, highlight, and other styles, and insert images
-						for convenient editing of large amounts of text.
+						Accurately transcribe foreign language content into text
+						for easy editing and saving.
 					</p>
 				</div>
 			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:text-bullet-list-square-edit-20-regular"
-						size={32}
-						color="green"
-					/>
-				</div>
+			<div class="p-3 rounded-xl bg-gray-50">
+				<Icon
+					name="fluent:text-bullet-list-square-edit-20-regular"
+					size={28}
+					color="black"
+				/>
+				<h3 class="font-medium text-normal leading-none my-2">
+					Intelligent Translation
+				</h3>
 				<div>
-					<h3 class="font-medium text-lg leading-none mb-2">
-						Outline Mode
-					</h3>
 					<p class="text-gray-500 text-sm">
-						Display the mind map in a hierarchical text format,
-						making text editing more intuitive and convenient.
+						Supports multilingual translation to help users easily
+						understand foreign content.
 					</p>
 				</div>
 			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:keyboard-16-regular"
-						size={32}
-						color="blue"
-					/>
-				</div>
+			<div class="p-3 rounded-xl bg-gray-50">
+				<Icon
+					name="fluent:keyboard-16-regular"
+					size={28}
+					color="black"
+				/>
+				<h3 class="font-medium text-normal leading-none my-2">
+					Natural Reading
+				</h3>
 				<div>
-					<h3 class="font-medium text-lg leading-none mb-2">
-						Shortcuts
-					</h3>
 					<p class="text-gray-500 text-sm">
-						Supports shortcuts for common actions like copying,
-						pasting, and creating child nodes, allowing for quick
-						and efficient mind map editing via the keyboard.
+						Read translated content with natural and fluent speech,
+						enhancing the auditory experience.
 					</p>
 				</div>
 			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:color-24-regular"
-						size={32}
-						color="purple"
-					/>
-				</div>
+			<div class="p-3 rounded-xl bg-gray-50">
+				<Icon
+					name="fluent:balloon-16-regular"
+					size={28}
+					color="black"
+				/>
+				<h3 class="font-medium text-normal leading-none my-2">
+					Offline Mode
+				</h3>
 				<div>
-					<h3 class="font-medium text-lg leading-none mb-2">
-						Theme Styles
-					</h3>
 					<p class="text-gray-500 text-sm">
-						Offer a variety of color themes and node shapes to
-						customize the appearance of your mind map and enhance
-						its visual appeal.
-					</p>
-				</div>
-			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:balloon-16-regular"
-						size={32}
-						color="red"
-					/>
-				</div>
-				<div>
-					<h3 class="font-medium text-lg leading-none mb-2">
-						Node Icons
-					</h3>
-					<p class="text-gray-500 text-sm">
-						Use icons such as numbers, colors, and priorities to
-						clearly indicate the hierarchy and focus of the mind
-						map, improving readability.
-					</p>
-				</div>
-			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:share-20-filled"
-						size={32}
-						color="maroon"
-					/>
-				</div>
-				<div>
-					<h3 class="font-medium text-lg leading-none mb-2">
-						Easy Sharing
-					</h3>
-					<p class="text-gray-500 text-sm">
-						Generate a sharing link with one click, easily share it
-						with friends or team members for anytime, anywhere
-						access and collaboration.
+						Access transcription and translation features without an
+						internet connection for convenience on the go.
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- Whiteboard -->
-	<!-- <div
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-		id="whiteboard"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">
-			Modern Whiteboard Tool<br />with Clear Design
-		</h2>
-		<div class="text-neutral-500 text-center text-lg mb-4">
-			The old and complicated menu is not a standard feature of drawing <br
-			/>
-			applications. AmyMind Whiteboard is such a productivity tool. It is <br
-			/>
-			simple and elegant, and has super high efficiency.
-		</div>
-		<a
-			href="https://app.amymind.com/graph/new"
-			class="rounded-full py-2 px-4 mb-8 bg-black text-white hover:shadow-xl transition-shadow"
-			>Create Whiteboard for free →</a
-		>
-		<div class="flex space-x-4 max-w-5xl">
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
-				<Image src={WhiteboardSimpleIcon} alt="simple" />
-				<div class="">
-					<div class="text-lg font-bold">Simple, but efficient</div>
-					<div class="text-neutral-500 leading-snug text-sm mb-4">
-						No outdated menus, screens full of small windows.
-						Supports toolbars, quick editing of graphic styles.
-					</div>
-					<Image src={WhiteboardSimple} alt="simple" />
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
-				<Image src={WhiteboardProductivityIcon} alt="productivity" />
-				<div class="">
-					<div class="text-lg font-bold">
-						Productivity tools, no joking
-					</div>
-					<div class="text-neutral-500 leading-snug text-sm mb-4">
-						It’s not just casual drawing, but it can also draw
-						flowcharts, UML diagrams and other work scene diagrams.
-					</div>
-					<Image
-						src={WhiteboardProductivity}
-						alt="productivity"
-						style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
-					/>
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-neutral-100 w-1/3">
-				<Image src={WhiteboardFastIcon} alt="fast" />
-				<div class="">
-					<div class="text-lg font-bold">Fast, edit online</div>
-					<div class="text-neutral-500 leading-snug text-sm mb-4">
-						No need to download and install software to the local
-						computer, support online editing of charts.
-					</div>
-					<Image src={WhiteboardFast} alt="fast" />
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- Design for All Platforms -->
-	<div
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">
-			Design for All Platforms
-		</h2>
-		<div class="text-neutral-500 text-center text-lg mb-4">
-			The web version is just the beginning,<br /> AmyMind will gradually cover
-			all popular platforms.
-		</div>
-		<div class="flex space-x-4">
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image src={PlatformWebpage} alt="Webpage" />
-				<div class="text-sm mt-2 mb-4">Web</div>
-				<div
-					class="text-sm rounded-full bg-black text-white px-2 py-1.5"
-				>
-					Available now
-				</div>
-			</div>
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image class="opacity-60" src={PlatformWindows} alt="Windows" />
-				<div class="text-sm mt-2 mb-4">Windows</div>
-				<div
-					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
-				>
-					2025 Mid
-				</div>
-			</div>
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image class="opacity-60" src={PlatformMac} alt="MacOS" />
-				<div class="text-sm mt-2 mb-4">MacOS</div>
-				<div
-					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
-				>
-					2025 Mid
-				</div>
-			</div>
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image class="opacity-60" src={PlatformMobile} alt="Mobile" />
-				<div class="text-sm mt-2 mb-4">Mobile</div>
-				<div
-					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
-				>
-					In the further
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Pricing -->
-	<div
-		id="pricing"
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">Pricing</h2>
-		<div class="text-neutral-500 text-lg text-center mb-10">
-			Friends with limited budget are welcome to use it for free. <br />
-			If you need,you can consider upgrading the membership plan.
-		</div>
-		<div class="flex space-x-4">
-			<div
-				class="rounded-xl bg-white shadow-md p-4 max-w-80 border-neutral-100 border"
-			>
-				<div class="text-2xl font-bold">Free</div>
-				<div class="text-neutral-500 min-h-12 text-sm">
-					For occasional users
-				</div>
-				<div class="flex items-end mb-2">
-					<div class="text-3xl leading-none text-bold">$0</div>
-					<div class="text-sm text-neutral-500">/Month</div>
-				</div>
-				<a
-					class="rounded-lg bg-neutral-200 font-bold block text-neutral-600 text-center py-1.5 mb-2"
-					>Current Plan</a
-				>
-				<ul class="leading-loose list-disc list-inside">
-					<li>Mindmap App</li>
-					<li>WhiteBoard App</li>
-					<li>Export png, pdf, doc...</li>
-					<li class="text-fuchsia-600">10 AI-actions/day</li>
-					<li class="text-fuchsia-600">20 Diagrams</li>
-					<li class="text-fuchsia-600">50MB Storeage</li>
-				</ul>
-			</div>
-			<div
-				class="rounded-xl bg-white shadow-xl p-4 max-w-80 border-neutral-100 border"
-			>
-				<div
-					class="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-200"
-					style=" -webkit-text-fill-color: transparent;text-fill-color: transparent;; background-clip: text;"
-				>
-					AmyMind Pro
-				</div>
-				<div class="text-neutral-500 min-h-12 text-sm">
-					For professional users who often draw and organize diagrams.
-				</div>
-				<div class="flex items-end mb-2">
-					<div class="text-3xl leading-none text-bold">$4.99</div>
-					<div class="text-sm text-neutral-500">/Month</div>
-				</div>
-				<a
-					class="rounded-lg bg-purple-500 font-bold block text-white text-center py-1.5 mb-2 hover:bg-fuchsia-500"
-					href="https://app.amymind.com/home/membership"
-					>Upgrade to Pro</a
-				>
-				<ul class="leading-loose list-disc list-inside">
-					<li>Mindmap App</li>
-					<li>WhiteBoard App</li>
-					<li>Export png, pdf, doc...</li>
-					<li class="text-fuchsia-600">200 AI-actions/day</li>
-					<li class="text-fuchsia-600">Unlimited Diagrams</li>
-					<li class="text-fuchsia-600">500MB Storeage</li>
-					<li class="text-fuchsia-600">Folder Manager</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<!-- Follow -->
-	<div
-		class="pt-12 flex flex-col mb-10 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">Follow AmyMind</h2>
-		<div class="text-neutral-500 text-lg text-center mb-10">
-			The growth of AmyMind could not be separated from the support and
-			help<br />
-			of friends in the community. You are always welcome to communicate with<br
-			/>
-			us and make AmyMind better together!
-		</div>
-		<div class="flex space-x-4 max-w-5xl">
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
-				<div class="text-xl">🧭</div>
-				<div class="">
-					<div class="font-bold text-md">Road Map</div>
-					<div class="text-neutral-500 text-sm">
-						AmyMind development plan, you can keep track of feature
-						development progress here
-					</div>
-					<a
-						class="text-fuchsia-600 text-sm mt-2 block"
-						href="https://trello.com/b/AZNWVbcE/amymind-roadmap"
-						>Detail →</a
-					>
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
-				<div class="text-xl">📧</div>
-				<div class="">
-					<div class="font-bold text-md">Contact Us</div>
-					<div class="text-neutral-500 text-sm">
-						Send me an email if you have any questions.The email
-						contact is ahshengchen, sevice at gmail.com
-					</div>
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
-				<div class="text-xl">💁‍♀️</div>
-				<div class="">
-					<div class="font-bold text-md">Official Resellers</div>
-					<div class="text-neutral-500 text-sm">
-						Partner of AmyMind
-					</div>
-					<a
-						class="text-fuchsia-600 text-sm mt-2 block"
-						href={translatePath("/legal/official-resellers")}
-						>Detail →</a
-					>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<Footer />
 </Layout>
+
+<Footer />
+
 <style>
-	#hero {
-		transform: perspective(600px) rotateX(25deg) translateY(-60px);
-	}
-	#hero:hover {
-		transform: rotateX(0deg) translateY(0px);
-	}
-	#product-sologan {
-		font-size: 3.25rem;
-		font-weight: 700;
-		line-height: 3.75rem;
-		margin: 0 0 4px;
-		position: relative;
-		word-break: keep-all;
-		/* 字体横向间距 */
-		letter-spacing: -0.02em;
-		text-align: center;
-	}
-	@keyframes slide {
-		0%,
-		20% {
-			top: 0;
-		}
-		30% {
-			top: -3.75rem;
-		}
-		40% {
-			top: -7.5rem;
-		}
-		60% {
-			top: -7.5rem;
-		}
-		90% {
-			top: -7.5rem;
-		}
-	}
-
-	.ticker {
-		display: inline-flex;
-		height: 3.75rem;
-		overflow: hidden;
-		flex-direction: column;
-	}
-	.ticker > span {
-		position: relative;
-		top: 0;
-		text-align: left;
-		animation: slide 7s infinite;
-		/* 文字渐变背景色 */
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.ppt {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #bc3f1f 50%, #ffb29d 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.md {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #000 50%, #d6d6d6 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.doc {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #195ad4 50%, #9dd5ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.pdf {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #ba0f0f 50%, #ff7171 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-
 	#glow-button {
 		color: #fff;
 		background: #111;
 		cursor: pointer;
 		position: relative;
 		z-index: 0;
-		border-radius: 20px;
 	}
 
 	#glow-button:before {
@@ -733,29 +239,3 @@ const translatePath = useTranslatedPath(lang);
 		}
 	}
 </style>
-<script>
-	document.cookie.split(";").forEach((item) => {
-		const [key, value] = item.split("=");
-		if (key.trim() === "user") {
-			try {
-				const decodedValue = decodeURIComponent(value);
-				const { id, email } = JSON.parse(decodedValue);
-				if (email) {
-					const actionButton = document.getElementById(
-						"glow-button",
-					) as HTMLAnchorElement;
-					actionButton.href = `https://app.amymind.com/home`;
-
-					const actionText = document.getElementById("action-text");
-					actionText.innerText = "Go to Workspace";
-
-					const actionTip = document.getElementById("action-tip");
-					actionTip.style.visibility = "hidden";
-				}
-			} catch (error) {
-				console.error("Error parsing user cookie:", error);
-			}
-			return;
-		}
-	});
-</script>

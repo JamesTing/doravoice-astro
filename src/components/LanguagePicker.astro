@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 
 import {
     getLangFromUrl,
@@ -8,7 +7,6 @@ import {
     getSlug,
 } from "../i18n/utils";
 import { languages } from "../i18n/ui";
-import LanguageIcon from "/src/assets/language-picker.svg";
 
 const lang = getLangFromUrl(Astro.url);
 const slug = getSlug(Astro.url);
@@ -17,7 +15,6 @@ const t = useTranslations(lang);
 ---
 
 <div class="flex items-center">
-    <Image src={LanguageIcon} alt="langueage picker" />
     <select
         id="language-picker"
         class="bg-transparent outline-none cursor-pointer transition rounded-md py-1 hover:bg-neutral-200"
