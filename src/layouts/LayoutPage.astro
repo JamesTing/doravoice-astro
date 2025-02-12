@@ -18,7 +18,7 @@ const { frontmatter } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{frontmatter.title} - AmyMind</title>
+		<title>{frontmatter.title} - DoraVoice</title>
 	</head>
 	<body>
 		<div class="fixed w-full pt-4 z-10">
@@ -26,7 +26,7 @@ const { frontmatter } = Astro.props;
 		</div>
 		<div class="pt-28">
 			<div
-				class="max-w-5xl mb-10 border border-neutral-100 px-20 py-16 mx-auto shadow-xl leading-relaxed"
+				class="max-w-[900px] rounded-md mb-10 border border-gray-200 px-20 py-16 mx-auto shadow-lg shadow-gray-200 leading-relaxed"
 			>
 				<ProsPage><slot /></ProsPage>
 			</div>

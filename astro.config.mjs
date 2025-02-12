@@ -6,7 +6,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://amymind.com',
+  site: 'https://doravoice.com',
   integrations: [tailwind(), sitemap(), icon()],
   i18n: {
     defaultLocale: "en",

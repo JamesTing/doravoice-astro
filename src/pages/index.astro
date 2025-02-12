@@ -33,13 +33,14 @@ const translatePath = useTranslatedPath(lang);
 		<Navbar />
 		<!-- Hero -->
 		<div class="max-w-[900px] mx-auto mt-4 flex space-x-8 justify-between">
-			<div class="pt-28 pl-8">
-				<Image
-					src={Logo}
-					id="glow-button"
-					class="rounded-xl w-10 shadow-lg mb-1 ml-1"
-					alt="DoraVoice"
-				/>
+			<div class="pt-28 pl-8 relative">
+				<div id="glow-button" class="rounded-xl w-10">
+					<Image
+						src={Logo}
+						class="rounded-xl w-10 shadow-lg mb-1 ml-1"
+						alt="DoraVoice"
+					/>
+				</div>
 				<div class="text-black mb-8 text-5xl font-bold tracking-tight">
 					Tune into content <br /> in your native tongue
 				</div>
@@ -74,55 +75,56 @@ const translatePath = useTranslatedPath(lang);
 
 	<!-- Features -->
 	<div
+		id="features"
 		class="pt-16 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 	>
-		<h2 class="text-3xl font-medium text-center tracking-tighter">
-			Transcription, Translation, and Reading
+		<h2 class="text-3xl font-medium text-center tracking-tight">
+			Transcribe, Translate, and Read
 		</h2>
 		<div class="pb-8 text-gray-600 text-lg">
-			Listen to podcasts and webpages in your native tongue, without the
-			need for a translator.
+			Transcribe and translate audio and text content in your native
+			tongue.
 		</div>
 		<div class="flex justify-between max-w-[900px] rounded-xl gap-x-4">
-			<div class="p-3 rounded-xl bg-gray-50">
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
 				<Icon
-					name="fluent:translate-auto-16-regular"
+					name="fluent:comment-text-24-regular"
 					color="black"
-					size={28}
+					size={32}
 				/>
-				<h3 class="font-medium text-normal leading-none my-2">
-					Language Transcription
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
+					Audio Transcription
 				</h3>
 				<div>
 					<p class="text-gray-500 text-sm">
-						Accurately transcribe foreign language content into text
-						for easy editing and saving.
+						Accurately & easily transcribe podcasts and other audio
+						content into text.
 					</p>
 				</div>
 			</div>
-			<div class="p-3 rounded-xl bg-gray-50">
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
 				<Icon
-					name="fluent:text-bullet-list-square-edit-20-regular"
-					size={28}
+					name="fluent:translate-auto-16-regular"
+					size={32}
 					color="black"
 				/>
-				<h3 class="font-medium text-normal leading-none my-2">
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
 					Intelligent Translation
 				</h3>
 				<div>
 					<p class="text-gray-500 text-sm">
-						Supports multilingual translation to help users easily
-						understand foreign content.
+						Translate webpages, subtitles, and other text content
+						into your native language.
 					</p>
 				</div>
 			</div>
-			<div class="p-3 rounded-xl bg-gray-50">
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
 				<Icon
-					name="fluent:keyboard-16-regular"
-					size={28}
+					name="fluent:person-voice-24-regular"
+					size={32}
 					color="black"
 				/>
-				<h3 class="font-medium text-normal leading-none my-2">
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
 					Natural Reading
 				</h3>
 				<div>
@@ -132,19 +134,19 @@ const translatePath = useTranslatedPath(lang);
 					</p>
 				</div>
 			</div>
-			<div class="p-3 rounded-xl bg-gray-50">
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
 				<Icon
-					name="fluent:balloon-16-regular"
-					size={28}
+					name="fluent:airplane-24-regular"
+					size={32}
 					color="black"
 				/>
-				<h3 class="font-medium text-normal leading-none my-2">
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
 					Offline Mode
 				</h3>
 				<div>
 					<p class="text-gray-500 text-sm">
-						Access transcription and translation features without an
-						internet connection for convenience on the go.
+						Once transcribed & translated done, content is stored
+						offline for quick access.
 					</p>
 				</div>
 			</div>
@@ -156,9 +158,6 @@ const translatePath = useTranslatedPath(lang);
 
 <style>
 	#glow-button {
-		color: #fff;
-		background: #111;
-		cursor: pointer;
 		position: relative;
 		z-index: 0;
 	}
@@ -188,7 +187,6 @@ const translatePath = useTranslatedPath(lang);
 		animation: glowing 20s linear infinite;
 		opacity: 0.3;
 		transition: opacity 0.28s ease-in-out;
-		border-radius: 20px;
 	}
 
 	#glow-button:active {
@@ -198,21 +196,8 @@ const translatePath = useTranslatedPath(lang);
 	#glow-button:active:after {
 		background: transparent;
 	}
-
-	#glow-button:hover {
-		transition: all 0.16s ease-in-out;
-		transform: translateY(-2px) scale(1.01);
-	}
-	#glow-button .arrow {
-		display: inline-block;
-		transition: all 0.16s ease-in-out;
-		transform: translateX(0px);
-	}
-	#glow-button:hover .arrow {
-		transform: translateX(8px);
-	}
 	#glow-button:hover:before {
-		opacity: 1;
+		opacity: 0.5;
 	}
 
 	#glow-button:after {
@@ -221,10 +206,8 @@ const translatePath = useTranslatedPath(lang);
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background: #111;
 		left: 0;
 		top: 0;
-		border-radius: 20px;
 	}
 
 	@keyframes glowing {

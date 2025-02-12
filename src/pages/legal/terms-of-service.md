@@ -3,7 +3,7 @@ layout: '/src/layouts/LayoutPage.astro'
 title: 'Terms of Service'
 ---
 # Terms of Service
-The online tool network service website operated by AmyMind (referred to as "Website"), the following terms and conditions ("Terms of Service", "Terms") apply to all users. Accessing or using any part of the website indicates acceptance and compliance with these Terms of Service. These Terms of Service may be changed and updated by us at any time, and we reserve this right.
+The online tool operated by DoraVoice (referred to as "App"), the following terms and conditions ("Terms of Service", "Terms") apply to all users. Accessing or using any part of the App indicates acceptance and compliance with these Terms of Service. These Terms of Service may be changed and updated by us at any time, and we reserve this right.
 
 We provide you with information, tools, and services for purchasing goods under the conditions that you meet the legal age and agree to seek our services. Please do not use our products for any illegal or unauthorized use, including the spread of destructive codes, otherwise, it will lead to service termination.
 
@@ -17,7 +17,7 @@ For any orders you place with us, we reserve the right to refuse. You agree to p
 
 This service may contain information, products, and services from third parties. When you visit third-party links, you may be transferred to sites unrelated to us. We are not responsible for any responsibilities of third parties. Complaints, claims, concerns, or issues related to third-party products should be submitted directly to the third party.
 
-You agree to indemnify, defend and guarantee AmyMind for any claims or demands arising from your use of this service in violation of the terms of service, including reasonable attorney's fees.
+You agree to indemnify, defend and guarantee DoraVoice for any claims or demands arising from your use of this service in violation of the terms of service, including reasonable attorney's fees.
 
 This service should be provided "as is" and "available" without any express or implied warranties.
 

@@ -5,11 +5,11 @@ title: 'Privacy Policy'
 
 # Privacy Policy
 
-This Privacy Policy describes how we collect, use, and share your personal information when you visit https://amymind.com ("Website") or purchase products or services from it.
+This Privacy Policy describes how we collect, use, and share your personal information when you use DoraVoice ("App") or purchase products or services from it.
 
 Types of personal information collected
 
-When you visit the website, we automatically collect specific information about your device, including information about your web browser, IP address, time zone, and some of the cookies installed on your device. Additionally, as you browse the website, we collect information about the individual web pages or products you view, what websites or search terms referred you to the Website, and information about how you interact with the Website. We refer to this automatically-collected information as “Device Information”.
+When you use the App, we automatically collect specific information about your device, including information about your web browser, IP address, time zone, and some of the cookies installed on your device. Additionally, as you browse the website, we collect information about the individual web pages or products you view, what websites or search terms referred you to the Website, and information about how you interact with the Website. We refer to this automatically-collected information as “Device Information”.
 
 We collect Device Information using the following technologies:
 
