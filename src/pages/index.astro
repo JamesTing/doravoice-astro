@@ -50,16 +50,20 @@ const translatePath = useTranslatedPath(lang);
 				</div>
 				<!-- Download Badges -->
 				<div class="flex space-x-4">
-					<Image
-						src={DownloadBadgeAppStore}
-						alt="Download Badge App Store"
-						class="w-36 hover:shadow-lg transition-all cursor-pointer"
-					/>
-					<Image
-						src={DownloadBadgeGooglePlay}
-						alt="Download Badge Google Play"
-						class="w-36 hover:shadow-lg transition-all cursor-pointer hidden"
-					/>
+					<a href="#">
+						<Image
+							src={DownloadBadgeAppStore}
+							alt="Download Badge App Store"
+							class="w-36 hover:shadow-lg transition-all cursor-pointer"
+						/>
+					</a>
+					<a href="#">
+						<Image
+							src={DownloadBadgeGooglePlay}
+							alt="Download Badge Google Play"
+							class="w-36 hover:shadow-lg transition-all cursor-pointer hidden"
+						/>
+					</a>
 				</div>
 			</div>
 			<div class="max-w-96 h-[500px] overflow-hidden">
@@ -141,7 +145,7 @@ const translatePath = useTranslatedPath(lang);
 					color="black"
 				/>
 				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
-					Offline Mode
+					Offline Access
 				</h3>
 				<div>
 					<p class="text-gray-500 text-sm">

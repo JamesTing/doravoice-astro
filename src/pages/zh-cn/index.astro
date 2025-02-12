@@ -5,29 +5,14 @@ import {
 	useTranslations,
 	useTranslatedPath,
 } from "../../i18n/utils";
-import { Icon } from "astro-icon/components";
 
-import LightEffect from "/src/assets/light-effect.svg";
-import WhiteboardSimpleIcon from "/src/assets/whiteboard-simple-icon.svg";
-import AISign from "/src/assets/ai-sign.png";
-import WhiteboardSimple from "/src/assets/whiteboard-simple.svg";
-import WhiteboardProductivityIcon from "/src/assets/whiteboard-productivity-icon.svg";
-import WhiteboardProductivity from "/src/assets/whiteboard-productivity.svg";
-import WhiteboardFastIcon from "/src/assets/whiteboard-fast-icon.svg";
-import WhiteboardFast from "/src/assets/whiteboard-fast.svg";
-import PlatformWindows from "/src/assets/platform-windows.svg";
-import PlatformMac from "/src/assets/platform-mac.svg";
-import PlatformMobile from "/src/assets/platform-mobile.svg";
-import PlatformWebpage from "/src/assets/platform-webpage.svg";
-import AmymindScreenshot from "/src/assets/doravoice-screenshot.png";
-import PasteText from "/src/assets/paste-text.png";
-import OneIdea from "/src/assets/one-idea.png";
-import ImportFile from "/src/assets/import-file.png";
-import Star from "/src/assets/star.png";
-import AppleMindmap from "/src/assets/apple-mindmap.png";
-import Toolbar from "/src/assets/toolbar.png";
-import MagicWand from "/src/assets/magic-wand.png";
-import FileWall from "/src/assets/file-wall.png";
+import ScreenshotHero from "/src/assets/screenshot-hero.png";
+import { Icon } from "astro-icon/components";
+import Logo from "/src/assets/logo.png";
+import LogoText from "/src/assets/logo-text.png";
+import LogoTextSlim from "/src/assets/logo-text-slim.png";
+import DownloadBadgeAppStore from "/src/assets/download-badge-app-store.svg";
+import DownloadBadgeGooglePlay from "/src/assets/download-badge-google-play.png";
 
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
@@ -38,583 +23,145 @@ const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout
-	title="DoraVoice - 伴你思考的AI思维导图"
-	description="DoraVoice是一款AI驱动的应用，支持通过提示语、PDF、Word、Markdown、Txt等方式生成思维导图，AI助力完善脑图内容，轻松导出各种格式与他人共享。"
-	keywords="DoraVoice,AI,思维导图,脑图,思维导图软件,免费思维导图软件,头脑风暴工具"
+	title="DoraVoice - AI Transcription and Translation"
+	description="DoraVoice is a free AI app for effortless transcription and translation."
+	keywords="transcription, translation, AI, artificial intelligence, transcription and translation"
 >
 	<!-- Head -->
-	<div class="fixed w-full pt-4 z-10">
+	<div class="pt-8 bg-gray-100">
+		<!-- navbar -->
 		<Navbar />
+		<!-- Hero -->
+		<div class="max-w-[900px] mx-auto mt-4 flex space-x-8 justify-between">
+			<div class="pt-20 pl-8 relative">
+				<div id="glow-button" class="rounded-xl w-10">
+					<Image
+						src={Logo}
+						class="rounded-xl w-10 shadow-lg mb-1 ml-1"
+						alt="DoraVoice"
+					/>
+				</div>
+				<div class="text-black mb-4 text-5xl font-bold tracking-tight leading-tight">
+					用你的母语<br />收听外文内容
+				</div>
+				<div class="text-gray-500 text-lg mb-4">
+					打破语言障碍，转录翻译播客和网页
+					<br />
+					生成自然流畅的语音
+					<br />
+					用你的母语收听
+				</div>
+				<!-- Download Badges -->
+				<div class="flex space-x-4">
+					<a href="#">
+						<Image
+							src={DownloadBadgeAppStore}
+							alt="Download Badge App Store"
+							class="w-36 hover:shadow-lg transition-all cursor-pointer"
+						/>
+					</a>
+					<a href="#">
+						<Image
+							src={DownloadBadgeGooglePlay}
+							alt="Download Badge Google Play"
+							class="w-36 hover:shadow-lg transition-all cursor-pointer hidden"
+						/>
+					</a>
+				</div>
+			</div>
+			<div class="max-w-96 h-[500px] overflow-hidden">
+				<Image
+					id="hero"
+					class="w-full"
+					src={ScreenshotHero}
+					alt="DoraVoice Screenshot"
+				/>
+			</div>
+		</div>
 	</div>
 
-	<!-- Mindmap -->
+	<!-- Features -->
 	<div
-		id="mindmap"
-		class="pt-28 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
+		id="features"
+		class="pt-16 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
 	>
-		<Image
-			class="absolute -left-10 top-0 opacity-90 pointer-events-none"
-			src={LightEffect}
-			alt="light effect"
-		/>
-		<h2 id="product-sologan">
-			<p>
-				一句话生成<span class="relative"
-					>思维导图<Image
-						class="absolute left-2/3 -top-5 w-2/3"
-						src={AISign}
-						alt="AI Powered"
-					/></span
-				>
-			</p>
-			<p>
-				一键导出
-				<span class="ticker">
-					<span class="ppt">PowerPoint</span>
-					<span class="md">Markdown</span>
-					<span>
-						<span class="pdf">PDF</span>
-						<span style="-webkit-text-fill-color: #333;">&amp;</span
-						>
-						<span class="doc">Word</span>
-					</span>
-				</span>
-			</p>
+		<h2 class="text-3xl font-medium text-center tracking-tight">
+			转录, 翻译, 朗读
 		</h2>
-		<div class="text-neutral-500 text-center text-lg mb-4">
-			AI助力，将一句话、Markdown、PDF、Word、Txt、Freemind转换为思维导图<br
-			/>
-			轻松导出 PowerPoint, PDF, Word 方便二次编辑和分享
+		<div class="pb-8 text-gray-600 text-lg">
+			用你的母语转录, 翻译, 朗读音频和文本内容。
 		</div>
-
-		<a
-			href="https://app.doravoice.com/mindmap/guide"
-			id="glow-button"
-			class="radius-md py-2 px-4 mb-8"
-			><span id="action-text">无需注册，立即体验</span>
-			<span class="arrow">→</span></a
-		>
-
-		<Image
-			id="hero"
-			class="max-w-screen-md rounded-xl border border-gray-200 shadow-2xl transition duration-500 ease-in-out transform-gpu"
-			src={AmymindScreenshot}
-			alt="DoraVoice Screenshot"
-		/>
-		<h2 id="features" class="pt-12 pb-2 font-semibold text-4xl">
-			AI助力，思维导图更出色
-		</h2>
-		<div class="pb-8 text-gray-500">
-			有了AI，您可以轻松生成思维导图、进行研究，并且毫不费力地导出文件。
-		</div>
-
-		<div class="flex max-w-screen-lg gap-3">
-			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
-				<div class="relative h-48">
-					<Image
-						src={PasteText}
-						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(-120px,40px)rotate(-30deg);width:110px"
-						alt="paste text to mind map"
-						quality={100}
-					/>
-					<Image
-						src={OneIdea}
-						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(-50%,20px);width:110px"
-						alt="one idea to mind map"
-						quality={100}
-					/>
-					<Image
-						src={ImportFile}
-						class="absolute left-1/2 border border-gray-200 shadow-xl rounded-xl"
-						style="transform:translate(20px,40px)rotate(30deg);width:110px"
-						alt="import file to mind maps"
-						quality={100}
-					/>
-					<Image
-						src={Star}
-						class="absolute left-5 top-5"
-						alt="star"
-						style={{ width: "52px" }}
-						quality={100}
-					/>
-				</div>
-				<div class="px-4 pb-4">
-					<h3 class="font-normal text-xl mb-1">
-						AI生成，思维导图触手可及
-					</h3>
-					<p class="text-gray-500 text-sm">
-						借助AI，快速从简短的文字输入中生成思维导图。轻松导入PDF、Markdown、Word
-						Doc和TXT等文件，实现无缝的内容整合
-					</p>
-				</div>
-			</div>
-			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
-				<div class="relative h-48 mx-4">
-					<Image
-						src={AppleMindmap}
-						class="absolute bottom-0"
-						alt="Simple Mind Map"
-					/>
-					<Image
-						src={Toolbar}
-						class="rounded-xl shadow-lg border border-gray-200 absolute top-16"
-						alt="AI Toolbar"
-					/>
-					<Image
-						src={MagicWand}
-						width={84}
-						class="absolute left-1/3 top-3"
-						alt="AI Magic Wand"
-					/>
-				</div>
-				<div class="px-4 pb-4">
-					<h3 class="font-normal text-xl mb-1">
-						AI探索，挖掘思维导图内容深度
-					</h3>
-					<p class="text-gray-500 text-sm">
-						利用AI Branch、AI Chat和AI
-						Explore深入挖掘信息，从而制作出全面而详细的思维导图
-					</p>
-				</div>
-			</div>
-			<div class="rounded-xl bg-gray-50 w-1/3 border border-gray-100">
-				<div class="relative h-48 overflow-hidden">
-					<Image
-						src={FileWall}
-						class="absolute -bottom-2 w-3/4 left-1/2 -translate-x-1/2"
-						alt="Export File"
-					/>
-				</div>
-				<div class="px-4 pb-4">
-					<h3 class="font-normal text-xl mb-1">
-						灵活导出，方便编辑和分享
-					</h3>
-					<p class="text-gray-500 text-sm">
-						导出思维导图为多种格式，包括PPT、PDF、DOC、TXT、MD、PNG，满足不同编辑和分享需求，让思维导图的应用更加便捷
-					</p>
-				</div>
-			</div>
-		</div>
-		<h2 class="pt-12 pb-2 font-semibold text-4xl">
-			不仅有AI，更是强大的思维导图
-		</h2>
-		<div class="pb-8 text-gray-500">
-			集成富文本备注、快捷操作、个性主题、多样图标等强大功能，为您打造一款思维导图制作利器
-		</div>
-		<div
-			class="flex justify-between max-w-screen-lg flex-wrap rounded-xl gap-y-4"
-		>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:note-add-48-regular"
-						color="orange"
-						size={32}
-					/>
-				</div>
+		<div class="flex justify-between max-w-[900px] rounded-xl gap-x-4">
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
+				<Icon
+					name="fluent:comment-text-24-regular"
+					color="black"
+					size={32}
+				/>
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
+					音频转录
+				</h3>
 				<div>
-					<h3 class="font-bold">节点备注</h3>
 					<p class="text-gray-500 text-sm">
-						在节点中插入富文本备注，可轻松应用加粗、斜体、高亮等样式，并插入图片
+						准确 & 轻松地将播客和其他音频内容转录为文本。
 					</p>
 				</div>
 			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:text-bullet-list-square-edit-20-regular"
-						color="green"
-						size={32}
-					/>
-				</div>
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
+				<Icon
+					name="fluent:translate-auto-16-regular"
+					size={32}
+					color="black"
+				/>
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
+					智能翻译
+				</h3>
 				<div>
-					<h3 class="font-bold">大纲模式</h3>
 					<p class="text-gray-500 text-sm">
-						以层级文本格式直观展示思维导图，让文本编辑更轻松便捷
+						将网页, 字幕和其他文本内容翻译成你的母语。
 					</p>
 				</div>
 			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:keyboard-16-regular"
-						color="blue"
-						size={32}
-					/>
-				</div>
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
+				<Icon
+					name="fluent:person-voice-24-regular"
+					size={32}
+					color="black"
+				/>
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
+					自然朗读
+				</h3>
 				<div>
-					<h3 class="font-bold">快捷键</h3>
 					<p class="text-gray-500 text-sm">
-						支持复制、粘贴、生成子节点等快捷键操作，通过键盘快速高效编辑思维导图
+						用自然流畅的语音朗读翻译后的内容，提升听觉体验。
 					</p>
 				</div>
 			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:color-24-regular"
-						color="purple"
-						size={32}
-					/>
-				</div>
+			<div class="p-3 w-1/4 rounded-xl bg-gray-50 border border-gray-100">
+				<Icon
+					name="fluent:airplane-24-regular"
+					size={32}
+					color="black"
+				/>
+				<h3 class="font-medium text-normal leading-none mt-4 mb-2">
+					离线可用
+				</h3>
 				<div>
-					<h3 class="font-bold">主题样式</h3>
 					<p class="text-gray-500 text-sm">
-						提供多种颜色主题和节点形状选择，个性化定制思维导图外观，提升美观度
-					</p>
-				</div>
-			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:balloon-16-regular"
-						color="red"
-						size={32}
-					/>
-				</div>
-				<div>
-					<h3 class="font-bold">节点图标</h3>
-					<p class="text-gray-500 text-sm">
-						利用数字、颜色、优先级等图标清晰标识思维导图层级和重点，增强可读性
-					</p>
-				</div>
-			</div>
-			<div class="w-80 flex px-5 py-4 rounded-xl bg-gray-50">
-				<div class="mr-2">
-					<Icon
-						name="fluent:share-20-filled"
-						color="maroon"
-						size={32}
-					/>
-				</div>
-				<div>
-					<h3 class="font-bold">轻松分享</h3>
-					<p class="text-gray-500 text-sm">
-						一键生成分享链接，轻松分享给朋友或团队成员，实现随时随地的访问与协作
+						转录和翻译完成后，内容将离线存储，随时随地快速访问。
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- Whiteboard -->
-	<!-- <div
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-		id="whiteboard"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">现代性的白板</h2>
-		<div class="text-neutral-500 text-center text-lg mb-4">
-			古老繁杂的菜单，不是绘图应用的标配<br />
-			DoraVoice白板是这样一款生产力工具<br />
-			简洁优雅，更有超高效率
-		</div>
-		<a
-			href="https://app.doravoice.com/graph/new"
-			class="rounded-full py-2 px-4 mb-8 bg-black text-white hover:shadow-xl transition-shadow"
-			>无需注册，立即体验 →</a
-		>
-		<div class="flex space-x-4 max-w-5xl">
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3">
-				<Image src={WhiteboardSimpleIcon} alt="simple" />
-				<div class="">
-					<div class="text-lg font-bold">简单，但是高效</div>
-					<div class="text-neutral-500 leading-snug text-sm mb-4">
-						没有过时的菜单，满屏的小窗口。支持工具栏，快速修改图形样式。
-					</div>
-					<Image src={WhiteboardSimple} alt="simple" />
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3">
-				<Image src={WhiteboardProductivityIcon} alt="productivity" />
-				<div class="">
-					<div class="text-lg font-bold">
-						提高生产力的工具，不开玩笑
-					</div>
-					<div class="text-neutral-500 leading-snug text-sm mb-4">
-						它不仅仅是随意绘图，还可以绘制流程图，UML图和其他工作场景图。
-					</div>
-					<Image
-						src={WhiteboardProductivity}
-						alt="productivity"
-						style="mask-image:linear-gradient(90deg, black 0%, transparent 90%)"
-					/>
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3">
-				<Image src={WhiteboardFastIcon} alt="fast" />
-				<div class="">
-					<div class="text-lg font-bold">快速，在线编辑</div>
-					<div class="text-neutral-500 leading-snug text-sm mb-4">
-						无需下载并安装软件到本地计算机，支持在线编辑图表。
-					</div>
-					<Image src={WhiteboardFast} alt="fast" />
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- Design for All Platforms -->
-	<div
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">为所有平台设计</h2>
-		<div class="text-neutral-500 text-center text-lg mb-4">
-			网页版只是一个开始，<br />
-			DoraVoice将逐渐覆盖所有平台
-		</div>
-		<div class="flex space-x-4">
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image src={PlatformWebpage} alt="Webpage" />
-				<div class="text-sm mt-2 mb-4">Web</div>
-				<div
-					class="text-sm rounded-full bg-black text-white px-2 py-1.5"
-				>
-					现已可用
-				</div>
-			</div>
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image class="opacity-60" src={PlatformWindows} alt="Windows" />
-				<div class="text-sm mt-2 mb-4">Windows</div>
-				<div
-					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
-				>
-					2025 下半年
-				</div>
-			</div>
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image class="opacity-60" src={PlatformMac} alt="MacOS" />
-				<div class="text-sm mt-2 mb-4">MacOS</div>
-				<div
-					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
-				>
-					2025 下半年
-				</div>
-			</div>
-			<div class="flex flex-col items-center text-center px-4 py-2">
-				<Image class="opacity-60" src={PlatformMobile} alt="Mobile" />
-				<div class="text-sm mt-2 mb-4">Mobile</div>
-				<div
-					class="text-sm rounded-full bg-neutral-200 text-neutral-500 px-2 py-1.5"
-				>
-					将来某时
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Pricing -->
-	<div
-		id="pricing"
-		class="pt-12 flex flex-col mb-20 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">定价</h2>
-		<div class="text-neutral-500 text-lg text-center mb-10">
-			预算有限的朋友，欢迎免费使用<br />
-			若你有需要，可考虑升级会员计划
-		</div>
-		<div class="flex space-x-4">
-			<div
-				class="rounded-xl bg-white shadow-md p-4 max-w-80 border-neutral-100 border"
-			>
-				<div class="text-2xl font-bold">Free</div>
-				<div class="text-neutral-500 min-h-12 text-sm">
-					适合偶尔使用的用户
-				</div>
-				<div class="flex items-end mb-2">
-					<div class="text-3xl leading-none text-bold">$0</div>
-					<div class="text-sm text-neutral-500">/Month</div>
-				</div>
-				<a
-					class="rounded-lg bg-neutral-200 font-bold block text-neutral-600 text-center py-1.5 mb-2"
-					>当前方案</a
-				>
-				<ul class="leading-loose list-disc list-inside">
-					<li>Mindmap App</li>
-					<li>WhiteBoard App</li>
-					<li>Export png, pdf, doc...</li>
-					<li class="text-fuchsia-600">10 AI-actions/day</li>
-					<li class="text-fuchsia-600">20 Diagrams</li>
-					<li class="text-fuchsia-600">50MB Storeage</li>
-				</ul>
-			</div>
-			<div
-				class="rounded-xl bg-white shadow-xl p-4 max-w-80 border-neutral-100 border"
-			>
-				<div
-					class="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 to-fuchsia-200"
-					style=" -webkit-text-fill-color: transparent;text-fill-color: transparent;; background-clip: text;"
-				>
-					DoraVoice Pro
-				</div>
-				<div class="text-neutral-500 min-h-12 text-sm">
-					适合经常绘制、整理各种图示的专业用户
-				</div>
-				<div class="flex items-end mb-2">
-					<div class="text-3xl leading-none text-bold">$4.99</div>
-					<div class="text-sm text-neutral-500">/Month</div>
-				</div>
-				<a
-					class="rounded-lg bg-purple-500 font-bold block text-white text-center py-1.5 mb-2 hover:bg-fuchsia-500"
-					href="https://app.doravoice.com/home/membership"
-					>Upgrade to Pro</a
-				>
-				<ul class="leading-loose list-disc list-inside">
-					<li>Mindmap App</li>
-					<li>WhiteBoard App</li>
-					<li>Export png, pdf, doc...</li>
-					<li class="text-fuchsia-600">200 AI-actions/day</li>
-					<li class="text-fuchsia-600">Unlimited Diagrams</li>
-					<li class="text-fuchsia-600">500MB Storeage</li>
-					<li class="text-fuchsia-600">Folder Manager</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<!-- Follow -->
-	<div
-		class="pt-12 flex flex-col mb-10 items-center bg-gradient-to-b from-gray-50 to-white to-10%"
-	>
-		<h2 class="text-5xl font-bold text-center mb-4">关注DoraVoice</h2>
-		<div class="text-neutral-500 text-lg text-center mb-10">
-			DoraVoice的成长，离不开朋友们的支持<br />
-			欢迎你随时和我们交流，让 DoraVoice 变得更棒！
-		</div>
-		<div class="flex space-x-4 max-w-5xl">
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
-				<div class="text-xl">🧭</div>
-				<div class="">
-					<div class="font-bold text-md">开发路线图</div>
-					<div class="text-neutral-500 text-sm">
-						DoraVoice
-						的开发计划，你可以在这里时刻关注我们正在开发什么功能
-					</div>
-					<a
-						class="text-fuchsia-600 text-sm mt-2 block"
-						href="https://trello.com/b/AZNWVbcE/doravoice-roadmap"
-						>详情 →</a
-					>
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
-				<div class="text-xl">📧</div>
-				<div class="">
-					<div class="font-bold text-md">联系我们</div>
-					<div class="text-neutral-500 text-sm">
-						你可以随时给我发邮件，我们的Gmail邮箱收件人是ahshengchen
-					</div>
-				</div>
-			</div>
-			<div class="p-4 rounded-xl bg-gray-50 w-1/3 flex space-x-2">
-				<div class="text-xl">💁‍♀️</div>
-				<div class="">
-					<div class="font-bold text-md">授权经销商</div>
-					<div class="text-neutral-500 text-sm">
-						这里展示DoraVoice授权的正版销售合作伙伴
-					</div>
-					<a
-						class="text-fuchsia-600 text-sm mt-2 block"
-						href={translatePath("/legal/official-resellers")}
-						>详情 →</a
-					>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<Footer />
 </Layout>
+
+<Footer />
+
 <style>
-	#hero {
-		transform: perspective(400px) rotateX(25deg) translateY(-60px);
-	}
-	#hero:hover {
-		transform: rotateX(0deg) translateY(0px);
-	}
-	#product-sologan {
-		font-size: 3.25rem;
-		font-weight: 700;
-		line-height: 3.75rem;
-		margin: 0 0 4px;
-		position: relative;
-		word-break: keep-all;
-		/* 字体横向间距 */
-		letter-spacing: -0.02em;
-		text-align: center;
-	}
-	@keyframes slide {
-		0%,
-		20% {
-			top: 0;
-		}
-		30% {
-			top: -3.75rem;
-		}
-		40% {
-			top: -7.5rem;
-		}
-		60% {
-			top: -7.5rem;
-		}
-		90% {
-			top: -7.5rem;
-		}
-	}
-
-	.ticker {
-		display: inline-flex;
-		height: 3.75rem;
-		overflow: hidden;
-		flex-direction: column;
-	}
-	.ticker > span {
-		position: relative;
-		top: 0;
-		text-align: left;
-		animation: slide 7s infinite;
-		/* 文字渐变背景色 */
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.ppt {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #bc3f1f 50%, #ffb29d 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.md {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #000 50%, #d6d6d6 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.doc {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #195ad4 50%, #9dd5ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-	.ticker span.pdf {
-		/* 渐变文字背景色 */
-		background: linear-gradient(180deg, #ba0f0f 50%, #ff7171 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-	}
-
 	#glow-button {
-		color: #fff;
-		background: #111;
-		cursor: pointer;
 		position: relative;
 		z-index: 0;
-		border-radius: 20px;
 	}
 
 	#glow-button:before {
@@ -642,7 +189,6 @@ const translatePath = useTranslatedPath(lang);
 		animation: glowing 20s linear infinite;
 		opacity: 0.3;
 		transition: opacity 0.28s ease-in-out;
-		border-radius: 20px;
 	}
 
 	#glow-button:active {
@@ -652,21 +198,8 @@ const translatePath = useTranslatedPath(lang);
 	#glow-button:active:after {
 		background: transparent;
 	}
-
-	#glow-button:hover {
-		transition: all 0.16s ease-in-out;
-		transform: translateY(-2px) scale(1.01);
-	}
-	#glow-button .arrow {
-		display: inline-block;
-		transition: all 0.16s ease-in-out;
-		transform: translateX(0px);
-	}
-	#glow-button:hover .arrow {
-		transform: translateX(8px);
-	}
 	#glow-button:hover:before {
-		opacity: 1;
+		opacity: 0.5;
 	}
 
 	#glow-button:after {
@@ -675,10 +208,8 @@ const translatePath = useTranslatedPath(lang);
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background: #111;
 		left: 0;
 		top: 0;
-		border-radius: 20px;
 	}
 
 	@keyframes glowing {
@@ -693,29 +224,3 @@ const translatePath = useTranslatedPath(lang);
 		}
 	}
 </style>
-<script>
-	document.cookie.split(";").forEach((item) => {
-		const [key, value] = item.split("=");
-		if (key.trim() === "user") {
-			try {
-				const decodedValue = decodeURIComponent(value);
-				const { id, email } = JSON.parse(decodedValue);
-				if (email) {
-					const actionButton = document.getElementById(
-						"glow-button",
-					) as HTMLAnchorElement;
-					actionButton.href = `https://app.doravoice.com/home`;
-
-					const actionText = document.getElementById("action-text");
-					actionText.innerText = "前往个人中心";
-
-					const actionTip = document.getElementById("action-tip");
-					actionTip.style.visibility = "hidden";
-				}
-			} catch (error) {
-				console.error("Error parsing user cookie:", error);
-			}
-			return;
-		}
-	});
-</script>
