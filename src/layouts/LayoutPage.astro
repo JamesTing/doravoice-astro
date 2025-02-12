@@ -21,12 +21,12 @@ const { frontmatter } = Astro.props;
 		<title>{frontmatter.title} - DoraVoice</title>
 	</head>
 	<body>
-		<div class="fixed w-full pt-4 z-10">
+		<div class="px-4 pt-8">
 			<Navbar />
 		</div>
-		<div class="pt-28">
+		<div class="flex justify-center">
 			<div
-				class="max-w-[900px] rounded-md mb-10 border border-gray-200 px-20 py-16 mx-auto shadow-lg shadow-gray-200 leading-relaxed"
+				class="max-w-[900px] w-full mt-6 mb-8 mx-4 p-6 lg:p-12 rounded-lg border border-gray-200 shadow-lg shadow-gray-200 leading-relaxed"
 			>
 				<ProsPage><slot /></ProsPage>
 			</div>

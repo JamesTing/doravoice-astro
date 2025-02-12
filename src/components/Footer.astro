@@ -13,42 +13,29 @@ const t = useTranslations(lang);
 ---
 
 <div
-	class="mx-auto max-w-[900px] mb-12 px-2 text-sm border-t border-gray-200 pt-8 pb-4 text-gray-400 flex justify-between"
+	class="mx-auto max-w-[900px] p-4 flex flex-col md:flex-row-reverse md:px-0 justify-between text-sm border-t border-gray-200 text-gray-400"
 >
-	<!-- Copyright -->
-	<div class="w-56">
-		<Image
-			src={Logo}
-			class="opacity-30 rounded-md w-6 mb-2"
-			alt="DoraVoice"
-		/>
-		<div class="mb-2 leading-tight">
-			Listen to podcasts and webpages in your native tongue, without the
-			need for a translator.
-		</div>
-		<div>©DoraVoice 2025</div>
-	</div>
 	<!-- Links -->
-	<div class="flex space-x-16">
+	<div class="flex mb-4 justify-between md:space-x-16">
 		<div>
 			<div class="leading-none font-medium mb-2">Tools</div>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
 				href={translatePath("/tools/audio-transcription")}
 				>{t("footer.audio-transcription")}</a
 			>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
 				href={translatePath("/tools/audio-translation")}
 				>{t("footer.audio-translation")}</a
 			>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
 				href={translatePath("/tools/audio-transcription")}
 				>{t("footer.audio-to-text")}</a
 			>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
 				href={translatePath("/tools/text-to-speech")}
 				>{t("footer.text-to-speech")}</a
 			>
@@ -56,31 +43,40 @@ const t = useTranslations(lang);
 		<div>
 			<div class="leading-none font-medium mb-2">Legal</div>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
 				href={translatePath("/legal/privacy-policy")}
 				>{t("footer.privacy-policy")}</a
 			>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
 				href={translatePath("/legal/terms-of-service")}
 				>{t("footer.terms-of-service")}</a
 			>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
 				href={translatePath("/about")}>{t("footer.about")}</a
 			>
 		</div>
 		<div>
 			<div class="leading-none font-medium mb-2">Links</div>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
-				href="https://producterbook.com">Producter book</a
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
+				href="https://producterbook.com">ProducterBook</a
 			>
 			<a
-				class="block mb-1 hover:text-gray-800 transition duration-300"
-				href="https://doravoice.com">DoraVoice</a
+				class="block md:mb-1 hover:text-gray-800 transition duration-300"
+				href="https://amymind.com">AmyMind</a
 			>
 		</div>
+	</div>
+	<!-- Copyright -->
+	<div class="md:w-1/3">
+		<Image src={Logo} class="opacity-30 rounded-md w-6" alt="DoraVoice" />
+		<div class="my-1 leading-tight">
+			Listen to podcasts and webpages in your native tongue, without the
+			need for a translator.
+		</div>
+		<div>©DoraVoice 2025</div>
 	</div>
 </div>
 

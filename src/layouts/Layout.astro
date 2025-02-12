@@ -22,41 +22,7 @@ const { title, description, keywords } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<title>{title}</title>
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				var items = document.querySelectorAll(
-					"#feature-list #tab > div",
-				);
-				for (var i = 0; i < items.length; i++) {
-					items[i].addEventListener("mouseenter", function () {
-						var tab_id = this.getAttribute("data-target");
-
-						var activedItems = document.querySelectorAll(
-							"#feature-list #tab > div.bg-neutral-100",
-						);
-						for (var j = 0; j < activedItems.length; j++) {
-							activedItems[j].classList.remove("bg-neutral-100");
-						}
-
-						var activedContents = document.querySelectorAll(
-							"#feature-list #content > div.block",
-						);
-						for (var j = 0; j < activedContents.length; j++) {
-							activedContents[j].classList.remove("block");
-							activedContents[j].classList.add("hidden");
-						}
-
-						this.classList.add("bg-neutral-100");
-						document
-							.querySelector(tab_id)
-							.classList.remove("hidden");
-						document.querySelector(tab_id).classList.add("block");
-
-						return false;
-					});
-				}
-			});
-		</script>
+		
 		<!-- Paste this right before your closing </head> tag -->
 		<script type="text/javascript">
 			(function (f, b) {
