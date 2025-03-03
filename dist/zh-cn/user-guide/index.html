@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description"><meta name="keywords"><meta name="viewport" content="width=device-width"><link rel="icon" href="/favicon.ico"><meta name="generator" content="Astro v4.16.18"><link rel="sitemap" href="/sitemap-index.xml"><title>About DoraVoice</title><!-- Paste this right before your closing </head> tag --><script type="text/javascript">
+			(function (f, b) {
+				if (!b.__SV) {
+					var e, g, i, h;
+					window.mixpanel = b;
+					b._i = [];
+					b.init = function (e, f, c) {
+						function g(a, d) {
+							var b = d.split(".");
+							2 == b.length && ((a = a[b[0]]), (d = b[1]));
+							a[d] = function () {
+								a.push(
+									[d].concat(
+										Array.prototype.slice.call(
+											arguments,
+											0,
+										),
+									),
+								);
+							};
+						}
+						var a = b;
+						"undefined" !== typeof c
+							? (a = b[c] = [])
+							: (c = "mixpanel");
+						a.people = a.people || [];
+						a.toString = function (a) {
+							var d = "mixpanel";
+							"mixpanel" !== c && (d += "." + c);
+							a || (d += " (stub)");
+							return d;
+						};
+						a.people.toString = function () {
+							return a.toString(1) + ".people (stub)";
+						};
+						i =
+							"disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(
+								" ",
+							);
+						for (h = 0; h < i.length; h++) g(a, i[h]);
+						var j = "set set_once union unset remove delete".split(
+							" ",
+						);
+						a.get_group = function () {
+							function b(c) {
+								d[c] = function () {
+									call2_args = arguments;
+									call2 = [c].concat(
+										Array.prototype.slice.call(
+											call2_args,
+											0,
+										),
+									);
+									a.push([e, call2]);
+								};
+							}
+							for (
+								var d = {},
+									e = ["get_group"].concat(
+										Array.prototype.slice.call(
+											arguments,
+											0,
+										),
+									),
+									c = 0;
+								c < j.length;
+								c++
+							)
+								b(j[c]);
+							return d;
+						};
+						b._i.push([e, f, c]);
+					};
+					b.__SV = 1.2;
+					e = f.createElement("script");
+					e.type = "text/javascript";
+					e.async = !0;
+					e.src =
+						"undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+							? MIXPANEL_CUSTOM_LIB_URL
+							: "file:" === f.location.protocol &&
+								  "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(
+										/^\/\//,
+								  )
+								? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+								: "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+					g = f.getElementsByTagName("script")[0];
+					g.parentNode.insertBefore(e, g);
+				}
+			})(document, window.mixpanel || []);
+			mixpanel.init("8531ce0ef1b71386ed6bfb168e258a7f", {
+				debug: false,
+				ignore_dnt: true,
+				track_pageview: false,
+			});
+			// Set this to a unique identifier for the user performing the event.
+			// mixpanel.identify('USER_ID')
+			// Track an event. It can be anything, but in this example, we're tracking a Sign Up event.
+			mixpanel.track("visit Landing page", {
+				"Cloudflare Pages": true,
+				i18n: "zh",
+			});
+		</script><script type="text/javascript">
+			(function (c, l, a, r, i, t, y) {
+				c[a] =
+					c[a] ||
+					function () {
+						(c[a].q = c[a].q || []).push(arguments);
+					};
+				t = l.createElement(r);
+				t.async = 1;
+				t.src = "https://www.clarity.ms/tag/" + i;
+				y = l.getElementsByTagName(r)[0];
+				y.parentNode.insertBefore(t, y);
+			})(window, document, "clarity", "script", "ksbkb9e48r");
+		</script><style>:root{--accent: 136, 58, 234;--accent-light: 224, 204, 250;--accent-dark: 49, 10, 101;--accent-gradient: linear-gradient( 45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60% )}html{font-family:system-ui,sans-serif;scroll-behavior:smooth}body{height:100%}code{font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace}
+</style>
+<link rel="stylesheet" href="/_astro/about.On1ylaQ8.css"><script type="module" src="/_astro/hoisted.D6on-sqq.js"></script></head> <body> <div class="shadow-sm h-12 fixed z-10 w-full shadow-black/5 border-black/10 border-b backdrop-blur p-2 bg-white/50 flex items-center text-neutral-700"> <div class="flex-grow flex items-center space-x-8"> <a href="/"> <img src="/_astro/logo-text.DJhWuEGC_Z20IeU8.webp" class="w-28" alt="DoraVoice" width="920" height="180" loading="lazy" decoding="async"></a> <div class="flex-1 items-center space-x-4"> <a class="rounded-md transition-all px-2 py-1.5 hover:bg-neutral-200 hover:text-black" href="/user-guide">User Guide</a> </div> </div> <div> <div class="flex items-center"> <select id="language-picker" class="bg-transparent text-sm outline-none cursor-pointer transition rounded-md py-1 hover:bg-gray-200"> <option value="/zh-cn/user-guide/" selected> 简体中文 </option><option value="/user-guide/"> English </option> </select> </div>  </div> </div>  <div class="fixed w-72 mt-12 pt-6 px-4 flex-shrink-0 border-r border-neutral-100 bg-neutral-50 h-dvh overflow-y-auto"> <div class="text-sm text-neutral-400 font-medium">Get Started</div> <ul class="menu mt-1 mb-6 ml-1.5 pl-3 border-l border-neutral-200"> <a class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950" href="/zh-cn/user-guide">
+👋 Hi, there
+</a> <a class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950" href="/zh-cn/user-guide/faq">
+🧭 FAQs
+</a> </ul> <div class="text-sm text-neutral-400 font-medium">User Guide</div> <ul class="menu mt-1 mb-6 ml-1.5 pl-3 border-l border-neutral-200"> <a class="transition block py-1.5 text-neutral-600 px-1 rounded-md hover:bg-neutral-200 hover:text-neutral-950" href="/user-guide"> About DoraVoice </a> </ul> </div>   <div class="py-20 px-24 ml-72 text-lg"> <div class="
+  prose-h1:font-bold
+  prose-h1:pb-4
+  prose-h2:pb-4
+  prose-h3:pb-1
+  prose-h1:text-4xl
+  prose-h2:text-xl
+  prose-h2:font-bold
+  prose-h3:font-bold
+  prose-p:pb-4
+  prose-ol:pb-4
+  prose-li:text-base
+  prose-li:text-gray-600
+  prose-p:leading-relaxed
+  prose-li:leading-relaxed
+  prose-p:text-gray-600
+  prose-ol:list-decimal
+  prose-ol:list-inside
+  prose-ul:list-disc
+  prose-ul:list-inside
+  prose-ul:pl-1
+  prose-ul:pb-4
+  prose-p:text-base
+  prose-a:underline
+  prose-a:italic
+  prose-img:max-w-60"> <h1 id="-hi-there">👋 Hi, there</h1>
+<p>DoraVoice is a AI Transcription and Translation App.</p> </div> </div> </body></html>
