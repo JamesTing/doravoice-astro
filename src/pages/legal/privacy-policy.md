@@ -44,7 +44,7 @@ When you make a general network request, we collect your phone model, system ver
 
 ### 3.3 Uses of DoraVoice when requesting permissions from users
 A. Access the mic to record voice
-DoraVoice's shadowing function requires mic permisison to record voice.
+DoraVoice's playback function requires mic permission to record voice.
 
 B. Read/Write phone storage permissions
 When a user selects a local file as study material, access to your storage permissions is required to access the content.
