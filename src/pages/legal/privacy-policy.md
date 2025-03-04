@@ -5,40 +5,89 @@ title: 'Privacy Policy'
 
 # Privacy Policy
 
-This Privacy Policy describes how we collect, use, and share your personal information when you use DoraVoice ("App") or purchase products or services from it.
+## Introduction
+DoraVoice is a language translation software developed by LifeStruggle Team. We understand the importance of your personal information and we are committed to protecting the personal information and privacy of users of our products and services ("Users" or "You"). We are committed to protecting the personal information and privacy of users of our products and services (collectively, "Users" or "You"). We may collect and use personal information about you in connection with your use of DoraVoice. We would like to explain to you the rules of handling your personal information that we collect and use through the DoraVoice Privacy Policy, so that we can better protect your rights and interests.
 
-Types of personal information collected
+This Privacy Policy explains what content and information DoraVoice collects from you, and how it will use and protect that information.
 
-When you use the App, we automatically collect specific information about your device, including information about your web browser, IP address, time zone, and some of the cookies installed on your device. Additionally, as you browse the website, we collect information about the individual web pages or products you view, what websites or search terms referred you to the Website, and information about how you interact with the Website. We refer to this automatically-collected information as “Device Information”.
+**The following are the key points of the DoraVoice Privacy Policy：**
 
-We collect Device Information using the following technologies:
+To help you register and use DoraVoice products or services, we may collect personal information in connection with the provision of the services, and you have the right to refuse or withdraw authorization.
 
-- “Cookies” are data files placed on your device or computer, often including an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit http://www.allaboutcookies.org.
-- “Log files” track actions occurring on the Website, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.
-- “Web beacons”, “tags”, and “pixels” are electronic files used to record information about how you browse the Website.
+You can access, correct, delete your personal information, change the scope of your authorized consent, and cancel your account, and we provide you with the means to exercise these rights.
 
-Additionally, when you make a purchase or attempt to make a purchase through the Website, we collect certain information from you, including your name, billing address, payment information, email address. We refer to this information as “Order Information”.
+We have adopted Internet industry standard technical measures and data security measures to protect the security of your personal information.
 
-The “Personal Information” referred to in this Privacy Policy includes both Device Information and Order Information.
+## I. Introduction
+This policy applies to the DoraVoice App software.
 
-How do we use your personal information?
+"Special Note" Please read and fully understand this policy before using any of our products and/or services. By using or continuing to use DoraVoice products and services, you agree to our processing of your information in accordance with this policy. If you have any questions about this Policy, you may provide feedback through the Feedback in the DoraVoice App.
 
-We use the Device Information we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Website (for example, by generating
-analytics about how our customers browse and interact with the Website, and to assess the success of our marketing and advertising campaigns).
+We may revise the DoraVoice Privacy Policy from time to time. When changes are made to the DoraVoice Privacy Policy, we will show you the changes in the form of push notifications, pop-ups, etc. after the version update.
 
-Sharing your personal information
 
-We share your Personal Information with third parties to help us use your Personal Information, as described above. For example, we use Mixpanel to help us understand how our customers use the Site - you can read more about how Mixpanel uses your Personal Information here: https://mixpanel.com/legal/privacy-policy.
+## II. Legal basis for DoraVoice's handling of personal information
+We will collect and use your personal information to provide you with DoraVoice products or services in accordance with the General Data Protection Regulation, and other relevant laws and regulations. We will generally only collect your personal information with your consent. In some cases, we may also collect personal Information from you based on legal obligations or as necessary to perform a contract, or personal Information may be needed to protect your vital interests or the interests of others.
 
-Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.
+## III. How we collect and use your personal information
+We collect and use personal information that you voluntarily provide in the course of using the Services or as a result of using DoraVoice products or services for the purposes described in this Policy in accordance with the principles of legitimacy, legality and necessity. If we want to use your personal information for purposes other than those set forth in this Policy, or use the information collected for a specific purpose, we will inform you in a reasonable manner and obtain your consent again prior to such use.
 
-Your rights If you are a European resident, you have the right to access the personal information we hold about you and to ask for your personal information to be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below. 
+### 3.1 Help you register your purchase
+When you purchase our products, you are required to provide us with the following information: email address (used as account identification). After providing the above information and agreeing to the DoraVoice User Agreement and this policy, you can use all of DoraVoice's core business functions.
 
-Additionally, if you are a European resident, we process your information in order to fulfill contracts
-we might have with you (for example, if you make an order through the website), or otherwise to pursue our legitimate business interests listed above. Please note that your information will be transferred outside of Europe, including to Canada and the United States.
+### 3.2 Provision of products or services to you
+In order to implement DoraVoice's core functions, we may need to collect personal information from you. The following is a detailed list of DoraVoice's core functions and the personal information that needs to be collected to implement those functions, and if you refuse to collect it, you will not be able to use the service.
 
-Data retention When you place an order through the Website, we will maintain your Order Information for our records unless and until you ask us to delete this information.
+When you use the "Translate" function, we will upload your file to the server for transcribe & translate,then return the result for you.
 
-Changes We may update this privacy policy from time to time in order to reflect changes to our practices or for other operational, legal, or regulatory reasons. Contact us For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at ahshengchen@gmail.com or by mail using the address provided below:
+When you make a general network request, we collect your phone model, system version, and IP information anonymously in order to facilitate statistics on our user distribution.
 
-China Beijing 100000 Chaoyang District, Jianguo Road 29
+### 3.3 Uses of DoraVoice when requesting permissions from users
+A. Access the mic to record voice
+DoraVoice's shadowing function requires mic permisison to record voice.
+
+B. Read/Write phone storage permissions
+When a user selects a local file as study material, access to your storage permissions is required to access the content.
+
+## IV. Your right to manage personal information
+We take your concerns about your personal information seriously and make every effort to protect your rights to access, correct, delete, and withdraw consent to your personal information so that you have the full ability to safeguard your privacy and security. Your rights include
+
+### 4.1 Accessing and Correcting Your Personal Information
+A. If you need access to personal information generated in the course of your use of DoraVoice, we will provide it to you upon reasonable request. This can be done by sending an email to help@doravoice.com to contact us. We will respond to your access request within 15 days.
+
+### 4.2 Deleting your personal information
+We provide a "Delete Account" function in app settings, which allows you to delete all information related to you, including but not limited to
+- Membership
+- Purchase history
+
+### 4.3 Device permission usage
+In the course of providing our services, we may require you to enable some device permissions, such as access to notifications, photo albums, mic, etc. You may also choose to turn off some or all of these permissions at any time in the "Settings" function of your device. You can also choose to turn off some or all permissions at any time in the "Settings" function of your device, so that you can refuse us to collect your personal information accordingly. Please refer to the device and system developer's instructions or policies for details.
+
+## V. The notice we sent
+We may make certain service related announcements to you from time to time as we deem necessary (for example, when we suspend the DoraVoice service for maintenance).
+
+## VI. Storage of your personal information
+When you register for an account, all data associated with you will be stored in the United States.
+
+## VII. How to update and modify this policy
+We may modify the terms of this Policy from time to time, and such modifications form part of this Policy. We will issue an updated version of this Privacy Policy or otherwise alert you to updates in an appropriate manner within DoraVoice.
+
+## VIII. How DoraVoice protects my information
+A.DoraVoice will not share your information with third parties unless you have given your permission.
+
+## IX. Third-party SDK directory
+The following are third-party SDK services that involve the collection of user information
+
+SDK Name: RevenueCat
+Company: RevenueCat
+SDK Usage: App Subscription Management
+Types of information collected by the SDK: Anonymously collects information about payment status
+Official website link: https://www.revenuecat.com/
+
+## X. In-application reading recommendation algorithm
+DoraVoice in-app content recommendations do not involve algorithmic pushing, and the recommended content is displayed to all users, not personalized recommendations or targeted pushing.
+
+## XI. How to contact us
+If you have any questions about this policy, you can send an email to help@doravoice.com to inquire, and we will promptly resolve your issue, usually within 5 business days.
+
+Effective date: March 3, 2025
